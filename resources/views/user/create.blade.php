@@ -1,0 +1,110 @@
+@include('partials.header')
+<div>
+    <div class="flex flex-col justify-center mt-20">
+      <div class="w-full p-10 m-auto bg-white rounded-md shadow-xl ring-2 ring-indigo-600 lg:max-w-xl">
+        <h1
+          class="text-center text-3xl leading-9 
+        font-extrabold text-gray-800"
+        >
+          Sign Up
+        </h1>
+        <form class="mt-6">
+          <div class="mb-2">
+            <label
+              for="email"
+              class="block text-sm font-semibold text-gray-800"
+            >
+              Company Name:
+            </label>
+            <input
+              type="text"
+              class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full 
+                py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500"
+              required
+            />
+          </div>
+          <div class="mb-2">
+            <label
+              for="text"
+              class="block text-sm font-semibold text-gray-800"
+            >
+              Owner:
+            </label>
+            <input
+              type="email"
+              class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full 
+                py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500"
+              required
+            />
+          </div>
+          <div class="mb-2">
+            <label
+              for="text"
+              class="block text-sm font-semibold text-gray-800"
+            >
+              Contact numbers:
+            </label>
+            <input
+              type="Text"
+              class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full 
+                py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500"
+              required
+            />
+          </div>
+          <div class="mb-2">
+            <label
+              for="email"
+              class="block text-sm font-semibold text-gray-800"
+            >
+              Email
+            </label>
+            <input
+              type="email"
+              class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full 
+                py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500"
+              required
+            />
+          </div>
+          <div class="mb-2">
+            <label
+              for="email"
+              class="block text-sm font-semibold text-gray-800"
+            >
+              UserName:
+            </label>
+            <input
+              type="text"
+              class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full 
+                py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500"
+              required
+            />
+          </div>
+          <div class="mb-2">
+            <label
+              for="password"
+              class="block text-sm font-semibold text-gray-800"
+            >
+              Password
+            </label>
+            <input
+              type="password"
+              class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full 
+                py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500"
+              required
+            />
+          </div>
+          <div class="mt-6">
+            <button class="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-teal-500 rounded-md hover:bg-teal-400 focus:outline-none focus:bg-teal-400">
+              Login
+            </button>
+          </div>
+        </form>
+
+        <p class="mt-8 text-xs font-light text-center text-gray-700">
+          Already have an account?
+          <a href="#" class="font-medium hover:underline"> Sign in </a>
+        </p>
+      </div>
+    </div>
+  </div>
+@include('partials.footer')
