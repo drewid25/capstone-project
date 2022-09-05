@@ -58,10 +58,10 @@ use Illuminate\Support\Facades\Route;
 
 
 // // Route::get('/users',[UserController::class, 'index']);
-
-
-Route::get('/',[StudentController::class,'index']);
-Route::get('/login',[UserController::class,'create']);
+Route::get('/register',[UserController::class,'register']);
+Route::get('/dashboard', function (){
+    return view('user.dashboard');
+});
 
 
   
