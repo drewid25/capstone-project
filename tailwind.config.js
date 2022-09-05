@@ -8,7 +8,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'regal-blue': '#243c5a',
+        'accent-blue': '#4dabf7',
+        'letter':'#f8f9fa',
       },
     },
   },

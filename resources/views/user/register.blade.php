@@ -1,4 +1,5 @@
 @include('partials.header')
+<x-nav/>
 <div>
     <div class="flex flex-col justify-center mt-20">
       <div class="w-full p-10 m-auto bg-white rounded-md shadow-xl ring-2 ring-indigo-600 lg:max-w-xl">
