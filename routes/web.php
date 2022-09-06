@@ -1,9 +1,12 @@
 <?php
 
+use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Models\Property;
+use App\Models\Employee;
 
 /*
 |--------------------------------------------------------------------------
@@ -59,10 +62,34 @@ use Illuminate\Support\Facades\Route;
 
 // // Route::get('/users',[UserController::class, 'index']);
 Route::get('/register',[UserController::class,'register']);
+Route::get('/', function (){
+    return view('user.dashboard');
+})->name('dashboard');
 Route::get('/dashboard', function (){
     return view('user.dashboard');
+})->name('dashboard');
+
+
+
+// Property Routes
+Route::post('/createproperty',[PropertyController::class,'create'])->name('createproperty');
+Route::get('/addproperty',function(){
+    return view('user.addproperty');
 });
 
 
-  
 
+
+// Employee Routes
+
+Route::get('/addemployee',function(){
+    return view('user.addemployee');
+})->name('addemployee');
+
+
+// Inventory Routes
+
+Route::get('/inventory',function(){
+
+    return view('user.inventory')->with('inventories', Property::all());
+})->name('inventories');
