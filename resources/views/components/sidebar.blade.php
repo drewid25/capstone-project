@@ -1,5 +1,5 @@
-<div class="h-50 flex flex-col bg-accent-blue py-10 px-10 mt-10  border-solid border-2 border-r-gray-300 border-t-gray-300 border-l-none ">
-   
+<div class="h-50 col-span-2 bg-accent-blue py-10 px-10 mt-10  border-solid border-2 border-r-gray-300 border-t-gray-300 border-l-none ">
+        <div class = "flex flex-col">
         <a href="#" class="text-letter font-bold">
         <i class="fa-solid fa-sliders text-black mr-2 mb-5"></i> Add Property</a>
         <a href="#" class="text-letter font-bold">
@@ -11,6 +11,6 @@
         <a href="#" class="text-letter font-bold">
         <i class="fa-solid fa-sliders text-black mr-2"></i> Add Property</a>
     
-  
+    </div>
 </div>
 
