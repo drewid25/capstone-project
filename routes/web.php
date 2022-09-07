@@ -3,6 +3,7 @@
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\EmployeeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Models\Property;
@@ -85,6 +86,11 @@ Route::get('/addproperty',function(){
 Route::get('/addemployee',function(){
     return view('user.addemployee');
 })->name('addemployee');
+
+Route::get('/employeelist',function (){
+    return view('user.employeelist')->with('employees', Employee::all());
+})->name('employeelist');
+Route::post('/addemployeelist',[EmployeeController::class,'create'])->name('addemployeelist');
 
 
 // Inventory Routes

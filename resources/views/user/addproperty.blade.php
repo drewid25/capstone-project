@@ -1,6 +1,6 @@
 @include('partials.header')
  <x-nav/>
- <div class="w-screen  bg-letter px- h-screen mx-auto  grid grid-col-3  grid-flow-col ">
+ <div class="container bg-letter px- h-screen mx-auto grid grid-cols-3  grid-flow-col ">
     <x-sidebar/>
     <x-addproperty/>
     <x-rightbar/>

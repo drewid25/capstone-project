@@ -1,10 +1,10 @@
 
-<div class="grid  h-full bg-accent-blue py-2 px-2  border-2 border-black    ">
+<div class="h-full bg-accent-blue py-2 px-2 border border-border-gray   ">
  
     <div class="mt-5 flex flex-col items-center">
         
         <!-- component -->
-        <div class="bg-blue py-3 w-60 flex items-center font-sans">
+       <div class="bg-blue py-3 w-60 flex items-center font-sans">
             <div class="rounded bg-slate-300 w-64 p-2">
                 <div class="flex justify-between py-1">
                     <h3 class="text-sm text-black font-semibold">Task</h3>
@@ -74,5 +74,3 @@
             Add task
         </button>
     </div>
-</div>
-

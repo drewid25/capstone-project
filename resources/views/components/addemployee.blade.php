@@ -1,18 +1,16 @@
-
-
-     <div class="bg-button-blue col-span-4 border-2 border-black h-full shadow-2xl p-6">
+ <div class="bg-button-blue col-span-4 border-2 border-black h-full shadow-2xl p-6">
       <h1 class="text-white font-bold text-4xl py-6 text-center">Add Employee</h1>
-       <form action="{{ route('addemployee')}}" method="POST" type="submit" class="py-6 px-2 bg-accent-blue h-50 flex flex-col w-5/12 mx-auto shadow-2xl"  >
+       <form action="{{ route('addemployeelist')}}" method="POST" type="submit" class="py-6 px-2 bg-accent-blue h-50 flex flex-col w-5/12 mx-auto shadow-2xl"  >
          @csrf
           <div>
               <div class="flex flex-col">
                   <div class="p-3 flex flex-col bg-accent-blue w-50">
                       <label for="" class="text-letter mr-3">ID Number</label>
-                      <input type="text" name="supplier_name" class="focus-border-accent-blue">
+                      <input type="text" name="ID_number" class="focus-border-accent-blue">
                   </div>
                   <div class="p-3 flex flex-col bg-accent-blue w-50">
                     <label for="" class="text-letter mr-3">Employee Name</label>
-                    <input type="text" name="supplier_name" class="focus-border-accent-blue">
+                    <input type="text" name="employee_name" class="focus-border-accent-blue">
                  </div>
            
                  
@@ -21,7 +19,7 @@
                   
                   <div class="p-3 flex flex-col bg-accent-blue">
                       <label for="" class="text-letter mr-3">Department/Office</label>
-                      <select name="classification"
+                      <select name="department"
                        id="" class="w-50" >
                       <option value="IT Department" class="text-gray-600">IT Department</option>
                       <option value="Operations">Operations</option>
@@ -36,14 +34,14 @@
                           <option value="CELLPHONE" name="property_name" id="property">>CELLPHONE</option>
                           <option value="TABLET" name="property_name
                           " id="property">>TABLET</option>
-                          </select> --}}
+                          {{-- </select>  --}}
                      
-                  </div>
+                </div>
             
                  
   
                   <button class="text-white bg-button-blue" type="submit">Add</button>
-          </div>
+          
          
       
           
@@ -51,4 +49,4 @@
        </form>
      
     </div>
- 
+  

@@ -2,9 +2,9 @@
 
   <div class="bg-button-blue col-span-4 border-2 border-black h-full shadow-2xl p-6">
     <h1 class="text-white font-bold text-4xl py-6 text-center">Add Property</h1>
-     <form action="{{ route('createproperty')}}" method="POST" type="submit" class="py-6 px-2 bg-accent-blue h-50 flex flex-col w-8/12 mx-auto shadow-2xl"  >
+     <form action="{{ route('createproperty')}}" method="POST" type="submit" class="py-6 px-2 bg-accent-blue h-50 flex flex-col w-fullmx-auto shadow-2xl"  >
        @csrf
-        <div>
+ 
             <div class="flex flex-row">
                 <div class="p-3 flex flex-col bg-accent-blue w-full">
                     <label for="" class="text-letter mr-3">Supplier Name</label>
@@ -23,11 +23,11 @@
                 <div class="flex flex-row">
                     <div class="p-3 flex flex-col bg-accent-blue w-full">
                         <label for="" class="text-letter mr-3">Price</label>
-                        <input type="text" name="price">
+                        <input type="text" class="w-50" name="price">
                     </div>
                     <div class="p-3 flex flex-col bg-accent-blue ">
                         <label for="" class="text-letter mr-3">Quantity</label>
-                        <input type="text" name="quantity">
+                        <input type="text" class="w-50" name="quantity">
                     </div>
                 </div>
                
@@ -63,13 +63,38 @@
                 </div>
           
                
-                <div class="p-3 flex flex-col bg-accent-blue">
-                    <label for="" class="text-letter mr-3">DESCRIPTION</label>
-                    <input type="text" class="h-28" for="" name="description">
-                </div>
+                <div class="flex p-3">
+                    <div class="mb-3 xl:w-full">
+                      <label for="exampleFormControlTextarea1" class="form-label inline-block mb-2 text-white"
+                        >Description</label
+                      >
+                      <textarea
+                        class="
+                          form-control
+                          block
+                          w-full
+                          px-3
+                          py-1.5
+                          text-base
+                          font-normal
+                          text-gray-700
+                          bg-white bg-clip-padding
+                          border border-solid border-gray-300
+                          rounded
+                          transition
+                          ease-in-out
+                          m-0
+                          focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+                        "
+                        id="exampleFormControlTextarea1"
+                        rows="3"
+                       name="description"
+                      ></textarea>
+                    </div>
+                  </div>
               
                
-        </div>
+     
        
     
         <button class="text-white bg-button-blue" type="submit">Add</button>

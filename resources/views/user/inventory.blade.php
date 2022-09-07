@@ -1,23 +1,26 @@
 @include('partials.header')
  <x-nav/>
- <div class="  w-screen  py-6 px-6 bg-letter px- h-screen mx-auto mt-10 grid grid-cols-3 border-2 border-black grid-flow-col ">
+ <div class="container py-6 px-6 bg-letter px- h-screen mx-auto  grid grid-cols-3 border-2 border-black grid-flow-col ">
     <x-sidebar/>
  
-    <div class="bg-white shadow-2xl py-6 px-6 col-span-2 mt-5 border-2 border-black">
-        <h1 class="text-4xl font-bold text-center mb-3">INVENTORY LIST</h1>
-        <table class="table-auto border-2 border-accent-blue">
+    <div class="bg-white shadow-2xl py-6  col-span-4 border border-border-gray">
+        <h1 class="text-4xl font-bold text-center mb-3 text-accent-blue">INVENTORY LIST</h1>
+        <table class=" border-2 border-border-gray">
             <thead>
                 <tr>
-                    <th class="border-2 border-accent-blue mr-2 w-40">
+                    <th class="border-2 border-border-gray  text-grey mr-2 w-40">
                     Property Number
                     </th>
-                    <th class="border-2 border-accent-blue mr-2 w-40">
+                    <th class="border-2 border-border-gray  text-grey mr-2 w-40">
+                    Qty
+                    </th>
+                    <th class="border-2 border-border-gray text-grey  mr-2 w-40">
                         Item
                     </th>
-                    <th class="border-2 border-accent-blue mr-2 w-48">
+                    <th class="border-2 border-border-gray text-grey  mr-2 w-96">
                         Description
                     </th>
-                    <th class="border-2 border-accent-blue mr-2 w-48">
+                    <th class="border-2 border-border-gray text-grey  mr-2 w-32 ">
                        issued to
                     </th>
                 </tr>
@@ -28,9 +31,11 @@
               
                 
             
-                    <td class='border-2 border-accent-blue '>{{$inventory->property_number}}</td>
-                    <td class='border-2 border-accent-blue '>{{$inventory->property_name}}</td>
-                    <td class='border-2 border-accent-blue'>{{$inventory->description}}</td>
+                    <td class='border-2 border-border-gray text-grey '>{{$inventory->property_number}}</td>
+                    <td class='border-2 border-border-gray text-grey '>{{$inventory->quantity}}</td>
+                    <td class='border-2 border-border-gray text-grey '>{{$inventory->property_name}}</td>
+                    <td class='border-2 border-border-gray text-grey '>{{$inventory->description}}</td>
+                    <td class='border-2 border-border-gray  text-grey '></td>
                  
                 </tr>
                 @endforeach

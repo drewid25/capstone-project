@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('classification');
             $table->string('property_number');
             $table->string('property_name');
-            $table->string('description');
+            $table->longText('description');
           
             $table->timestamps();
         });

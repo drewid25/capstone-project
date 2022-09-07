@@ -10,7 +10,9 @@ module.exports = {
       colors: {
         'accent-blue': '#4dabf7',
         'letter':'#f8f9fa',
-        'button-blue':'#74c0fc'
+        'button-blue':'#74c0fc',
+        'grey':'#343a40',
+        'border-gray':'#adb5bd'
       },
     },
   },
