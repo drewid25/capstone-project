@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-<div class="h-50 bg-accent-blue col-span-2 py-6 px-6">
-    <h1>Home</h1>
-</div>
-=======
-<div class="grid col-span-2 h-50 bg-accent-blue py-2 px-2 mt-10  border-solid border-2 border-r-gray-300 border-t-gray-300 border-l-none ">
-    <h1 class="font-bold">Home</h1>
+
+<div class="grid  h-full bg-accent-blue py-2 px-2  border-2 border-black    ">
+ 
     <div class="mt-5 flex flex-col items-center">
         
         <!-- component -->
@@ -79,4 +75,4 @@
         </button>
     </div>
 </div>
->>>>>>> 5677dda8963e58ab2249621ed55b6845656cbe3d
+

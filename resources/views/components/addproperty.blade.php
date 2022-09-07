@@ -1,6 +1,6 @@
 
-<div class='bg-gray-600 col-span-5 p-6'>
-  <div class="bg-button-blue h-full shadow-2xl p-6">
+
+  <div class="bg-button-blue col-span-4 border-2 border-black h-full shadow-2xl p-6">
     <h1 class="text-white font-bold text-4xl py-6 text-center">Add Property</h1>
      <form action="{{ route('createproperty')}}" method="POST" type="submit" class="py-6 px-2 bg-accent-blue h-50 flex flex-col w-8/12 mx-auto shadow-2xl"  >
        @csrf
@@ -77,4 +77,3 @@
      </form>
    
   </div>
-</div>

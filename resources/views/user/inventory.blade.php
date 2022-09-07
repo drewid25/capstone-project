@@ -1,9 +1,10 @@
 @include('partials.header')
  <x-nav/>
- <div class="  w-screen py-6 px-6 bg-letter px- h-screen mx-auto mt-10 grid grid-col-3  grid-flow-col ">
+ <div class="  w-screen  py-6 px-6 bg-letter px- h-screen mx-auto mt-10 grid grid-cols-3 border-2 border-black grid-flow-col ">
     <x-sidebar/>
-    <div class="bg-white shadow-2xl py-6 px-6">
-
+ 
+    <div class="bg-white shadow-2xl py-6 px-6 col-span-2 mt-5 border-2 border-black">
+        <h1 class="text-4xl font-bold text-center mb-3">INVENTORY LIST</h1>
         <table class="table-auto border-2 border-accent-blue">
             <thead>
                 <tr>
@@ -27,8 +28,8 @@
               
                 
             
-                    <td class='border-2 border-accent-blue'>{{$inventory->property_number}}</td>
-                    <td class='border-2 border-accent-blue'>{{$inventory->property_name}}</td>
+                    <td class='border-2 border-accent-blue '>{{$inventory->property_number}}</td>
+                    <td class='border-2 border-accent-blue '>{{$inventory->property_name}}</td>
                     <td class='border-2 border-accent-blue'>{{$inventory->description}}</td>
                  
                 </tr>
