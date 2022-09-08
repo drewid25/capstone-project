@@ -21,6 +21,7 @@ return new class extends Migration
             $table->integer('price');
             $table->integer('quantity');
             $table->string('classification');
+            $table->string('category');
             $table->string('property_number');
             $table->string('property_name');
             $table->longText('description');

@@ -1,5 +1,5 @@
 
-<div class="h-full bg-accent-blue py-2 px-2 border border-border-gray   ">
+<div class="h-screen bg-accent-blue py-2 px-2 border border-border-gray   ">
  
     <div class="mt-5 flex flex-col items-center">
         

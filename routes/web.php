@@ -64,7 +64,7 @@ use App\Models\Employee;
 // // Route::get('/users',[UserController::class, 'index']);
 Route::get('/register',[UserController::class,'register']);
 Route::get('/', function (){
-    return view('user.dashboard');
+    return view('user.inventory')->with('inventories',Property::all());
 })->name('dashboard');
 Route::get('/dashboard', function (){
     return view('user.dashboard');

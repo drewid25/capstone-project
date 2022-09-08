@@ -2,7 +2,7 @@
 
    
 
-<div class="h-full border bg-accent-blue border-border-gray py-10 px-10  border-r-none">
+<div class="h-screen border bg-accent-blue border-border-gray py-10 px-10  border-r-none">
         <div class = "flex flex-col">
         <a href="/addproperty" class="text-letter font-bold">
 

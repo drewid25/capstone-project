@@ -19,6 +19,7 @@ class Property extends Model
         'quantity',
         'classification',
         'property_number',
+        'category',
         'property_name',
         'description',
        
