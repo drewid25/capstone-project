@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Models\Property;
 use App\Models\Employee;
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,46 +30,14 @@ use App\Models\Employee;
 // Route::permanentRedirect('/welcom','/');
 // Route::redirect('/welcome','/')
 
-// Route::get('/users',function(Request $request){
-//     dd($request);
-//     return null;
-// });
 
-// Route::get('/get-text',function(){
-//     return response("Hello PinoyFreeCoder", 200)
-//                 ->header('Content-Type', 'text/plain');
-// });
-
-// Route::get('/user/{id}',function($id){
-//     return response($id,200);
-// });
-
-// Route::get('/user/{id}/{group}',function($id,$group){
-//     return response($id.'-'.$group,200);
-// });
-
-// Route::get('/request-json',function(){
-//     return response()->json(['name'=>'PinoyfreeCoder','age'=>22,]);
-// });
-
-//  Route::get('/request-download',function(){
-//     $path = public_path().'/sample.txt';
-//     $name = 'sample.txt';
-//     $headers = array(
-//         'Content-type: application/text-plain'
-//     );
-//     return response()->download($path, $name, $headers);
-// });
-
-
-// // Route::get('/users',[UserController::class, 'index']);
 Route::get('/register',[UserController::class,'register']);
 Route::get('/', function (){
-    return view('user.dashboard');
+    return view('user.inventory')->with('inventories',Property::all());
 })->name('dashboard');
 Route::get('/dashboard', function (){
     return view('user.dashboard');
-})->name('dashboard');
+})->middleware(['auth'])->name('dashboard');;
 
 
 
@@ -99,3 +68,23 @@ Route::get('/inventory',function(){
 
     return view('user.inventory')->with('inventories', Property::all());
 })->name('inventories');
+
+//Issuance
+
+Route::get('/issuance',function(){
+    return view('user.issuance');
+})->name('issuance');
+
+// Register
+Route::get('/register',function(){
+    return view('user.register');
+})->name('register');
+Route::post('/store',[UserController::class,'store']);
+//login
+Route::get('/login',function(){
+    return view('user.login');
+})->name('login');
+Route::post('/login/process',[UserController::class, 'process']);
+
+
+Route::post('/logout',[UserController::class, 'logout']);

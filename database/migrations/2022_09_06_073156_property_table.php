@@ -21,10 +21,12 @@ return new class extends Migration
             $table->integer('price');
             $table->integer('quantity');
             $table->string('classification');
+            $table->string('category');
             $table->string('property_number');
             $table->string('property_name');
             $table->longText('description');
-          
+            // $table->unsignedBigInteger('employee_id');
+            // $table->foreign('employee_id')->reference('id')->on('employee') ;           
             $table->timestamps();
         });
     }

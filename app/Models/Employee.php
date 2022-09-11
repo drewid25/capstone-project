@@ -14,9 +14,14 @@ class Employee extends Model
     protected $fillable = [
         'ID_number',
         'employee_name',
+        'email_address',
         'department',
         
     ];
+
+    public function property(){
+        return $this->hasMany(Property::class);
+    }
    
 
 }

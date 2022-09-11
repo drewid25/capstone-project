@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string("ID_number");
             $table->string("employee_name");
+            $table->string('email_address');
             $table->string("department");
             $table->timestamps();
         });

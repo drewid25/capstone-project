@@ -19,10 +19,13 @@ class Property extends Model
         'quantity',
         'classification',
         'property_number',
+        'category',
         'property_name',
         'description',
        
     ];
-   
+   public function employee(){
+    return $this->belongsTo(Employee::class);
+   }
 
 }

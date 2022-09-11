@@ -1,8 +1,8 @@
- <div class="bg-button-blue col-span-4 border-2 border-black h-full shadow-2xl p-6">
-      <h1 class="text-white font-bold text-4xl py-6 text-center">Add Employee</h1>
-       <form action="{{ route('addemployeelist')}}" method="POST" type="submit" class="py-6 px-2 bg-accent-blue h-50 flex flex-col w-5/12 mx-auto shadow-2xl"  >
+ <div class="bg-letter col-span-4 border border-grey h-screen shadow-2xl p-6">
+      <h1 class="text-accent-blue font-bold text-4xl py-6 text-center">Add Employee</h1>
+       <form action="{{ route('addemployeelist')}}" method="POST" type="submit" class="py-6 px-2 bg-accent-blue h-50 flex flex-col w-6/12 mx-auto shadow-2xl"  >
          @csrf
-          <div>
+         
               <div class="flex flex-col">
                   <div class="p-3 flex flex-col bg-accent-blue w-50">
                       <label for="" class="text-letter mr-3">ID Number</label>
@@ -11,6 +11,10 @@
                   <div class="p-3 flex flex-col bg-accent-blue w-50">
                     <label for="" class="text-letter mr-3">Employee Name</label>
                     <input type="text" name="employee_name" class="focus-border-accent-blue">
+                 </div>
+                  <div class="p-3 flex flex-col bg-accent-blue w-50">
+                    <label for="" class="text-letter mr-3">Email Address</label>
+                    <input type="email" name="email_address" class="focus-border-accent-blue">
                  </div>
            
                  
@@ -22,7 +26,14 @@
                       <select name="department"
                        id="" class="w-50" >
                       <option value="IT Department" class="text-gray-600">IT Department</option>
-                      <option value="Operations">Operations</option>
+                      <option value="Property Division">Property Division</option>
+                      <option value="Accounting Division">Accounting Department</option>
+                      <option value="Finance Division">Finance Division</option>
+                      <option value="Personnel Division">Personnel</option>
+                      <option value="Records Division">Records Division</option>
+                      <option value="Training Division">Training Department</option>
+                      <option value="Maintenance Division">Maintenance Division</option>
+                      <option value="Leave Division">Leave Division</option>
                       </select>
                   </div>
                 
@@ -36,11 +47,13 @@
                           " id="property">>TABLET</option>
                           {{-- </select>  --}}
                      
-                </div>
+             
             
                  
-  
-                  <button class="text-white bg-button-blue" type="submit">Add</button>
+  <div class="text-center">
+    <button class="text-white bg-button-blue w-24 text-center" type="submit">Add</button>
+  </div>
+                 
           
          
       
