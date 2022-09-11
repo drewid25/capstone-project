@@ -1,10 +1,11 @@
+
 @include('partials.header')
  <x-nav/>
  <div class="container py-6 px-6 bg-letter px- h-screen mx-auto  grid grid-cols-3 border-2 border-accent-blue grid-flow-col ">
     <x-sidebar/>
  
     <div class="bg-white shadow-2xl py-6  col-span-4 border border-border-gray">
-        <h1 class="text-2xl font-bold text-center mb-3 text-accent-blue">INVENTORY LIST</h1>
+        <h1 class="text-2xl font-bold text-center mb-3 text-accent-blue">Inventory List</h1>
         <table class=" border-2 border-border-gray">
             <thead>
                 <tr>

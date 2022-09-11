@@ -18,6 +18,10 @@ class Employee extends Model
         'department',
         
     ];
+
+    public function property(){
+        return $this->hasMany(Property::class);
+    }
    
 
 }

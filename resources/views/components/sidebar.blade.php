@@ -13,8 +13,8 @@
             <i class="fa-solid fa-cart-flatbed mr-2 mb-5"></i></i> Inventory List</a>
         <a href="/employeelist" class="text-letter font-bold">
         <i class="fa-solid fa-sliders text-black mr-2"></i> Employee List</a>
-        <a href="#" class="text-letter font-bold">
-        <i class="fa-solid fa-sliders text-black mr-2"></i> Add Property</a>
+        <a href="/issuance" class="text-letter font-bold">
+        <i class="fa-solid fa-sliders text-black mr-2"></i> Issuance</a>
     
     </div>
 </div>

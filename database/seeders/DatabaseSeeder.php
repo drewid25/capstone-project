@@ -22,6 +22,12 @@ class DatabaseSeeder extends Seeder
         "email_address"=> "andrewidanol@gmail.com",
         "department"=> "IT Department"
        ]);
+       Employee::create([
+        "ID_number"=> 'B13-002',
+        "employee_name"=> 'Bob Kyle Garcia',
+        "email_address"=> "andrewidanol@gmail.com",
+        "department"=> "IT Department"
+       ]);
        
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
