@@ -18,16 +18,30 @@ class UserController extends Controller
     }
 
     public function store(Request $request){
-     $validated = $request->validate([
+      $request->validate([
     "company_name"=>['required','min:4'],
-    "company_logo"=>'required',
+    "company_logo"=>'required|mimes:jpg,png,jpeg|max:5048',
     "email" =>['required', 'email', Rule::unique('users','email')],
     "user_name"=>['required','min:4'],
-    "user_image"=>'required',
+    "user_image"=>'required|mimes:jpg,png,jpeg|max:5048',
     "password" => 'required|confirmed|min:6'
    ]);
-   $validated['password'] = Hash::make( $validated['password']);
-   $user =User::create($validated);
+   $request['password'] = Hash::make( $request['password']);
+   
+   $newLogoName = time() . '-' .$request->company_name. "."  .$request->company_logo->extension();
+
+ 
+   $newUserImage = time() . '-' .$request->user_name. "."  .$request->user_image->extension();
+   $request->company_logo->move(public_path('images'),$newLogoName);
+   $request->user_image->move(public_path('images'),$newUserImage);
+   $user =User::create([
+      'company_name'=>$request->input('company_name'),
+      'company_logo'=> $newLogoName,
+      'email'=>$request->input('email'),
+      'user_name'=>$request->input('user_name'),
+      'user_image'=>$newUserImage ,
+      'password'=>$request->input('password'),
+    ]);
 
 
    auth()->login($user);

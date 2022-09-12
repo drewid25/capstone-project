@@ -9,7 +9,7 @@
          
         Sign Up
         </h1>
-        <form action="/store" method="POST" class="mt-6">
+        <form action="/store" method="POST" enctype="multipart/form-data" class="mt-6">
           @csrf
           <div class="mb-2">
             <label

@@ -33,10 +33,10 @@ use App\Models\User;
 
 Route::get('/register',[UserController::class,'register']);
 Route::get('/', function (){
-    return view('user.inventory')->with('inventories',Property::all());
+    return view('admin.inventory')->with('inventories',Property::all());
 })->name('dashboard');
 Route::get('/dashboard', function (){
-    return view('user.dashboard');
+    return view('admin.dashboard')->with('user',User::all());
 })->middleware(['auth'])->name('dashboard');;
 
 
@@ -44,7 +44,7 @@ Route::get('/dashboard', function (){
 // Property Routes
 Route::post('/createproperty',[PropertyController::class,'create'])->name('createproperty');
 Route::get('/addproperty',function(){
-    return view('user.addproperty');
+    return view('admin.addproperty');
 });
 
 
@@ -53,11 +53,11 @@ Route::get('/addproperty',function(){
 // Employee Routes
 
 Route::get('/addemployee',function(){
-    return view('user.addemployee');
+    return view('admin.addemployee');
 })->name('addemployee');
 
 Route::get('/employeelist',function (){
-    return view('user.employeelist')->with('employees', Employee::all());
+    return view('admin.employeelist')->with('employees', Employee::all());
 })->name('employeelist');
 Route::post('/addemployeelist',[EmployeeController::class,'create'])->name('addemployeelist');
 
@@ -66,23 +66,23 @@ Route::post('/addemployeelist',[EmployeeController::class,'create'])->name('adde
 
 Route::get('/inventory',function(){
 
-    return view('user.inventory')->with('inventories', Property::all());
+    return view('admin.inventory')->with('inventories', Property::all());
 })->name('inventories');
 
 //Issuance
 
 Route::get('/issuance',function(){
-    return view('user.issuance');
+    return view('admin.issuance');
 })->name('issuance');
 
 // Register
 Route::get('/register',function(){
-    return view('user.register');
+    return view('admin.register');
 })->name('register');
 Route::post('/store',[UserController::class,'store']);
 //login
 Route::get('/login',function(){
-    return view('user.login');
+    return view('admin.login');
 })->name('login');
 Route::post('/login/process',[UserController::class, 'process']);
 
