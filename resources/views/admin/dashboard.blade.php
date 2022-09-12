@@ -1,7 +1,7 @@
 
 @include('partials.header')
- 
-     <div class="container p-6 bg-gray h-screen mx-auto mt-10 grid grid-cols-3  grid-flow-col ">
+     <x-nav/>
+     <div class="container bg-letter py-6 px-6 h-full mx-auto grid grid-cols-3  grid-flow-col ">
      <x-sidebar/>
      <x-table/>
      <x-rightbar/>

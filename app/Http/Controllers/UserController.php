@@ -56,7 +56,7 @@ public function process(Request $request){
    if(auth()->attempt($validated)){
       $request->session()->regenerate();
 
-      return redirect('/')->with('message', 'Welcome'.$validated['user_name']. '!');
+      return redirect('/dashboard')->with('message', 'Welcome'.$validated['user_name']. '!');
    }
 }
 public function logout(Request $request){

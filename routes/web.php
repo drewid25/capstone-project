@@ -33,10 +33,10 @@ use App\Models\User;
 
 Route::get('/register',[UserController::class,'register']);
 Route::get('/', function (){
-    return view('admin.inventory')->with('inventories',Property::all());
+    return view('landingpage');
 })->name('dashboard');
 Route::get('/dashboard', function (){
-    return view('admin.dashboard')->with('user',User::all());
+    return view('admin.dashboard')->with('user',User::all())->with('inventories',Property::all());
 })->middleware(['auth'])->name('dashboard');;
 
 
