@@ -18,7 +18,7 @@
                 <a href="/login" class="text-letter  hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Sign In</a>
   
                 <a href="/register" class="text-letter hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Sign Up</a>
-                <a href="/logout" class="text-letter  hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">logout</a>
+               
               </div>
             </div>
           </div>
