@@ -26,10 +26,7 @@
 
         <i class="fa-solid fa-address-book text-grey mr-2 mb-5"></i>Employee List</a>
         </div>
-        <div class="hover:bg-button-blue hover:text-white rounded-r-full text-left hover:indent-4 pt-3">
-        <a href="#" class="text-letter font-bold">
-        <i class="fa-solid fa-sliders text-grey mr-2 mb-5"></i>Add Property</a>
-        </div>
+      
 
 
     </div>

@@ -1,14 +1,14 @@
 <?php
 
 use App\Http\Controllers\PropertyController;
-use App\Http\Controllers\StudentController;
+
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\EmployeeController;
-use Illuminate\Http\Request;
+
 use Illuminate\Support\Facades\Route;
 use App\Models\Property;
 use App\Models\Employee;
-use App\Models\User;
+use App\Models\Admin;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,12 +31,12 @@ use App\Models\User;
 // Route::redirect('/welcome','/')
 
 
-Route::get('/register',[UserController::class,'register']);
+// Route::get('/register',[UserController::class,'register']);
 Route::get('/', function (){
     return view('landingpage');
 })->name('dashboard');
 Route::get('/dashboard', function (){
-    return view('admin.dashboard')->with('user',User::all())->with('inventories',Property::all());
+    return view('admin.dashboard')->with('inventories',Property::all());
 })->middleware(['auth'])->name('dashboard');;
 
 
@@ -80,7 +80,7 @@ Route::get('/register',function(){
     return view('admin.register');
 })->name('register');
 Route::post('/store',[UserController::class,'store']);
-//login
+//admin
 Route::get('/login',function(){
     return view('admin.login');
 })->name('login');
@@ -88,3 +88,27 @@ Route::post('/login/process',[UserController::class, 'process']);
 
 
 Route::post('/logout',[UserController::class, 'logout']);
+
+//employee
+
+Route::get('/employee/login',function(){
+    return view('employee.login');
+});
+
+Route::get('/employee/dashboard',function(){
+    return view('employee.dashboard');
+});
+
+Route::get('/employee/profile', function(){
+    return view('employee.profile');
+});
+Route::get('/employee/property-transfer', function(){
+    return view('employee.transfer-property');
+});
+Route::get('/employee/property-return', function(){
+    return view('employee.return-property');
+});
+Route::get('/employee/change-password
+', function(){
+    return view('employee.changepassword');
+});

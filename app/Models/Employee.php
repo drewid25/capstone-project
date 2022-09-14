@@ -15,6 +15,8 @@ class Employee extends Model
         'ID_number',
         'employee_name',
         'email_address',
+        'login_password',
+        'employee_image',
         'department',
         
     ];
