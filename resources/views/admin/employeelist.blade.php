@@ -1,7 +1,7 @@
 @include('partials.header')
-     <x-nav/>
+     <x-adminnav/>
      <div class="container px-6 py-10 bg-white h-full mx-auto  grid grid-cols-3  grid-flow-col ">
-     <x-sidebar/>
+     <x-adminsidebar/>
     
      <div class="bg-white shadow-2xl py-6 h-screen col-span-4 border border-border-gray overflow-auto">
         <h1 class="text-2xl font-bold text-center mb-3 text-accent-blue">LIST OF EMPLOYEES</h1>
@@ -48,7 +48,7 @@
     
     
     </div>
-     <x-rightbar/>
+     <x-adminrightbar/>
  
     </div>
 

@@ -43,10 +43,10 @@
               <div class="flex">
                 <button type="button" class="flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
                   <span class="sr-only">Open user menu</span>
-                  <img class="h-8 w-8 rounded-full" src="{{asset('images/'. auth()->user()->user_image)}}" alt="">
+                  <img class="h-8 w-8 rounded-full" src="{{asset('images/'. auth()->user()->admin_image)}}" alt="">
                   <h1></h1>
                 </button>
-                <h3 class="text-letter ml-2 items-center">{{auth()->user()->user_name}}</h3>
+                <h3 class="text-letter ml-2 items-center">{{auth()->user()->admin_name}}</h3>
                 <form action="/logout" method="post">
                   @csrf
                   <button  class="text-letter  hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">logout</button>

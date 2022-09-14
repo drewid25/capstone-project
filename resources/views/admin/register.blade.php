@@ -68,31 +68,31 @@
           </div>
           <div class="mb-2">
             <label
-              for="user_name"
+              for="admin_name"
               class="block text-sm font-semibold text-gray-800"
             >
-              UserName:
+              Admin Name:
             </label>
             <input
               type="text"
               class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full 
                 py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500"
-                name="user_name"
+                name="admin_name"
               required
             />
-            @error('user_name')
+            @error('admin_name')
             <p class="text-red-500 text-xs p-1">
                 {{$message}}
             </p>
             @enderror  
           </div>
           <div class="mb-2">
-            <label for="user_image" class="block text-sm font-semibold text-gray-800">
+            <label for="admin_image" class="block text-sm font-semibold text-gray-800">
               User Photo:
             </label>
             <input type="file" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full 
-                  py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500" name="user_image" required />
-            @error('user_image')
+                  py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500" name="admin_image" required />
+            @error('admin_image')
             <p class="text-red-500 text-xs p-1">
               {{$message}}
             </p>
