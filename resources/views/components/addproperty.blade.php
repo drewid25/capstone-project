@@ -111,7 +111,7 @@
                 
       
         <div class="text-center">
-          <button class="text-white bg-accent-blue w-24 rounded-lg font-bold hover:bg-slate-700" type="submit" >ADD</button>
+          <button class="text-white bg-accent-blue w-24 rounded-lg font-bold hover:bg-white hover:text-button-blue" type="submit" >ADD</button>
         </div>
      
         
