@@ -1,3 +1,3 @@
-<div class="col-span-2">
+<div class="col-span-6 h-full w-full">
     <h1>Home</h1>
 </div>

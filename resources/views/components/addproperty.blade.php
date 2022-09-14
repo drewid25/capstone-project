@@ -1,32 +1,30 @@
-
-
-  <div class="bg-button-blue col-span-6 border-2 border-black h-screen w-full shadow-2xl p-6">
-    <h1 class="text-white font-bold text-4xl mb-3 text-center">Add Property</h1>
+  <div class="bg-white col-span-6 h-full w-full p-6 border border-border-gray">
+    <h1 class="text-accent-blue font-bold text-4xl mb-3 text-center">Add Property</h1>
     <div class="bg-white h-8/12 p-6">
-      <form action="{{ route('createproperty')}}" method="POST" type="submit" class="py-6 px-2 bg-accent-blue h-50 flex flex-col mx-auto shadow-2xl"  >
+      <form action="{{ route('createproperty')}}" method="POST" type="submit" class="py-6 px-2 bg-button-blue h-50 flex flex-col mx-auto shadow-2xl"  >
         @csrf
   
              <div class="flex flex-row">
-                 <div class="p-3 flex flex-col bg-accent-blue w-full">
+                 <div class="p-3 flex flex-col bg-button-blue w-full">
                      <label for="" class="text-letter mr-3">Supplier Name</label>
                      <input type="text" name="supplier_name" class="focus-border-accent-blue">
                  </div>
-                 <div class="p-3 flex flex-col bg-accent-blue w-full">
+                 <div class="p-3 flex flex-col bg-button-blue w-full">
                      <label for="" class="text-letter mr-3">Invoice Number</label>
                      <input type="text" name="invoice_number">
                  </div>
                 </div>
                 <div class="flex flex-row">
-                 <div class="p-3 flex flex-col bg-accent-blue w-50">
+                 <div class="p-3 flex flex-col bg-button-blue w-50">
                      <label for="" class="text-letter mr-3">Date Acquired</label>
                      <input type="date" name="date_acquired">
                  </div>
                  <div class="flex flex-row ">
-                     <div class="p-3 flex flex-col bg-accent-blue">
+                     <div class="p-3 flex flex-col bg-button-blue">
                          <label for="" class="text-letter mr-3">Price</label>
                          <input type="text" class="w-50" name="price">
                      </div>
-                     <div class="p-3 flex flex-col bg-accent-blue ">
+                     <div class="p-3 flex flex-col bg-button-blue ">
                          <label for="" class="text-letter mr-3">Quantity</label>
                          <input type="number" class="w-24" name="quantity">
                      </div>
@@ -35,7 +33,7 @@
                 </div>
               
                  
-                 <div class="p-3 flex flex-col bg-accent-blue">
+                 <div class="p-3 flex flex-col bg-button-blue">
                      <label for="" class="text-letter mr-3">Classification</label>
                      <select name="classification"
                       id="" class="w-50" >
@@ -45,7 +43,7 @@
                      <option value="MOTOR VEHICLE">MOTOR VEHICLE</option>
                      </select>
                  </div>
-                 <div class="p-3 flex flex-col bg-accent-blue">
+                 <div class="p-3 flex flex-col bg-button-blue">
                      <label for="" class="text-letter mr-3">Category</label>
                      <select name="classification"
                       id="" class="w-50" >
@@ -61,11 +59,11 @@
                  </div>
                
                  <div class="flex flex-row">
-                     <div class="p-3 flex flex-col bg-accent-blue">
+                     <div class="p-3 flex flex-col bg-button-blue">
                          <label for="" class="text-letter mr-3">Property Number</label>
                          <input type="text" name="property_number">
                      </div>
-                     <div class="p-3 flex flex-col bg-accent-blue">
+                     <div class="p-3 flex flex-col bg-button-blue">
                          <label for="" class="text-letter mr-3">Property Name</label>
                          <input type="text" name="property_name">
                          {{-- <select name="property_name" id="property">
@@ -113,7 +111,7 @@
                 
       
         <div class="text-center">
-          <button class="text-white bg-button-blue w-24 rounded-lg font-bold" type="submit">ADD</button>
+          <button class="text-white bg-accent-blue w-24 rounded-lg font-bold hover:bg-slate-700" type="submit" >ADD</button>
         </div>
      
         

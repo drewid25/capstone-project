@@ -1,4 +1,4 @@
- <div class="bg-letter col-span-4 border border-grey h-screen shadow-2xl p-6">
+ <div class="bg-letter col-span-6 border border-grey h-screen shadow-2xl p-6">
       <h1 class="text-accent-blue font-bold text-4xl py-6 text-center">Add Employee</h1>
        <form action="{{ route('addemployeelist')}}" method="POST" type="submit" class="py-6 px-2 bg-accent-blue h-50 flex flex-col w-6/12 mx-auto shadow-2xl"  >
          @csrf
@@ -51,7 +51,7 @@
             
                  
   <div class="text-center">
-    <button class="text-white bg-button-blue w-24 text-center" type="submit">Add</button>
+    <button class=" hover:bg-gray-700 hover:text-white text-white bg-button-blue w-24 text-center hover" type="submit">Add</button>
   </div>
                  
           
