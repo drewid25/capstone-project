@@ -3,7 +3,7 @@
    
 
 
-<div class="h-full border bg-accent-blue border-border-gray py-5 px-5  border-r-none">
+<div class="h-full border bg-accent-blue border-border-gray py-5 px-5 col-span-2 border-r-none">
 
 
 
@@ -25,6 +25,11 @@
         <a href="/employeelist" class="text-letter font-bold">
 
         <i class="fa-solid fa-address-book text-grey mr-2 mb-5"></i>Employee List</a>
+        </div>
+        <div class="hover:bg-button-blue hover:text-white rounded-r-full text-left hover:indent-4 pt-3">
+        <a href="/issuance" class="text-letter font-bold">
+
+        <i class="fa-solid fa-address-book text-grey mr-2 mb-5"></i>Issuance</a>
         </div>
       
 

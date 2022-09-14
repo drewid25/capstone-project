@@ -21,4 +21,5 @@ class EmployeeController extends Controller
    
     return redirect()->route('employeelist')->with('success', 'New employee added.');
    }
+  
 }

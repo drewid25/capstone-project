@@ -96,11 +96,11 @@ Route::get('/employee/login',function(){
 });
 
 Route::get('/employee/dashboard',function(){
-    return view('employee.dashboard');
+    return view('employee.dashboard')->with('user', auth()->user());
 });
 
 Route::get('/employee/profile', function(){
-    return view('employee.profile');
+    return view('employee.profile')->with('user', auth()->user());
 });
 Route::get('/employee/property-transfer', function(){
     return view('employee.transfer-property');

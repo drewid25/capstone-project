@@ -16,6 +16,7 @@ class PropertyController extends Controller
     $property->price = $request->price;
     $property->quantity = $request->quantity;
     $property->classification = $request->classification;
+    $property->category = $request->category;
     $property->property_number= $request->property_number;
     $property->property_name = $request->property_name;
    

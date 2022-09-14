@@ -1,28 +1,12 @@
-<div class="min-h-full container mx-auto ">
+<div class="min-h-full container mx-auto py-6">
     <nav class="bg-accent-blue">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="flex h-16 items-center justify-between">
           <div class="flex items-center">
-            <div class="flex-shrink-0 text-letter font-bold">
           
-        
-       
-             <div class="flex mt-3 gap-2 items-center justify-center">
-              
-             <img class="w-10 h-10 rounded-full"src="" alt="">
-              <h2> </h2>
-             </div>
-             
-            </div>
             <div class="hidden md:block">
               <div class="ml-10 flex items-baseline space-x-4">
-                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <a href="/dashboard" class="bg-button-blue text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Dashboard</a>
-  
-                <a href="/employeelist" class="text-letter hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Employees</a>
-  
-                
-  
+            
                 
                 
               </div>
@@ -43,7 +27,7 @@
                 <div class="flex">
                   <button type="button" class="flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
                     <span class="sr-only">Open user menu</span>
-                    <img class="h-8 w-8 rounded-full" src="" alt="">
+                    <img class="h-8 w-8 rounded-full" src="{{asset('images/'. $user->admin_image)}} " alt="">
                     <h1></h1>
                   </button>
                   <h3 class="text-letter ml-2 items-center"></h3>

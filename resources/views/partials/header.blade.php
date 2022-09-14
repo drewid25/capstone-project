@@ -18,4 +18,4 @@
     @vite('resources/css/app.css')
     <title>Property Management System</title>
 </head>
-<body class="bg-button-blue ">
+<body class="bg-grey ">
