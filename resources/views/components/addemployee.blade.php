@@ -1,7 +1,9 @@
+
  <div class="bg-accent-blue  border-r-2 border-l-2 border-r-letter border-l-letter h-full shadow-2xl py-6 px-3 col-span-7 ">
+
       <h1 class="text-letter font-bold text-2xl  mb-3 text-center">Add Employee</h1>
       <div class="bg-white h-8/12 p-6 w-8/12 mx-auto shadow-2xl rounded-lg py-4 px-4">
-       <form action="{{ route('addemployeelist')}}" method="POST" enctype="multipart/form-data" type="submit" class="py-6 px-2 bg-accent-blue h-50 flex flex-col w-12/12 mx-auto shadow-2xl"  >
+       <form action="{{ route('addemployeelist') }}" method="POST" enctype="multipart/form-data" type="submit" class="py-6 px-2 bg-accent-blue h-50 flex flex-col w-12/12 mx-auto shadow-2xl"  >
          @csrf
          
               <div class="flex flex-col">

@@ -15,9 +15,10 @@ return new class extends Migration
     {
         Schema::create('employees', function (Blueprint $table) {
             $table->id();
-            $table->string("ID_number");
+            $table->string("ID_number")->unique();
             $table->string("employee_name");
-            $table->string('email_address');
+            $table->string('email_address')->unique();
+          
             $table->string("department");
             $table->timestamps();
         });
