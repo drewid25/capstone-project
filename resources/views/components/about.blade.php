@@ -2,18 +2,18 @@
 <div class="container my-24 px-6 mx-auto">
 
   <!-- Section: Design Block -->
-  <section class="mb-32 text-gray-800">
+  <section class="mb-32 text-accent-blue">
     <div class="flex flex-wrap">
       <div class="grow-0 shrink-0 basis-auto mb-12 md:mb-0 w-full md:w-7/12 px-3 lg:px-6">
-        <h2 class="text-3xl font-bold mb-6">About the System</h2>
+        <h2 class="text-3xl text-letter font-bold mb-6">About the System</h2>
         <p class="font-bold mb-2">Anim pariatur cliche reprehenderit?</p>
-        <p class="text-gray-500 mb-6">
+        <p class="text-letter mb-6">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt
           autem numquam dolore molestias aperiam culpa alias veritatis
           architecto eos, molestiae vitae ex eligendi libero eveniet
           dolorem, doloremque rem aliquid perferendis.
         </p>
-        <p class="text-gray-500 mb-6">
+        <p class="text-letter mb-6">
           Distinctio corporis, iure facere ducimus quos consectetur ipsa ut
           magnam autem doloremque ex! Id, sequi. Voluptatum magnam sed fugit
           iusto minus et suscipit? Minima sunt at nulla tenetur, numquam
@@ -22,14 +22,14 @@
         </p>
           Praesentium voluptatibus temporibus consequatur non aspernatur?
         </p>
-        <p class="text-gray-500 mb-6">
+        <p class="text-letter mb-6">
           Minima sunt at nulla tenetur, numquam unde quod modi magnam ab
           deserunt ipsam sint aliquid dolores libero repellendus cupiditate
           mollitia quidem dolorem.
         </p>
       </div>
       <div class="grow-0 shrink-0 basis-auto w-full md:w-5/12 px-3 lg:px-6">
-        <p class="font-bold mb-6">Any queries or concerns? Please feel free to message us and we are happy to help you!</p>
+        <p class="font-bold text-letter mb-6">Any queries or concerns? Please feel free to message us and we are happy to help you!</p>
         <form>
           <div class="form-group mb-6">
             <input type="text" class="form-control block
@@ -88,19 +88,19 @@
             w-full
             px-6
             py-2.5
-            bg-blue-600
-            text-white
+            bg-button-blue
+            text-gray-text
             font-medium
             text-xs
             leading-tight
             uppercase
             rounded
             shadow-md
-            hover:bg-blue-700 hover:shadow-lg
+            hover:bg-accent-blue hover:text-white hover:shadow-lg
             focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
             active:bg-blue-800 active:shadow-lg
             transition
-            duration-150
+            duration-200
             ease-in-out">Send</button>
         </form>
       </div>

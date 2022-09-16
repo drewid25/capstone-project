@@ -7,13 +7,12 @@
         </thead>
         <tbody class="bg-slate-100 p-2 rounded-b-lg">
             <tr class="justify flex flex-col text-gray-text">
-                <td>Please fill in:</td>
-                <td class="list-disc text-gray-text"><strong class="text-gray-text">ID Number</strong></td>
-                <td><strong>Employee Name</strong></td>
-            </tr>
-            <tr class="pt-5 justify flex flex-col text-gray-text">
-                <td>Select:</td>
-                <td class="text-gray-text"><strong>DEPARTMENT/OFFICE</strong></td>
+                <th align ="left">Please Select:</th>
+                <td class = "pb-0"> - Add Property</strong></td>
+                <td class = "pb-0"> - Add Employee</td>
+                <td class = "pb-0"> - Inventory List</td>
+                <td class = "pb-0"> - Employee List</td>
+                <td class = "pb-0"> - Issuance</td>
             </tr>
         </tbody>
     </table>

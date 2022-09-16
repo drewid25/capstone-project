@@ -20,7 +20,7 @@
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
               <a href="/dashboard" class="bg-button-blue text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Dashboard</a>
 
-              <a href="/employeelist" class="text-letter hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Employees</a>
+              <a href="/employeelist" class="text-letter hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 transform">Employees</a>
 
               
 
@@ -44,7 +44,7 @@
                 <h3 class="text-letter ml-3 items-center">{{auth()->user()->admin_name}}</h3>
                 <form action="/logout" method="post">
                   @csrf
-                  <button  class="text-letter ml-3  hover:bg-letter hover:text-accent-blue bg-button-blue hover:text-white px-3 py-2 rounded-md text-sm font-medium">logout</button>
+                  <button class="text-letter ml-3  hover:bg-letter hover:text-accent-blue bg-button-blue transition-colors duration-200 transform px-3 py-2 rounded-md text-sm font-medium">logout</button>
                 </form>
                 
               </div>

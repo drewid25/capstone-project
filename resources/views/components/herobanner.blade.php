@@ -14,7 +14,7 @@
         <h2 class="font-semibold text-4xl mb-4">Title Natin Wala pa</h2>
         <h4 class="font-semibold text-xl mb-6">Property Management</h4>
         <a
-          class="inline-block px-7 py-3 mb-1 border-2 border-gray-200 text-gray-200 font-medium text-sm leading-snug uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
+          class="inline-block px-7 py-3 mb-1 border-2 border-gray-200 text-gray-200 font-medium text-sm leading-snug uppercase rounded hover:bg-accent-blue hover:bg-opacity-50 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
           href="#!"
           role="button"
           data-mdb-ripple="true"
