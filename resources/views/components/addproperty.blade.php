@@ -109,8 +109,16 @@
                        ></textarea>
                      </div>
                    </div>
-               
-                
+                   <div class="block relative mb-5">
+                    <span class="text-xs font-medium text-letter">Select Employee</span>
+                    <select id="student" required name="employee_id" class="block appearance-none w-full bg-white border border-gray-200 px-4 py-2 pr-8 rounded-lg shadow leading-tight focus:outline-none focus:shadow-outline">
+                        @foreach($employees as $employee)
+                        <option value="{{ $employee->id }}">Id number:{{$employee->ID_number}} {{ $employee->employee_name }} </option>
+                        @endforeach
+                    </select>
+                    </div>     
+                   
+          
       
         <div class="text-center">
           <button class="text-accent-blue bg-letter hover:bg-button-blue hover:text-letter w-24 rounded-lg font-bold" type="submit">ADD</button>

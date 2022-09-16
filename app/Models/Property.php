@@ -22,6 +22,7 @@ class Property extends Model
         'category',
         'property_name',
         'description',
+        'employee_id'
        
     ];
    public function employee(){

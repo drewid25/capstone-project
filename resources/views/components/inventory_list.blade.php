@@ -33,7 +33,7 @@
                    <td class='border-2 border-border-gray text-grey text-center text-sm '>{{$inventory->quantity}}</td>
                    <td class='border-2 border-border-gray text-grey text-left text-sm '>{{$inventory->property_name}}</td>
                    <td class='border-2 border-border-gray text-grey text-left text-sm '>{{$inventory->description}}</td>
-                   <td class='border-2 border-border-gray  text-grey text-center text-sm  '></td>
+                   <td class='border-2 border-border-gray  text-grey text-center text-sm  '>{{$inventory->employee->employee_name}}</td>
                 
                </tr>
                @endforeach
