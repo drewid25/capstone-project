@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Property;
 use App\Models\Employee;
 use App\Models\Admin;
+use Illuminate\Http\Request;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -127,5 +129,12 @@ function($id){
 
 
 Route::get('/search',[PropertyController::class, 'search']);
+
+Route::post('getproperties',function(Request $request){
+    $employee = Employee::find($request->id);
+
+    $properties = $employee->property;
+    return json_encode($properties);
+})->name('getproperties');
 
 
