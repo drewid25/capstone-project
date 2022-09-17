@@ -4,7 +4,7 @@
      <x-adminsidebar/>
     
     <x-employeelist :employees=$employees/>
-     <x-adminrightbar/>
+     <x-adminrightbaremployeelist/>
  
     </div>
 
