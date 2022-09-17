@@ -59,6 +59,7 @@ public function process(Request $request){
       return redirect('/dashboard')->with('message', 'Welcome back!'. $validated['admin_name']. "!");
    }
    else{
+     
 return redirect('/login')->with('message', "Admin name does not exist!");
    }
 }

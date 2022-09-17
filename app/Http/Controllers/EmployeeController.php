@@ -62,20 +62,20 @@ public function create(Request $request){
    }
 
   
-   public function process(Request $request){
-      $validated = $request->validate([
-         "ID_number" => 'required',
-         "login_password" => 'required'
-      ]);
-      if(auth()->attempt($validated)){
-         $request->session()->regenerate();
+   // public function process(Request $request){
+   //    $validated = $request->validate([
+   //       "ID_number" => 'required',
+   //       "login_password" => 'required'
+   //    ]);
+   //    if(auth()->attempt($validated)){
+   //       $request->session()->regenerate();
    
-         return redirect('/employee/dashboard')->with('message', 'Welcome back!'. $validated['ID_number']. "!");
-      }
-      else{
-   return redirect('/login')->with('message', "Admin name does not exist!");
-      }
-   }
+   //       return redirect('/employee/dashboard')->with('message', 'Welcome back!'. $validated['ID_number']. "!");
+   //    }
+   //    else{
+   // return redirect('/login')->with('message', "Admin name does not exist!");
+   //    }
+   // }
 
    
   

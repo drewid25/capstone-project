@@ -57,7 +57,7 @@ Route::get('/addemployee',function(){
 })->name('addemployee');
 
 Route::get('/employeelist',function (){
-    return view('admin.employeelist')->with('employees', Employee::all());
+    return view('admin.employeelist')->with('employees',Employee::all());
 })->name('employeelist');
 Route::post('/addemployeelist',[EmployeeController::class,'create'])->name('addemployeelist');
 

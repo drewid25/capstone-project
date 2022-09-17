@@ -1,3 +1,4 @@
+
 <div class="bg-accent-blue shadow-2xl py-6 px-3 h-screen col-span-7 border-r-2 border-l-2 border-r-letter overflow-auto">
     <h1 class="text-2xl font-bold text-center mb-3 text-letter">LIST OF EMPLOYEES</h1>
    <div class="bg-white py-6 px-3 h-96 py-4 px-4 rounded-lg shadow-2xl">
@@ -27,15 +28,17 @@
             </tr>
         </thead>
         <tbody>
-      
+        
             @foreach($employees as $employee)
+          
             <tr >
                 <td class='border-2 border-border-gray text-grey text-left text-sm'>{{$employee->ID_number}}</td>
                 <td class='border-2 border-border-gray text-grey text-left text-sm'>{{$employee->employee_name}}</td>
                 <td class='border-2 border-border-gray text-grey text-left text-sm'>{{$employee->department}}</td>
                 <td class='border-2 border-border-gray text-grey text-left text-sm'>{{$employee->email_address}}</td>
+          
                 <td class='border-2 border-border-gray text-grey text-center text-sm'>
-
+                   
                     <button type="button" class="px-6
                  
                     bg-button-blue
@@ -92,7 +95,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($employee->property as $property)
+                      
+                @foreach($employee->property as $property)
+            
+           
                         <tr>
                         
                              
@@ -108,7 +114,12 @@
                            
                        
                         </tr>
+               
+
+                     
                         @endforeach
+                      
+                 
                 </table>
             </div>
       
@@ -117,9 +128,21 @@
                     
 
                 <td class='border-2 border-border-gray text-grey text-left text-sm'>
-                   <form onsubmit="return confirm('Do you really want to update this employee')">
+                   <form onsubmit="return confirm('Do you really want to update this employee')" class="text-center rounded-lg p-3">
                 @csrf
-                <a href="{{url('employeeupdate/'.$employee->id)}}">
+                <a href="{{url('employeeupdate/'.$employee->id)}}" class=" bg-button-blue
+                    text-white
+                    font-medium
+                    text-xs
+                    text-center
+                    leading-tight
+                    uppercase
+                    rounded
+                    shadow-md
+                    px-3
+                    hover:bg-accent-blue hover:shadow-lg
+                    focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
+                    active:bg-blue-800 active:shadow-lg">
                 update
                 </a>
                 </form>
@@ -128,6 +151,7 @@
           
              
             </tr>
+        
             @endforeach
            
           
