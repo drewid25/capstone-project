@@ -1,6 +1,6 @@
-
-<div class="bg-accent-blue shadow-2xl py-6 px-3 h-screen col-span-7 border-r-2 border-l-2 border-r-letter overflow-auto">
+<div class="bg-accent-blue shadow-2xl py-6 px-3 h-full col-span-7 border-r-2 border-l-2 border-r-letter overflow-auto">
     <h1 class="text-2xl font-bold text-center mb-3 text-letter">LIST OF EMPLOYEES</h1>
+
    <div class="bg-white py-6 px-3 h-96 py-4 px-4 rounded-lg shadow-2xl">
     <table class="container border-2 border-border-gray  ">
         <thead>
@@ -39,6 +39,7 @@
                 <td class='border-2 border-border-gray text-grey text-center text-sm'>
                     <button type="button" class="viewProperties px-6
                     
+
                     bg-button-blue
                     text-white
                     font-medium
@@ -53,6 +54,7 @@
                     active:bg-blue-800 active:shadow-lg
                     transition
                     duration-150
+
                     ease-in-out" employeeid="{{$employee->id}}"  data-bs-toggle="modal" data-bs-target="#exampleModal">
                View
               </button>
@@ -108,12 +110,28 @@
                 </td>
               
                
-                    
 
-                <td class='border-2 border-border-gray text-grey text-left text-sm'>
-                   <form onsubmit="return confirm('Do you really want to update this employee')" class="text-center rounded-lg p-3">
-                @csrf
-                <a href="{{url('employeeupdate/'.$employee->id)}}" class=" bg-button-blue
+
+
+                                                </tr>
+
+
+
+                                                @endforeach
+
+
+                                        </table>
+                                    </div>
+
+
+                    </td>
+
+
+                    <td class='border-2 border-border-gray text-grey text-left text-sm'>
+                        <form onsubmit="return confirm('Do you really want to update this employee')"
+                            class="text-center rounded-lg p-3">
+                            @csrf
+                            <a href="{{url('employeeupdate/'.$employee->id)}}" class=" bg-button-blue
                     text-white
                     font-medium
                     text-xs
@@ -126,6 +144,7 @@
                     hover:bg-accent-blue hover:shadow-lg
                     focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
                     active:bg-blue-800 active:shadow-lg">
+
                 update
                 </a>
                
@@ -154,6 +173,7 @@
 </div>
     <div class="text-center mt-5">
         <a href="/addemployee" class="bg-letter text-accent-blue p-2 hover:bg-button-blue hover:text-letter  rounded-lg font-bold">ADD NEW EMPLOYEE</a>
+
     </div>
   
   
