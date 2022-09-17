@@ -1,8 +1,3 @@
-
-
-   
-
-
 <div class="h-full border bg-accent-blue border-border-gray py-5 px-5 col-span-2 border-r-none">
 
 
@@ -30,10 +25,10 @@
         <a href="/issuance" class="text-letter font-bold">
 
         <i class="fa-solid fa-address-book text-white mr-2 mb-5"></i>Issuance</a>
+
         </div>
-      
+
 
 
     </div>
 </div>
-

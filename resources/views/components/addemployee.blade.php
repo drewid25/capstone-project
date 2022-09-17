@@ -1,3 +1,4 @@
+
  <div class="bg-gray-text col-span-7 border-r-2 border-l-2 border-r-letter border-l-letter h-full shadow-2xl py-6 px-3  ">
       <h1 class="text-letter font-bold text-2xl  mb-3 text-center">Add Employee</h1>
       <div class="bg-white h-8/12 p-6 w-8/12 mx-auto shadow-2xl rounded-lg py-4 px-4">
@@ -56,7 +57,20 @@
           
           
        </form>
+
       </div>
-     
-    </div>
-  
+
+      <div class="text-center">
+        <button class=" bg-letter text-accent-blue hover:bg-button-blue hover:text-letter w-24 text-center"
+          type="submit">Add</button>
+      </div>
+
+
+
+
+
+
+    </form>
+  </div>
+
+</div>

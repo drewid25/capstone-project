@@ -70,23 +70,21 @@
                          <input type="text" name="property_name">
                          {{-- <select name="property_name" id="property">
                          <option value="LAPTOP" class="text-gray-600" name="property_name
+
                          " id="property">>LAPTOP COMPUTER</option>
-                         <option value="DESKTOP COMPUTER" name="property_name" id="property">>DESKTOP COMPUTER</option>
-                         <option value="CELLPHONE" name="property_name" id="property">>CELLPHONE</option>
-                         <option value="TABLET" name="property_name
+            <option value="DESKTOP COMPUTER" name="property_name" id="property">>DESKTOP COMPUTER</option>
+            <option value="CELLPHONE" name="property_name" id="property">>CELLPHONE</option>
+            <option value="TABLET" name="property_name
                          " id="property">>TABLET</option>
-                         </select> --}}
-                     </div>
-                 </div>
-           
-                
-                 <div class="flex p-3">
-                     <div class="mb-3 xl:w-full">
-                       <label for="exampleFormControlTextarea1" class="form-label inline-block mb-2 text-white"
-                         >Description</label
-                       >
-                       <textarea
-                         class="
+          </select> --}}
+        </div>
+      </div>
+
+
+      <div class="flex p-3">
+        <div class="mb-3 xl:w-full">
+          <label for="exampleFormControlTextarea1" class="form-label inline-block mb-2 text-white">Description</label>
+          <textarea class="
                            form-control
                            block
                            w-full
@@ -102,6 +100,7 @@
                            ease-in-out
                            m-0
                            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+
                          "
                          id="exampleFormControlTextarea1"
                          rows="3"
@@ -122,12 +121,31 @@
       
         <div class="text-center">
           <button class=" text-lg rounded-full font-bold hover:bg-gray-text text-accent-blue bg-letter hover:text-letter w-24 rounded-lg font-bold" type="submit">ADD</button>
+
         </div>
-     
-        
-         
-      </form>
-    </div>
-    
-   
+      </div>
+      <div class="block relative mb-5 mx-3">
+        <span class="mb-5 text-md font-medium text-letter">Select Employee</span>
+        <select id="student" required name="employee_id"
+          class="block appearance-none w-full bg-white border border-gray-200 mt-2 px-4 py-2 pr-8 rounded-lg shadow leading-tight focus:outline-none focus:shadow-outline">
+          @foreach($employees as $employee)
+          <option value="{{ $employee->id }}">Id number:{{$employee->ID_number}} {{ $employee->employee_name }}
+          </option>
+          @endforeach
+        </select>
+      </div>
+
+
+
+      <div class="text-center">
+        <button class="text-accent-blue bg-letter hover:bg-button-blue hover:text-letter w-24 rounded-lg font-bold"
+          type="submit">ADD</button>
+      </div>
+
+
+
+    </form>
   </div>
+
+
+</div>
