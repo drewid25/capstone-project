@@ -125,7 +125,9 @@ function($id){
 }
 )->name('employeeupdate');
 
-
-Route::get('/search',[PropertyController::class, 'search']);
+Route::get('/search',function(){
+    return view('admin.search')->with('inventories',Property::all());
+});
+Route::get('/search/property',[PropertyController::class, 'search']);
 
 
