@@ -2,9 +2,15 @@
 @include('partials.header')
 <x-landingnav/>
 <x-herobanner/>
-<x-about/>
+<footer class="bg-gray-200 text-center lg:text-left ">
+    <div class="text-gray-700 text-center align-top p-4 bg-accent-blue">
+      © 2022 Copyright:
+      <a class="text-gray-800" href="https://tailwind-elements.com/">Property Management System</a>
+    </div>
+  </footer>
+  
 <x-footer/>
-<h1>Drew</h1>
+
 <!-- wla JS yung navbar pag maliit na sya -->
 
 @include('partials.footer')

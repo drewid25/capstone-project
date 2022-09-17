@@ -116,15 +116,7 @@
 
 
 
-                                                </tr>
-
-
-
-                                                @endforeach
-
-
-                                        </table>
-                                    </div>
+                                    
 
 
                     </td>
