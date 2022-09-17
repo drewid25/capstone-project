@@ -60,17 +60,6 @@
 
       </div>
 
-      <div class="text-center">
-        <button class=" bg-letter text-accent-blue hover:bg-button-blue hover:text-letter w-24 text-center"
-          type="submit">Add</button>
-      </div>
-
-
-
-
-
-
-    </form>
-  </div>
+    
 
 </div>
