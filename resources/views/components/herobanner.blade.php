@@ -18,6 +18,7 @@
           </div>
           <div class="mb-12 lg:mb-0">
             <div class="block rounded-lg shadow-lg bg-gray-text px-6 py-12 md:px-12">
+
               <h2 class="text-center text-3xl leading-9 
                 font-extrabold text-white"
               >
@@ -92,7 +93,7 @@
                           Employee User
                         </label>
                   </div>
-              </form>
+
             </div>
           </div>
         </div>
@@ -103,7 +104,5 @@
 
 </div>
 <!-- Container for demo purpose -->
-
-
 
 

@@ -1,4 +1,6 @@
-<div class="grid col-span-3 h-full bg-gray-text pt-3 px-2 border border-border-gray items-start">
+
+<div class="h-full bg-gray-text py-2 px-2 border border-border-gray col-span-3">
+
     <table class="table-auto flex flex-col py-7 mt-8">
         <thead class="rounded-t-lg bg-accent-blue p-2 w-full ">
             <tr class="text-white">
@@ -23,5 +25,6 @@
             </tr>
         </tbody>
     </table>
+
 
 </div>
