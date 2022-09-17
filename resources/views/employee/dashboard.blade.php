@@ -1,9 +1,9 @@
 
 @include('partials.header')
-<x-employeenav/>
-<div class="container bg-letter py-6 px-6 h-full mx-auto grid grid-cols-3  grid-flow-col ">
+<x-employeenav :user=$user/>
+<div class="container bg-letter py-6 px-6 h-full mx-auto grid grid-col-12 grid-flow-col ">
 <x-employeesidebar/>
-<x-table/>
+<x-employeeprofile :user=$user />
 <x-employeerightbar/>
 
 </div>

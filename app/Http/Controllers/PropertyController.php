@@ -16,13 +16,24 @@ class PropertyController extends Controller
     $property->price = $request->price;
     $property->quantity = $request->quantity;
     $property->classification = $request->classification;
+    $property->category = $request->category;
     $property->property_number= $request->property_number;
     $property->property_name = $request->property_name;
-   
+    $property->employee_id = $request->employee_id;
     $property->description = $request->description;
   
  
     $property->save();
     return redirect()->route('inventories')->with('success', 'New subject added.');
    }
+
+   public function search(){
+      $search_property = $_GET['query'];
+      $property = Property::where('property_number', 'LIKE', '%' .$search_property. '%')->get();
+      return view('admin.search',compact('property'));
+   
+   }
+
+
+
 }

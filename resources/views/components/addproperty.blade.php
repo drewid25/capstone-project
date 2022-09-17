@@ -1,8 +1,8 @@
 
 
-  <div class="bg-button-blue col-span-6 border-2 border-black h-screen w-full shadow-2xl p-6">
-    <h1 class="text-white font-bold text-4xl mb-3 text-center">Add Property</h1>
-    <div class="bg-white h-8/12 p-6">
+  <div class="bg-accent-blue  border-r-2 border-l-2 border-r-letter border-l-letter h-full w-full shadow-2xl col-span-7 px-3 py-6">
+    <h1 class="text-white font-bold text-2xl mb-3 text-center">Add Property</h1>
+    <div class="bg-white h-8/12 p-6  shadow-2xl rounded-lg py-4 px-4">
       <form action="{{ route('createproperty')}}" method="POST" type="submit" class="py-6 px-2 bg-accent-blue h-50 flex flex-col mx-auto shadow-2xl"  >
         @csrf
   
@@ -47,7 +47,7 @@
                  </div>
                  <div class="p-3 flex flex-col bg-accent-blue">
                      <label for="" class="text-letter mr-3">Category</label>
-                     <select name="classification"
+                     <select name="category"
                       id="" class="w-50" >
                      <option value="CHAIR" class="text-gray-600">CHAIR</option>
                      <option value="TABLES" class="text-gray-600">TABLES</option>
@@ -109,11 +109,19 @@
                        ></textarea>
                      </div>
                    </div>
-               
-                
+                   <div class="block relative mb-5">
+                    <span class="text-xs font-medium text-letter">Select Employee</span>
+                    <select id="student" required name="employee_id" class="block appearance-none w-full bg-white border border-gray-200 px-4 py-2 pr-8 rounded-lg shadow leading-tight focus:outline-none focus:shadow-outline">
+                        @foreach($employees as $employee)
+                        <option value="{{ $employee->id }}">Id number:{{$employee->ID_number}} {{ $employee->employee_name }} </option>
+                        @endforeach
+                    </select>
+                    </div>     
+                   
+          
       
         <div class="text-center">
-          <button class="text-white bg-button-blue w-24 rounded-lg font-bold" type="submit">ADD</button>
+          <button class="text-accent-blue bg-letter hover:bg-button-blue hover:text-letter w-24 rounded-lg font-bold" type="submit">ADD</button>
         </div>
      
         

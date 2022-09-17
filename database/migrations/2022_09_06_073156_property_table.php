@@ -25,9 +25,11 @@ return new class extends Migration
             $table->string('property_number');
             $table->string('property_name');
             $table->longText('description');
-            // $table->unsignedBigInteger('employee_id');
-            // $table->foreign('employee_id')->reference('id')->on('employee') ;           
             $table->timestamps();
+            $table->unsignedBigInteger('employee_id');
+            $table->foreign('employee_id')->references('id')->on('employees')->onDelete('cascade');
+          
+           
         });
     }
 

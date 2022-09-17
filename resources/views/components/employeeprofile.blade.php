@@ -1,18 +1,22 @@
-<div class="bg-white shadow-2xl py-6 px-6 col-span-4 border border-border-gray">
-     <div class="flex mt-5 ml-5">
-        <img src="{{asset('images/'. auth()->user()->admin_image)}}" alt="" class="rounded-full">
-        <h1>Andrew Idanol</h1>
-     </div>
-    <div>
-        IT Department
-    </div>
+<div class="bg-accent-blue shadow-2xl py-6 px-6 col-span-7 border-r-2 border-l-2 border-r-letter border-l-letter">
+     <div class="flex mt-5  items-center">
+        <img src="{{asset('images/'. $user->admin_image)}}" alt="" class="h-16 w-16 rounded-lg">
+        <div class="ml-3 ">
+          <h1 class="font-bold text-gray-text">Andrew Idanol</h1>
+            <p class="text-gray-text">IT Department</p>
+        </div>
+    
    
+  </div>
+  
    
-    <div class="flex flex-col mt-10">
-        <h1 class="text-center mb-3 font-bold t text-accent-blue">List of Accountablity</h1>
+  {{-- <h1 class="text-center mb-3 font-bold t text-letter text-2xl">List of Accountablity</h1> --}}
+  <h2 class="text-letter  text-center font-bold">Property Accountabilities</h2>  
+  <div class="flex flex-col ">
+       
         <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
           <div class="py-4 inline-block min-w-full sm:px-6 lg:px-8">
-            <div class="overflow-hidden">
+            <div class="overflow-hidden bg-white px-4 py-4">
               <table class="min-w-full border text-center ">
                 <thead class="border-b bg-accent-blue">
                   <tr>
@@ -20,15 +24,15 @@
                       Property Number
                     </th>
                     <th scope="col" class="text-sm font-medium text-white px-6 py-4 border-r">
-                 ITem
+                 Item
                     </th>
-                    <th scope="col" class="text-sm font-medium text-white px-6 py-4 w-96 border-r">
+                    <th scope="col" class="text-sm font-medium text-white px-6 py-4  border-r">
                      Description
                     </th>
-                    <th scope="col" colspan="2" class="text-sm font-medium text-white px-6 py-4 col-span-2 border-r">
+                    <th scope="col"  class="text-sm font-medium text-white px-6 py-4 col-span-2 border-r">
                      Options
                     </th>
-                    <th scope="col" colspan="2" class="text-sm font-medium text-white px-6 py-4 col-span-2  border-r">
+                    <th scope="col"  class="text-sm font-medium text-white px-6 py-4 col-span-2  border-r">
                     Status
                     </th>
                    

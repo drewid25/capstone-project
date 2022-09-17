@@ -4,6 +4,8 @@ module.exports = {
     "./resources/**/*.blade.php",
     "./resources/**/*.js",
     "./resources/**/*.vue",
+    './resources/**/*.{html,js}', 
+    './node_modules/tw-elements/dist/js/**/*.js'
   ],
   theme: {
     extend: {
@@ -13,9 +15,13 @@ module.exports = {
         'button-blue':'#74c0fc',
         'grey':'#343a40',
         'border-gray':'#adb5bd',
+
         'gray-text':'#525252'
+
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tw-elements/dist/plugin')
+  ],
 }

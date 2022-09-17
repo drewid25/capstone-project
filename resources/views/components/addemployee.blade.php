@@ -1,6 +1,7 @@
- <div class="bg-letter col-span-4 border border-grey h-screen shadow-2xl p-6">
-      <h1 class="text-accent-blue font-bold text-4xl py-6 text-center">Add Employee</h1>
-       <form action="{{ route('addemployeelist')}}" method="POST" enctype="multipart/form-data" type="submit" class="py-6 px-2 bg-accent-blue h-50 flex flex-col w-6/12 mx-auto shadow-2xl"  >
+ <div class="bg-accent-blue col-span-7 border-r-2 border-l-2 border-r-letter border-l-letter h-full shadow-2xl py-6 px-3  ">
+      <h1 class="text-letter font-bold text-2xl  mb-3 text-center">Add Employee</h1>
+      <div class="bg-white h-8/12 p-6 w-8/12 mx-auto shadow-2xl rounded-lg py-4 px-4">
+       <form action="{{ route('addemployeelist') }}" method="POST" enctype="multipart/form-data" type="submit" class="py-6 px-2 bg-accent-blue h-50 flex flex-col w-12/12 mx-auto shadow-2xl"  >
          @csrf
          
               <div class="flex flex-col">
@@ -46,7 +47,7 @@
                   </div>
                                
   <div class="text-center">
-    <button class="text-white bg-button-blue w-24 text-center" type="submit">Add</button>
+    <button class=" bg-letter text-accent-blue hover:bg-button-blue hover:text-letter w-24 text-center" type="submit">Add</button>
   </div>
                  
           
@@ -55,6 +56,7 @@
           
           
        </form>
+      </div>
      
     </div>
   

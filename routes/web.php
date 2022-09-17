@@ -44,7 +44,7 @@ Route::get('/dashboard', function (){
 // Property Routes
 Route::post('/createproperty',[PropertyController::class,'create'])->name('createproperty');
 Route::get('/addproperty',function(){
-    return view('admin.addproperty');
+    return view('admin.addproperty')->with('employees',Employee::all());
 });
 
 
@@ -79,7 +79,7 @@ Route::get('/issuance',function(){
 Route::get('/register',function(){
     return view('admin.register');
 })->name('register');
-Route::post('/store',[UserController::class,'store']);
+Route::post('/user',[UserController::class,'store']);
 //admin
 Route::get('/login',function(){
     return view('admin.login');
@@ -91,16 +91,18 @@ Route::post('/logout',[UserController::class, 'logout']);
 
 //employee
 
+
 Route::get('/employee/login',function(){
-    return view('employee.login');
+    return view('employee.login')->with('employees',Employee::all());
 });
+Route::post('employee/login/process',[EmployeeController::class,'process']);
 
 Route::get('/employee/dashboard',function(){
-    return view('employee.dashboard');
+    return view('employee.dashboard')->with('user', auth()->user());
 });
 
 Route::get('/employee/profile', function(){
-    return view('employee.profile');
+    return view('employee.profile')->with('user', auth()->user());
 });
 Route::get('/employee/property-transfer', function(){
     return view('employee.transfer-property');
@@ -112,3 +114,18 @@ Route::get('/employee/change-password
 ', function(){
     return view('employee.changepassword');
 });
+
+Route::post('updateemployee',
+[EmployeeController::class,'update']
+)->name('updateemployee');
+
+Route::get('employeeupdate/{id}',
+function($id){
+    return view('admin.employeeupdate')->with('employee',Employee::find($id));
+}
+)->name('employeeupdate');
+
+
+Route::get('/search',[PropertyController::class, 'search']);
+
+
