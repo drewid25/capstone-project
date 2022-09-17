@@ -11,6 +11,7 @@ use App\Models\Employee;
 use App\Models\Admin;
 use Illuminate\Http\Request;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -58,7 +59,7 @@ Route::get('/addemployee',function(){
 })->name('addemployee');
 
 Route::get('/employeelist',function (){
-    return view('admin.employeelist')->with('employees', Employee::all());
+    return view('admin.employeelist')->with('employees',Employee::all());
 })->name('employeelist');
 Route::post('/addemployeelist',[EmployeeController::class,'create'])->name('addemployeelist');
 
@@ -134,7 +135,10 @@ Route::get('/search/property',[PropertyController::class, 'search']);
 Route::post('getproperties',function(Request $request){
     $employee = Employee::find($request->id);
 
+
     $properties = $employee->property;
     return json_encode($properties);
 })->name('getproperties');
+
+
 

@@ -5,15 +5,12 @@
                 <th>Instructions</th>
             </tr>
         </thead>
-        <tbody class="bg-white p-2 rounded-b-lg">
+        <tbody class="bg-white p-4 rounded-b-lg">
             <tr class="justify flex flex-col text-gray-text">
-                <th align ="left">Please Select:</th>
-                <td class = "pb-0"> - Add Property</strong></td>
-                <td class = "pb-0"> - Add Employee</td>
-                <td class = "pb-0"> - Inventory List</td>
-                <td class = "pb-0"> - Employee List</td>
-                <td class = "pb-0"> - Issuance</td>
-            </tr>
+                <th align="left">Please Fill in the Form:</th>
+                <td class = "pb-0">- Property Number</strong></td>
+                <td class = "pb-0">- Employee ID</td>
+            </tr>   
         </tbody>
     </table>
 

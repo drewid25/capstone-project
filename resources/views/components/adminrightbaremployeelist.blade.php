@@ -5,17 +5,21 @@
                 <th>Description</th>
             </tr>
         </thead>
+
         <tbody class="bg-white p-2 rounded-b-lg h-48">
+
             <tr class="justify flex flex-col text-gray-text text-sm">
                 <td align ="left">The table shows the <strong class="underline">List of Employees</strong></td>
                 <td> </td>
             </tr>
         </tbody>
     </table>
+
     <table class="table-auto flex flex-col h-48">
         <thead class="rounded-t-lg bg-accent-blue p-2 w-full ">
             <tr class="text-white">
                 <th>Instructions</th>
+
             </tr>
         </thead>
         <tbody class="bg-white p-2 rounded-b-lg">
