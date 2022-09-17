@@ -47,7 +47,7 @@
                   </div>
                                
   <div class="text-center">
-    <button class=" bg-letter text-accent-blue hover:bg-button-blue hover:text-letter w-24 text-center" type="submit">Add</button>
+    <button class="text-lg rounded-full font-bold hover:bg-gray-text bg-letter text-accent-blue  hover:text-letter w-24 h-15 text-center" type="submit">Add</button>
   </div>
                  
           
