@@ -67,11 +67,18 @@
           Sign In
         </button>
       </div>
-      <p class="text-center text-l leading-9 
-      font-bold text-gray-800">
-        not yet registered?  
-          <a href="/register" class="font-medium text-accent-blue hover:underline"> Register</a>
-    </p>
+        <div class="form-check">
+          <input class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-black checked:border-black focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label inline-block text-gray-800" for="flexRadioDefault1">
+              Admin User
+            </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-black checked:border-black focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+              <label class="form-check-label inline-block text-gray-800" for="flexRadioDefault2">
+                Employee User
+              </label>
+        </div>
     </form>
     
   </div>

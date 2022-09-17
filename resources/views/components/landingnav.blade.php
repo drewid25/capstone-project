@@ -6,14 +6,6 @@
         <span class="text-2xl font-bold">Property Management System</span>
       </a>
     </div>
-    <div class="flex space-x-2 justify-center">
-  <div>
-    <button type="button" class="inline-block px-6 pt-2.5 pb-2 bg-blue-600 text-white font-medium text-xs leading-normal uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out flex align-center">
-    <i class="fa-solid fa-right-to-bracket mr-2.5"></i>
-      Register Now
-    </button>
-  </div>
-</div>
   </div>
 </nav>
 
