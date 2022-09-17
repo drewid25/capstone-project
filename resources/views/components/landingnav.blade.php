@@ -1,27 +1,22 @@
-
-
-<nav class="bg-white px-2 sm:px-4 py-2.5 bg-accent-blue fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
-  <div class="container flex flex-wrap justify-between items-center mx-auto">
-  <a href="#" class="flex items-center">
-      <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"> Property Management System</span>
-  </a>
-  <div class="flex md:order-2">
-      <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
-        <span class="sr-only">Open main menu</span>
-        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+<nav class="relative w-full flex flex-wrap items-center justify-between py-4 bg-accent-blue text-gray-500 hover:text-gray-700 focus:text-gray-700 shadow-lg ">
+  <div class="container-fluid w-full flex flex-wrap items-center justify-between px-6">
+    <div class="container-fluid">
+      <a class="flex items-center text-gray-900 hover:text-gray-900 focus:text-gray-900 mt-2 lg:mt-0 mr-1" href="#">
+        <i class="fa-solid fa-users-gear mx-3 text-3xl" loading="lazy" ></i>
+        <span class="text-2xl font-bold">Property Management System</span>
+      </a>
+    </div>
+    <div class="flex space-x-2 justify-center">
+  <div>
+    <button type="button" class="inline-block px-6 pt-2.5 pb-2 bg-blue-600 text-white font-medium text-xs leading-normal uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out flex align-center">
+    <i class="fa-solid fa-right-to-bracket mr-2.5"></i>
+      Register Now
     </button>
   </div>
-  <div class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-    <ul class="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-      <li>
-        <a href="/login" class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Sign In</a>
-      </li>
-      <li>
-        <a href="/register" class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Sign Up</a>
-      </li>
-    </ul>
-  </div>
+</div>
   </div>
 </nav>
+
+
 
 
