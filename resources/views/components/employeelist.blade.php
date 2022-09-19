@@ -32,13 +32,13 @@
         </thead>
         <tbody>
         
-            @foreach($employees as $employee)
+            @foreach($users as $employee)
           
             <tr >
-                <td class='border-2 border-border-gray text-grey text-left text-sm'>{{$employee->ID_number}}</td>
-                <td class='border-2 border-border-gray text-grey text-left text-sm'>{{$employee->employee_name}}</td>
+                <td class='border-2 border-border-gray text-grey text-left text-sm'>{{$employee->id_number}}</td>
+                <td class='border-2 border-border-gray text-grey text-left text-sm'>{{$employee->name}}</td>
                 <td class='border-2 border-border-gray text-grey text-left text-sm'>{{$employee->department}}</td>
-                <td class='border-2 border-border-gray text-grey text-left text-sm'>{{$employee->email_address}}</td>
+                <td class='border-2 border-border-gray text-grey text-left text-sm'>{{$employee->email}}</td>
                 <td class='border-2 border-border-gray text-grey text-center text-sm'>
                     <button type="button" class="viewProperties px-6
                     
@@ -98,9 +98,7 @@
                         </tr>
                     </thead>
                     <tbody id="subjectarea" >
-                      <tr >
-
-                      </tr>
+                      
           
                     
                     </tbody>
@@ -168,13 +166,12 @@
         </div>
     </div> --}}
 </div>
+
     <div class="text-center mt-5">
 
         <a href="/addemployee" class="text-lg rounded-full font-bold hover:bg-accent-blue hover:text-white bg-letter text-accent-blue p-2 hover:text-letter  rounded-lg font-bold">ADD NEW EMPLOYEE</a>
 
     </div>
-  
-  
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"
     integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script>
@@ -189,6 +186,7 @@ $('.viewProperties').click(function(e) {
    };
 
 
+
  $.ajax({
      headers: {
          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -197,13 +195,24 @@ $('.viewProperties').click(function(e) {
      data: formData,
      url: "{{ url('getproperties') }}",
      dataType: "json",
-
+   
      success: function(data) {
           $('#subjectarea').empty();
-
+        
         data.forEach(function(property){
-            $('#subjectarea').append(
-                '<tr class="border-2 border-border-gray text-grey text-left text-sm"><td class="border-2 border-border-gray text-grey text-left text-sm" >'+property.property_number+'</td><td class="border-2 border-border-gray text-grey text-left text-sm">'+property.property_name+'</td><td class="border-2 border-border-gray text-grey text-left text-sm">'+property.description+'</td><td class="border-2 border-border-gray text-grey text-left text-sm">'+property.date_acquired+'</td><td class="border-2 border-border-gray text-grey text-left text-sm">'+property.price+'</td></tr>')
+           
+            if(property.length() == 0){
+                <p>No Records Found</p>
+            }else{
+                $('#subjectarea').append(
+                '<tr class="border-2 border-border-gray text-grey text-left text-sm"><td class="border-2 border-border-gray text-grey text-left text-sm" >'+property.property_number+'</td></tr>')
+            }
+           
+                    //  <td class="border-2 border-border-gray text-grey text-left text-sm">'+property.property_name+'</td>
+                    //  <td class="border-2 border-border-gray text-grey text-left text-sm">'+property.description+'</td>
+                    //  <td class="border-2 border-border-gray text-grey text-left text-sm">'+property.date_acquired+'</td>
+                    //  <td class="border-2 border-border-gray text-grey text-left text-sm">'+property.price+'</td>
+                     
            
         });
          button.text('View Properties');
@@ -216,4 +225,6 @@ $('.viewProperties').click(function(e) {
 });
 </script>
 
+  
+    
 </div>

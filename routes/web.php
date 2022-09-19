@@ -7,7 +7,7 @@ use App\Http\Controllers\EmployeeController;
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Property;
-use App\Models\Employee;
+use App\Models\User;
 use App\Models\Admin;
 use Illuminate\Http\Request;
 
@@ -39,14 +39,14 @@ Route::get('/', function (){
 })->name('dashboard');
 Route::get('/dashboard', function (){
     return view('admin.dashboard')->with('inventories',Property::all());
-})->middleware(['auth'])->name('dashboard');;
+})->middleware(['auth'])->name('dashboard');
 
 
 
 // Property Routes
 Route::post('/createproperty',[PropertyController::class,'create'])->name('createproperty');
 Route::get('/addproperty',function(){
-    return view('admin.addproperty')->with('employees',Employee::all());
+    return view('admin.addproperty')->with('users',User::all());
 });
 
 
@@ -59,7 +59,7 @@ Route::get('/addemployee',function(){
 })->name('addemployee');
 
 Route::get('/employeelist',function (){
-    return view('admin.employeelist')->with('employees',Employee::all());
+    return view('admin.employeelist')->with('users',User::all());
 })->name('employeelist');
 Route::post('/addemployeelist',[EmployeeController::class,'create'])->name('addemployeelist');
 
@@ -86,6 +86,7 @@ Route::post('/user',[UserController::class,'store']);
 Route::get('/login',function(){
     return view('admin.login');
 })->name('login');
+
 Route::post('/login/process',[UserController::class, 'process']);
 
 
@@ -95,13 +96,13 @@ Route::post('/logout',[UserController::class, 'logout']);
 
 
 Route::get('/employee/login',function(){
-    return view('employee.login')->with('employees',Employee::all());
+    return view('employee.login')->with('employees',User::all());
 });
 Route::post('employee/login/process',[EmployeeController::class,'process']);
 
 Route::get('/employee/dashboard',function(){
-    return view('employee.dashboard')->with('user', auth()->user());
-});
+    return view('employee.dashboard');
+})->middleware(['auth'])->name('dashboard');
 
 Route::get('/employee/profile', function(){
     return view('employee.profile')->with('user', auth()->user());
@@ -123,7 +124,7 @@ Route::post('updateemployee',
 
 Route::get('employeeupdate/{id}',
 function($id){
-    return view('admin.employeeupdate')->with('employee',Employee::find($id));
+    return view('admin.employeeupdate')->with('employee',User::find($id));
 }
 )->name('employeeupdate');
 
@@ -133,10 +134,9 @@ Route::get('/search',function(){
 Route::get('/search/property',[PropertyController::class, 'search']);
 
 Route::post('getproperties',function(Request $request){
-    $employee = Employee::find($request->id);
-
-
-    $properties = $employee->property;
+    $employee = User::find($request->id);
+    
+    $properties = $employee->properties;
     return json_encode($properties);
 })->name('getproperties');
 

@@ -7,46 +7,53 @@
         font-extrabold text-gray-text"
         >
          
-        Sign Up
+      Register
         </h1>
         <form action="/user" method="POST" enctype="multipart/form-data" class="mt-6">
           @csrf
           <div class="mb-2">
             <label
-              for="company_name"
+              for="id_number"
               class="block text-sm font-semibold text-gray-text"
             >
-              Company Name:
+             Employee Id Number:
+            </label>
+            <input
+              type="text"
+              onfocus="this.value=''"
+              value="Type Here"
+              class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full 
+                py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-accent-blue"
+                name="id_number" value="{{ old('id_number') }}"
+              required
+            />
+            @error('id_number')
+            <p class="text-red-500 text-xs p-1">
+                {{$message}}
+            </p>
+            @enderror  
+          </div>
+          <div class="mb-2">
+            <label
+              for="name"
+              class="block text-sm font-semibold text-gray-text"
+            >
+              Employee Name:
             </label>
             <input
               type="text"
               class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full 
                 py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-accent-blue"
-                name="company_name" value="{{ old('company_name') }}"
+                name="name" value="{{ old('name') }}"
               required
             />
-            @error('company_name')
+            @error('name')
             <p class="text-red-500 text-xs p-1">
                 {{$message}}
-            </p>  
-           @enderror
-          </div>
-           <div class="mb-2">
-            <label for="company_logo" class="block text-sm font-semibold text-gray-text">
-              Company Logo:
-            </label>
-            <input type="hidden" name="MAX_FILE_SIZE" value="4194304" />
-  
-            <input type="file" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full 
-                  py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-accent-blue" name="company_logo"   value="{{ old('company_logo') }}" />
-  
-            @error('company_logo')
-            <p class="text-red-500 text-xs p-1">
-              {{$message}}
             </p>
-            @enderror
+            @enderror  
           </div>
-          <div class="mb-2">
+            <div class="mb-2">
             <label
               for="email"
               class="block text-sm font-semibold text-gray-text"
@@ -66,33 +73,50 @@
             </p>  
         @enderror
           </div>
+          
           <div class="mb-2">
-            <label
-              for="admin_name"
-              class="block text-sm font-semibold text-gray-text"
-            >
-              Admin Name:
-            </label>
-            <input
-              type="text"
-              class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full 
-                py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-accent-blue"
-                name="admin_name" value="{{ old('admin_name') }}"
-              required
-            />
-            @error('admin_name')
-            <p class="text-red-500 text-xs p-1">
-                {{$message}}
-            </p>
-            @enderror  
-          </div>
-          <div class="mb-2">
-            <label for="admin_image" class="block text-sm font-semibold text-gray-text ">
-              User Photo:
+            <label for="employee_image" class="block text-sm font-semibold text-gray-text ">
+              Upload Image:
             </label>
             <input type="file" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full 
-                  py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-accent-blue" name="admin_image"  value="{{ old('admin_image') }}" required />
-            @error('admin_image')
+                  py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-accent-blue" name="employee_image"  value="{{ old('employee_image') }}" required />
+            @error('employee_image')
+            <p class="text-red-500 text-xs p-1">
+              {{$message}}
+            </p>
+            @enderror
+          </div>
+          <div class="mb-2">
+            <label for="department" class="block text-sm font-semibold text-gray-text">Department/Office</label>
+            <select name="department"
+             id="department" class="w-50" bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full 
+             py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-accent-blue >
+            <option value="IT Department" class="text-gray-600">IT Department</option>
+            <option value="Property Division">Property Division</option>
+            <option value="Accounting Division">Accounting Department</option>
+            <option value="Finance Division">Finance Division</option>
+            <option value="Personnel Division">Personnel</option>
+            <option value="Records Division">Records Division</option>
+            <option value="Training Division">Training Department</option>
+            <option value="Maintenance Division">Maintenance Division</option>
+            <option value="Leave Division">Leave Division</option>
+            </select>
+            @error('department')
+            <p class="text-red-500 text-xs p-1">
+              {{$message}}
+            </p>
+            @enderror
+        </div>
+          <div class="mb-2">
+            <label for="usertype" class="block text-sm font-semibold text-gray-text ">
+             User Type:
+            </label>
+            <select name="usertype" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full 
+                  py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-accent-blue"   required >
+          <option value="admin">Admin</option>
+          <option value='employee'>Employee</option>
+                </select>
+            @error('usertype')
             <p class="text-red-500 text-xs p-1">
               {{$message}}
             </p>
@@ -146,8 +170,8 @@
         </form>
 
         <p class="mt-8 text-xs font-light text-center text-gray-700">
-          Already have an account?
-          <a href="/login" class="font-medium hover:underline text-accent-blue"> Sign in </a>
+          Already registred?
+          <a href="/login" class="font-medium hover:underline text-accent-blue"> Log in </a>
         </p>
       </div>
     </div>

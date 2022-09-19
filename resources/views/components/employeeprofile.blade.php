@@ -1,8 +1,8 @@
 <div class="bg-accent-blue shadow-2xl py-6 px-6 col-span-7 border-r-2 border-l-2 border-r-letter border-l-letter">
      <div class="flex mt-5  items-center">
-        <img src="{{asset('images/'. $user->admin_image)}}" alt="" class="h-16 w-16 rounded-lg">
+        <img src="{{asset('images/'. auth()->user()->employee_image)}}" alt="" class="h-16 w-16 rounded-lg">
         <div class="ml-3 ">
-          <h1 class="font-bold text-gray-text">Andrew Idanol</h1>
+          <h1 class="font-bold text-gray-text">{{auth()->user()->name}}</h1>
             <p class="text-gray-text">IT Department</p>
         </div>
     

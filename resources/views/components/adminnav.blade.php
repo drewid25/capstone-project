@@ -8,7 +8,7 @@
               <a href="/dashboard">
                 <img class="w-10 h-10 rounded-full" src="{{asset('images/'. auth()->user()->company_logo)}}" alt="">
               </a>
-              <h2 class="ml-3"> {{auth()->user()->company_name}}</h2>
+              <h2 class="ml-3"> B13 FULLTANK</h2>
             </div>
           </div>
           <div class="hidden md:block">
@@ -27,9 +27,9 @@
           <!-- Profile dropdown -->
           <div class=" ml-3">
             <div class="flex items-center">
-              <img class="h-8 w-8 rounded-full" src="{{asset('images/'. auth()->user()->admin_image)}}" alt="">
+              <img class="h-8 w-8 rounded-full" src="{{asset('images/'. auth()->user()->employee_image)}}" alt="">
               </button>
-              <h3 class="text-letter ml-3 items-center">{{auth()->user()->admin_name}}</h3>
+              <h3 class="text-letter ml-3 items-center">{{auth()->user()->name}}</h3>
               <form action="/logout" method="post">
                 @csrf
                 <button
