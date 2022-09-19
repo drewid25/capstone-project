@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rule;
 
 
+
+
+
 class UserController extends Controller
 {
     public function index(){
@@ -18,49 +21,56 @@ class UserController extends Controller
     }
 
     public function store(Request $request){
+    
       $request->validate([
-    "company_name"=>['required','min:4'],
-    "company_logo"=>'required|mimes:jpg,png,jpeg|max:5048',
-    "email" =>['required', 'email', Rule::unique('users','email')],
-    "admin_name"=>['required','min:4'],
-    "admin_image"=>'required|mimes:jpg,png,jpeg|max:5048',
-    "password" => 'required|confirmed|min:6'
+    'id_number'=>'required',   
+    'name'=>'required|min:4',
+    'email' =>['required', 'email', Rule::unique('users','email')],
+   'employee_image'=>'required|mimes:jpg,png,jpeg|max:5048',
+   'department'=>'required',
+   'usertype' =>'required',
+    'password' => 'required|confirmed|min:6'
    ]);
    $request['password'] = Hash::make( $request['password']);
-   
-   $newLogoName = time() . '-' .$request->company_name. "."  .$request->company_logo->extension();
-
- 
-   $newUserImage = time() . '-' .$request->user_name. "."  .$request->admin_image->extension();
-   $request->company_logo->move(public_path('images'),$newLogoName);
-   $request->admin_image->move(public_path('images'),$newUserImage);
+   $newUserImage = time() . '-' .$request->user_name. "."  .$request->employee_image->extension();
+   $request->employee_image->move(public_path('images'),$newUserImage);
    $user = User::create([
-      'company_name'=>$request->input('company_name'),
-      'company_logo'=> $newLogoName,
+      'id_number'=>$request->input('id_number'),
+      'name'=> $request->input('name'),
       'email'=>$request->input('email'),
-      'admin_name'=>$request->input('admin_name'),
-      'admin_image'=>$newUserImage ,
+       'employee_image'=>$newUserImage ,
+       'department'=>$request->input('department'),
+       'usertype' =>$request->input('usertype'),
+       
       'password'=>$request->input('password'),
     ]);
 
 
-   auth()->login($user);
    return redirect('/dashboard');
 
 }
 public function process(Request $request){
+
    $validated = $request->validate([
-      "admin_name" => 'required',
-      "password" => 'required'
+      "id_number" => 'required',
+      "password" => 'required',
+      "usertype" => 'required'
    ]);
    if(auth()->attempt($validated)){
       $request->session()->regenerate();
+      $usertype= $validated['usertype'];
+    
 
-      return redirect('/dashboard')->with('message', 'Welcome back!'. $validated['admin_name']. "!");
+      if($usertype == 'admin'){
+         return redirect('/dashboard')->with('message', 'Welcome back!');
+      }elseif($usertype == 'employee'){
+         return redirect('/employee/dashboard');
+      }
+      
    }
    else{
      
-return redirect('/login')->with('message', "Admin name does not exist!");
+return redirect('/')->with('message', "Admin name does not exist!");
    }
 }
 public function logout(Request $request){
@@ -68,7 +78,7 @@ public function logout(Request $request){
    $request->session()->invalidate();
    $request->session()->regenerateToken();
 
-   return redirect('/')->with('message','logout succesful');
+   return redirect('/')->with('message','Logout Succesful!');
 
 }
 }

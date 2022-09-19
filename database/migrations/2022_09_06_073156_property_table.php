@@ -27,7 +27,7 @@ return new class extends Migration
             $table->longText('description');
             $table->timestamps();
             $table->unsignedBigInteger('employee_id');
-            $table->foreign('employee_id')->references('id')->on('employees')->onDelete('cascade');
+            $table->foreign('employee_id')->references('id')->on('users')->onDelete('cascade');
           
            
         });

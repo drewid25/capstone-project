@@ -11,7 +11,8 @@
       Sign In to your account
     </h2>
     @if(session()->has('message'))
-    <h2 class="mt-5 text-red-400">{{session('message')}}</h2>
+    <div class="text-center text-large"> <h2 class="mt-5  text-red-400 ">{{session('message')}}</h2></div>
+   
     @endif
     <br />
     <br />
@@ -23,13 +24,13 @@
           class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
           htmlFor="text"
           >
-           User name
+         Employee Id Number
           </label>
           <input 
             type="text"
-            name="admin_name"
-            id="admin_name"
-            placeholder="admin_name"
+            name="id_number"
+            id="id_number"
+            placeholder="id_number"
             class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full  
               py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-accent-blue"
             required
@@ -56,7 +57,29 @@
           />
         </div>
       </div>
-    
+      <div class="flex justify-center mt-4">
+        <div class="lg:w-full md:w-2/3 w-full">
+        <label 
+        class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+        htmlFor="usertype"
+        >
+          UserType
+        </label>
+        <select name="usertype" required class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full 
+        py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-accent-blue">
+      
+        <option value="admin">
+              Admin
+
+          </option>
+          <option value="employee">
+            Employee
+  
+        </option>  
+       
+        </select>
+      </div>
+      </div>
       <div class="mt-4 flex justify-center">
         <button 
           type="submit"
@@ -67,18 +90,7 @@
           Sign In
         </button>
       </div>
-        <div class="form-check">
-          <input class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-black checked:border-black focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-            <label class="form-check-label inline-block text-gray-800" for="flexRadioDefault1">
-              Admin User
-            </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-black checked:border-black focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-              <label class="form-check-label inline-block text-gray-800" for="flexRadioDefault2">
-                Employee User
-              </label>
-        </div>
+        
     </form>
     
   </div>
