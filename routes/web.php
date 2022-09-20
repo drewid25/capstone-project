@@ -116,3 +116,6 @@ Route::get('/inventory',function(){
     return view('admin.inventory')->with('inventories', Property::all());
 })->name('inventories');
 
+Route::get('/home', function(){
+    return view('company.landingpage');
+});
