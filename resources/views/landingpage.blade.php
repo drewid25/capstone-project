@@ -1,6 +1,7 @@
 
 @include('partials.header')
-<x-landingnav/>
+<x-landingnav :company=$company />
+@dd($company)
 <x-herobanner/>
 
 

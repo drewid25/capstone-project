@@ -89,8 +89,8 @@
           <div class="mb-2">
             <label for="department" class="block text-sm font-semibold text-gray-text">Department/Office</label>
             <select name="department"
-             id="department" class="w-50" bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full 
-             py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-accent-blue >
+             id="department" class="w-50 bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full 
+             py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-accent-blue form-select bg-no-repeat">
             <option value="IT Department" class="text-gray-600">IT Department</option>
             <option value="Property Division">Property Division</option>
             <option value="Accounting Division">Accounting Department</option>
@@ -112,7 +112,7 @@
              User Type:
             </label>
             <select name="usertype" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full 
-                  py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-accent-blue"   required >
+                  py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-accent-blue form-select bg-no-repeat"   required >
           <option value="admin">Admin</option>
           <option value='employee'>Employee</option>
                 </select>

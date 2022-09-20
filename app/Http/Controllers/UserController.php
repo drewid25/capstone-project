@@ -47,7 +47,7 @@ class UserController extends Controller
     ]);
 
 
-   return redirect('/dashboard');
+   return redirect('/employeelist');
 
 }
 public function process(Request $request){
@@ -93,7 +93,7 @@ public function update(Request $request){
 
    $users->save();
 
-   return redirect('/dashboard')->with('success', 'Employee updated.');
+   return redirect('/employeelist')->with('success', 'Employee updated.');
 }
 
 public function change(Request $request){

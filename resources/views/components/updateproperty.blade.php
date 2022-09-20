@@ -58,6 +58,7 @@
                      <option value="TABLET">TABLET</option>
                      <option value="CELLPHONE">CELLPHONE</option>
                      <option value="AIRCONDITIONER">AIRCON</option>
+                     <option value="VEHICLE">VEHICLE</option>
                      </select>
                  </div>
                
@@ -114,7 +115,7 @@
           
       
         <div class="text-center">
-          <button class=" text-lg rounded-full font-bold hover:bg-gray-text text-accent-blue bg-letter hover:text-letter w-24 rounded-lg font-bold" type="submit">Update</button>
+          <button class=" text-lg hover:bg-gray-text text-accent-blue bg-letter hover:text-letter w-24 rounded-lg font-bold" type="submit">Update</button>
 
         </div>
       
