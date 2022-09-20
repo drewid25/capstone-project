@@ -21,4 +21,4 @@
     <title>Property Management System</title>
 </head>
 
-<body class="bg-gray-text">
+<body class="bg-gray-text h-full">

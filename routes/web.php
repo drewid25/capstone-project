@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\PropertyController;
 
 use App\Http\Controllers\UserController;
@@ -9,6 +10,7 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Property;
 use App\Models\User;
 use App\Models\Admin;
+use App\Models\Company;
 use Illuminate\Http\Request;
 
 
@@ -34,8 +36,8 @@ use Illuminate\Http\Request;
 
 
 // Home Route
-Route::get('/', function (){
-    return view('landingpage');
+Route::get('/{id}', function ($id){
+    return view('landingpage')->with('company', Company::find($id));
 })->name('dashboard');
 
 // Dashboard Route
@@ -116,3 +118,13 @@ Route::get('/inventory',function(){
     return view('admin.inventory')->with('inventories', Property::all());
 })->name('inventories');
 
+Route::get('/signin',function(){
+
+    return view('company.signin');
+});
+Route::get('/companyreg',function(){
+
+    return view('company.companyreg');
+});
+Route::post('/companyreg', [CompanyController::class, 'store']);
+    
