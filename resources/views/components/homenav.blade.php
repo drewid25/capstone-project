@@ -33,8 +33,8 @@
         <span class="text-2xl font-bold">Property Management System</span>
       </a>
       <!-- Left links -->
-      <div class="flex flex-row-reverse space-x-4 space-x-reverse">
-        <div>
+      <div class="flex flex-row-reverse space-x-8 space-x-reverse">
+        <div class="absolute top-1 right-0 ">
             <a href="#" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-md leading-normal uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Sign-in</a>
             
             <a href="#" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-md leading-normal uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Sign-up</a>
