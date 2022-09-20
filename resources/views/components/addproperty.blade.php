@@ -110,7 +110,7 @@
                    </div>
                    <div class="block relative mb-5">
                     <span class="text-xs font-medium text-letter">Select Employee</span>
-                    <select id="student" required name="employee_id" class="block appearance-none w-full bg-white border border-gray-200 px-4 py-2 pr-8 rounded-lg shadow leading-tight focus:outline-none focus:shadow-outline">
+                    <select id="user" required name="user_id" class="block appearance-none w-full bg-white border border-gray-200 px-4 py-2 pr-8 rounded-lg shadow leading-tight focus:outline-none focus:shadow-outline">
                         @foreach($users as $employee)
                         <option value="{{ $employee->id }}">{{$employee->id_number}} - {{ $employee->name }} - {{$employee->department}} </option>
                         @endforeach

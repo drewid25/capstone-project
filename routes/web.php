@@ -119,7 +119,7 @@ Route::get('/employee/change-password
 });
 
 Route::post('updateemployee',
-[EmployeeController::class,'update']
+[UserController::class,'update']
 )->name('updateemployee');
 
 Route::get('employeeupdate/{id}',
@@ -134,9 +134,10 @@ Route::get('/search',function(){
 Route::get('/search/property',[PropertyController::class, 'search']);
 
 Route::post('getproperties',function(Request $request){
-    $employee = User::find($request->id);
+    $user = User::find($request->id);
     
-    $properties = $employee->properties;
+    $properties = $user->properties;
+    
     return json_encode($properties);
 })->name('getproperties');
 

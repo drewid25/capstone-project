@@ -1,6 +1,6 @@
 
  
-    <div class="bg-gray-text shadow-2xl py-6 px-3 h-full col-span-7 border-r-2 border-l-2 border-r-letter border-l-letter">
+    <div class="bg-gray-text shadow-2xl py-6 px-3 h-full col-span-8 border-r-2 border-l-2 border-r-letter border-l-letter">
        <h1 class="text-2xl font-bold text-center mb-3 text-letter">Inventory List</h1>
        <div class="bg-letter py-6 px-3 h-96">
        <table class=" border-2 border-border-gray">
@@ -21,6 +21,9 @@
                    <th class="border-2 border-border-gray bg-accent-blue text-letter text-sm   mr-2 w-32 ">
                       Issued to
                    </th>
+                   <th class="border-2 border-border-gray bg-accent-blue text-letter text-sm   mr-2 w-32 ">
+                      Action
+                   </th>
                </tr>
            </thead>
            <tbody>
@@ -35,7 +38,13 @@
                    <td class='border-2 border-border-gray text-grey text-center text-sm '>{{$inventory->quantity}}</td>
                    <td class='border-2 border-border-gray text-grey text-left text-sm '>{{$inventory->property_name}}</td>
                    <td class='border-2 border-border-gray text-grey text-left text-sm '>{{$inventory->description}}</td>
-                   <td class='border-2 border-border-gray  text-grey text-center text-sm '>{{App\Models\User::find($inventory->employee_id)->name}}
+                   <td class='border-2 border-border-gray  text-grey text-center text-sm '>{{App\Models\User::find($inventory->user_id)->name}}
+                   <td class='border-2 border-border-gray  text-grey text-center text-sm '>
+                   <div class="flex flex-row gap-2">
+                    <a href="#" class='bg-button-blue px-2 rounded-lg text-letter ml-2'>edit</a>
+                    <a heref='#' class='bg-button-blue px-2 rounded-lg text-letter'>delete</a>
+                   </div>
+                   
                   
                  </td>
                  

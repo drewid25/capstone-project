@@ -18,8 +18,9 @@ class PropertyController extends Controller
     $property->classification = $request->classification;
     $property->category = $request->category;
     $property->property_number= $request->property_number;
+    $property->user_id = $request->user_id;
     $property->property_name = $request->property_name;
-    $property->employee_id = $request->employee_id;
+   
     $property->description = $request->description;
   
  

@@ -32,7 +32,7 @@ class UserController extends Controller
     'password' => 'required|confirmed|min:6'
    ]);
    $request['password'] = Hash::make( $request['password']);
-   $newUserImage = time() . '-' .$request->user_name. "."  .$request->employee_image->extension();
+   $newUserImage = time() . '-' .$request->name. "."  .$request->employee_image->extension();
    $request->employee_image->move(public_path('images'),$newUserImage);
    $user = User::create([
       'id_number'=>$request->input('id_number'),
@@ -80,5 +80,17 @@ public function logout(Request $request){
 
    return redirect('/')->with('message','Logout Succesful!');
 
+}
+public function update(Request $request){
+   $users = User::find($request->id);
+   $users ->name = $request->name;
+   $users ->email = $request->email;
+   $users->usertype =$request->usertype;
+
+   $users ->department=$request->department;
+
+   $users->save();
+
+   return redirect('/dashboard')->with('success', 'Employee updated.');
 }
 }
