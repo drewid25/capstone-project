@@ -1,12 +1,11 @@
-
 <!-- Container for demo purpose -->
-<div class="relative top-10 right-0 bottom-0 left-0 w-full h-full p-4 mx-auto ">
+<div class="relative top-10 right-0 bottom-0 left-0 w-full h-screen p-4 mx-auto mt-5">
 
   <!-- Section: Design Block -->
   <section class="mb-20 mx-8">
     <div class="px-12 py-12 md:px-12 bg-gray-100 text-gray-800 text-center lg:text-left">
       <div class="container mx-auto xl:px-32">
-        <div class="grid lg:grid-cols-2 gap-12 flex items-center">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
           <div class="mt-12 lg:mt-0">
             <h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12">Property Management  <br /><span class="text-600 text-accent-blue">System</span></h1>
             <p class="text-gray-600">
@@ -77,7 +76,7 @@
                 <div class="flex justify-center mt-4">
                   <div class="lg:w-full md:w-2/3 w-full">
                   <label 
-                  class="block uppercase tracking-wide text-gray-700 text-xs text-letter font-bold mb-2"
+                  class="block uppercase tracking-wide text-xs text-letter font-bold mb-2"
                   htmlFor="usertype"
                   >
                     UserType
