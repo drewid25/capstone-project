@@ -111,15 +111,20 @@ public function change(Request $request){
       'current_password' => 'required',
       'new_password' => 'required|string|min:6|confirmed',
   ]);
-  $validatedData['current_password'] = Hash::make(   $validatedData['current_password']) ;
+  $validatedData['current_password'] = Hash::make($validatedData['current_password']) ;
+  $validatedData['new_password'] = Hash::make($validatedData['new_password']) ;
   //Change Password
-  $users = Auth::user();
 
-  $users->password =$validatedData['current_password'];
-  dd($users);
-  $users->save();
 
-  return redirect('/login')->back()->with('sucess', 'password changed succesfully updated.');
+ 
+ 
+  $users = User::find(Auth::user()->id);
+ 
+   $users->password =$validatedData['new_password'];
+
+   $users->save();
+
+  return redirect('/login')->with('success', 'password changed successfully updated.');
 
 }
 };
