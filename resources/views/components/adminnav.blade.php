@@ -6,7 +6,7 @@
           <div class="flex-shrink-0 text-letter font-bold items-center justify-center">
             <div class="flex items-center gap-2 ">
               <a href="/dashboard">
-                <img class="w-10 h-10 rounded-full" src="" alt="">
+                <img class="w-10 h-10 rounded-full" src="{{asset('images/'. auth()->user()->company_logo)}}" alt="">
               </a>
               <h2 class="ml-3"> B13 FULLTANK</h2>
             </div>
@@ -47,7 +47,6 @@
           <span class="sr-only">Open main menu</span>
           <!--
               Heroicon name: outline/bars-3
-
               Menu open: "hidden", Menu closed: "block"
             -->
           <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -56,7 +55,6 @@
           </svg>
           <!--
               Heroicon name: outline/x-mark
-
               Menu open: "block", Menu closed: "hidden"
             -->
           <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -69,3 +67,4 @@
 </div>
 </nav>
 </div>
+

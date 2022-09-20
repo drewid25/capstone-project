@@ -1,7 +1,4 @@
 <div class="h-full border bg-accent-blue border-border-gray py-5 px-5 col-span-2 border-r-none">
-
-
-
     <div class="flex flex-col">
         <div class="hover:bg-gray-text hover:text-white rounded-r-full text-left hover:indent-4 pt-3">
             <a href="/addemployee" class="text-letter font-bold">
@@ -20,6 +17,10 @@
         <div class="hover:bg-gray-text hover:text-white rounded-r-full text-left hover:indent-4 pt-3">
             <a href="/inventory" class="text-letter font-bold">
                 <i class="fa-solid fa-warehouse text-white mr-2 mb-5"></i></i>Inventory List</a>
+        </div>
+        <div class="hover:bg-gray-text hover:text-white rounded-r-full text-left hover:indent-4 pt-3">
+            <a href="/employee/change-password/" class="text-letter font-bold">
+                <i class="fa-solid fa-warehouse text-sm text-grey mr-2 mb-5"></i></i>Change password </a>
         </div>
 
       
