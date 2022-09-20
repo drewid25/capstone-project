@@ -7,3 +7,4 @@
 <!-- wla JS yung navbar pag maliit na sya -->
 
 @include('partials.footer')
+
