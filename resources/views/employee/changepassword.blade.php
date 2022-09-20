@@ -10,10 +10,13 @@
     >
 Change Password
     </h2>
+   
     <br />
     <br />
-    <form action="/login/process" method="POST" >
+    <form action="{{ route('passwordchange') }}" method="POST" >
       @csrf
+      <input type="hidden" value="{{ auth()->user()->id }}" name="id" />
+
       <div class="flex justify-center">
         <div class="lg:w-full md:w-2/3 w-full">
           <label 
@@ -24,12 +27,12 @@ Change Password
           </label>
           <input 
             type="text"
-            name="password"
+          
             id="password"
             placeholder="Username"
             class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full  
               py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-button-blue md:"
-            required
+            required 
           />
         </div>
       </div>
@@ -43,9 +46,9 @@ Change Password
            New Password
           </label>
           <input 
-            type="new_password"
-            name="new_password"
-            id="new_password"
+            type="password"
+            name="password"
+            id="password"
             placeholder="Password"
             class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full 
               py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-button-blue"

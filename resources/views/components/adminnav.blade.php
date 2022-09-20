@@ -6,7 +6,7 @@
           <div class="flex-shrink-0 text-letter font-bold items-center justify-center">
             <div class="flex items-center gap-2 ">
               <a href="/dashboard">
-                <img class="w-10 h-10 rounded-full" src="{{asset('images/'. auth()->user()->company_logo)}}" alt="">
+                <img class="w-10 h-10 rounded-full" src="" alt="">
               </a>
               <h2 class="ml-3"> B13 FULLTANK</h2>
             </div>

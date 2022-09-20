@@ -33,27 +33,31 @@ use Illuminate\Http\Request;
 // Route::redirect('/welcome','/')
 
 
-// Route::get('/register',[UserController::class,'register']);
+// Home Route
 Route::get('/', function (){
     return view('landingpage');
 })->name('dashboard');
+
+// Dashboard Route
 Route::get('/dashboard', function (){
     return view('admin.dashboard')->with('inventories',Property::all());
 })->middleware(['auth'])->name('dashboard');
 
+//  Login/logout  Route
+Route::get('/login',function(){
+    return view('admin.login');
+})->name('login');
+Route::post('/login/process',[UserController::class, 'process']);
+Route::post('/logout',[UserController::class, 'logout']);
 
+// User Register Route
+Route::get('/register',function(){
+    return view('admin.register');
+})->name('register');
 
-// Property Routes
-Route::post('/createproperty',[PropertyController::class,'create'])->name('createproperty');
-Route::get('/addproperty',function(){
-    return view('admin.addproperty')->with('users',User::all());
-});
+Route::post('/user',[UserController::class,'store']);
 
-
-
-
-// Employee Routes
-
+// Employe Route
 Route::get('/addemployee',function(){
     return view('admin.addemployee');
 })->name('addemployee');
@@ -61,84 +65,54 @@ Route::get('/addemployee',function(){
 Route::get('/employeelist',function (){
     return view('admin.employeelist')->with('users',User::all());
 })->name('employeelist');
-Route::post('/addemployeelist',[EmployeeController::class,'create'])->name('addemployeelist');
 
-
-// Inventory Routes
-
-Route::get('/inventory',function(){
-
-    return view('admin.inventory')->with('inventories', Property::all());
-})->name('inventories');
-
-//Issuance
-
-Route::get('/issuance',function(){
-    return view('admin.issuance');
-})->name('issuance');
-
-// Register
-Route::get('/register',function(){
-    return view('admin.register');
-})->name('register');
-Route::post('/user',[UserController::class,'store']);
-//admin
-Route::get('/login',function(){
-    return view('admin.login');
-})->name('login');
-
-Route::post('/login/process',[UserController::class, 'process']);
-
-
-Route::post('/logout',[UserController::class, 'logout']);
-
-//employee
-
-
-Route::get('/employee/login',function(){
-    return view('employee.login')->with('employees',User::all());
-});
-Route::post('employee/login/process',[EmployeeController::class,'process']);
-
-Route::get('/employee/dashboard',function(){
-    return view('employee.dashboard');
+Route::get('/employee/dashboard/',function(){
+    return view('employee.dashboard')->with('inventories',Property::all());
 })->middleware(['auth'])->name('dashboard');
 
-Route::get('/employee/profile', function(){
-    return view('employee.profile')->with('user', auth()->user());
+Route::get('/employee/profile/{id}', function($id){
+    return view('employee.profile')->with('users',User::find($id));
 });
-Route::get('/employee/property-transfer', function(){
-    return view('employee.transfer-property');
-});
-Route::get('/employee/property-return', function(){
-    return view('employee.return-property');
-});
-Route::get('/employee/change-password
-', function(){
-    return view('employee.changepassword');
-});
+Route::get('/employee/change-password/{id}', function($id){
+    return view('employee.changepassword')->with('users',User::find($id));
+})->name('changepassword');
 
-Route::post('updateemployee',
-[EmployeeController::class,'update']
-)->name('updateemployee');
+Route::post('passwordchange',[UserController::class,'change'])->name('passwordchange');
+Route::post('updateemployee',[UserController::class,'update'])->name('updateemployee');
 
 Route::get('employeeupdate/{id}',
 function($id){
     return view('admin.employeeupdate')->with('employee',User::find($id));
-}
-)->name('employeeupdate');
-
-Route::get('/search',function(){
-    return view('admin.search')->with('inventories',Property::all());
-});
-Route::get('/search/property',[PropertyController::class, 'search']);
-
+})->name('employeeupdate');
 Route::post('getproperties',function(Request $request){
-    $employee = User::find($request->id);
+    $user = User::find($request->id);
     
-    $properties = $employee->properties;
+    $properties = $user->properties;
+    
     return json_encode($properties);
 })->name('getproperties');
 
 
+// Property Routes
+Route::post('/createproperty',[PropertyController::class,'create'])->name('createproperty');
+
+Route::get('/addproperty',function(){
+    return view('admin.addproperty')->with('users',User::all());
+});
+Route::post('/updateproperty',
+    [PropertyController::class, 'update']
+)->name('updateproperty');
+
+
+
+Route::get('propertyupdate/{id}',
+function($id){
+    return view('admin.propertyupdate')->with('property',Property::find($id));
+})->name('propertyupdate');
+
+// Inventory Routes
+Route::get('/inventory',function(){
+
+    return view('admin.inventory')->with('inventories', Property::all());
+})->name('inventories');
 

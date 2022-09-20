@@ -1,34 +1,35 @@
 
 
   <div class="bg-gray-text border-r-2 border-l-2 border-r-letter border-l-letter h-full w-full shadow-2xl col-span-7 px-3 py-6">
-    <h1 class="text-white font-bold text-2xl mb-3 text-center">Add Property</h1>
+    <h1 class="text-white font-bold text-2xl mb-3 text-center">Update Property</h1>
     <div class="bg-white h-8/12 p-6  shadow-2xl rounded-lg py-4 px-4">
-      <form action="{{ route('createproperty')}}" method="POST" type="submit" class="py-6 px-2 bg-accent-blue h-50 flex flex-col mx-auto shadow-2xl"  >
+      <form action="{{ route('updateproperty') }}" method="POST" type="submit" class="py-6 px-2 bg-accent-blue h-50 flex flex-col mx-auto shadow-2xl"  >
         @csrf
   
              <div class="flex flex-row">
+              <input type="hidden" value="{{ $property->id }}" name="id" />
                  <div class="p-3 flex flex-col bg-accent-blue w-full">
-                     <label for="" class="text-letter mr-3">Supplier Name</label>
-                     <input type="text" name="supplier_name" class="focus-border-accent-blue">
+                     <label for="supplier_name" class="text-letter mr-3">Supplier Name</label>
+                     <input type="text" name="supplier_name" class="focus-border-accent-blue" >
                  </div>
                  <div class="p-3 flex flex-col bg-accent-blue w-full">
-                     <label for="" class="text-letter mr-3">Invoice Number</label>
-                     <input type="text" name="invoice_number">
+                     <label for="inovoice_number" class="text-letter mr-3">Invoice Number</label>
+                     <input type="text" name="invoice_number" value={{ $property->invoice_number }}>
                  </div>
                 </div>
                 <div class="flex flex-row">
                  <div class="p-3 flex flex-col bg-accent-blue w-50">
-                     <label for="" class="text-letter mr-3">Date Acquired</label>
-                     <input type="date" name="date_acquired">
+                     <label for="date_acquired" class="text-letter mr-3">Date Acquired</label>
+                     <input type="date" name="date_acquired" value={{ $property->date_acquired }}>
                  </div>
                  <div class="flex flex-row ">
                      <div class="p-3 flex flex-col bg-accent-blue">
-                         <label for="" class="text-letter mr-3">Price</label>
-                         <input type="text" class="w-50" name="price">
+                         <label for="price" class="text-letter mr-3">Price</label>
+                         <input type="text" class="w-50" name="price" value={{ $property->price }}>
                      </div>
                      <div class="p-3 flex flex-col bg-accent-blue ">
-                         <label for="" class="text-letter mr-3">Quantity</label>
-                         <input type="number" class="w-24" name="quantity">
+                         <label for="quantity" class="text-letter mr-3">Quantity</label>
+                         <input type="number" class="w-24" name="quantity" value={{ $property->quantity }}>
                      </div>
                  </div>
                 
@@ -36,9 +37,9 @@
               
                  
                  <div class="p-3 flex flex-col bg-accent-blue">
-                     <label for="" class="text-letter mr-3">Classification</label>
+                     <label for="classification" class="text-letter mr-3">Classification</label>
                      <select name="classification"
-                      id="" class="w-50" >
+                      id="" class="w-50"  >
                      <option value="IT AND COMMUNICATIONS EQUIPMENT" class="text-gray-600">IT AND COMMUNICATIONS EQUIPMENTS</option>
                      <option value="OFFICE EQUIPMENT">OFFICE EQUIPMENTS</option>
                      <option value="FURNITURES AND FIXTURES">FURNITURES AND FIXTURES</option>
@@ -48,7 +49,7 @@
                  <div class="p-3 flex flex-col bg-accent-blue">
                      <label for="" class="text-letter mr-3">Category</label>
                      <select name="category"
-                      id="" class="w-50" >
+                      id="" class="w-50"  >
                      <option value="CHAIR" class="text-gray-600">CHAIR</option>
                      <option value="TABLES" class="text-gray-600">TABLES</option>
                      <option value="SOFA" class="text-gray-600">SOFA</option>
@@ -62,12 +63,12 @@
                
                  <div class="flex flex-row">
                      <div class="p-3 flex flex-col bg-accent-blue">
-                         <label for="" class="text-letter mr-3">Property Number</label>
-                         <input type="text" name="property_number">
+                         <label for="property_number" class="text-letter mr-3">Property Number</label>
+                         <input type="text" name="property_number" value={{ $property->property_number }}>
                      </div>
                      <div class="p-3 flex flex-col bg-accent-blue">
-                         <label for="" class="text-letter mr-3">Property Name</label>
-                         <input type="text" name="property_name">
+                         <label for="property_name" class="text-letter mr-3">Property Name</label>
+                         <input type="text" name="property_name" value={{ $property->property_name }}>
                          {{-- <select name="property_name" id="property">
                          <option value="LAPTOP" class="text-gray-600" name="property_name
 
@@ -104,23 +105,16 @@
                          "
                          id="exampleFormControlTextarea1"
                          rows="3"
-                        name="description"
+                        name="description" value={{ $property->description }}
                        ></textarea>
                      </div>
                    </div>
-                   <div class="block relative mb-5">
-                    <span class="text-xs font-medium text-letter">Select Employee</span>
-                    <select id="user" required name="user_id" class="block appearance-none w-full bg-white border border-gray-200 px-4 py-2 pr-8 rounded-lg shadow leading-tight focus:outline-none focus:shadow-outline">
-                        @foreach($users as $employee)
-                        <option value="{{ $employee->id }}">{{$employee->id_number}} - {{ $employee->name }} - {{$employee->department}} </option>
-                        @endforeach
-                    </select>
-                    </div>     
+                  
                    
           
       
         <div class="text-center">
-          <button class=" text-lg rounded-full font-bold hover:bg-gray-text text-accent-blue bg-letter hover:text-letter w-24 rounded-lg font-bold" type="submit">ADD</button>
+          <button class=" text-lg rounded-full font-bold hover:bg-gray-text text-accent-blue bg-letter hover:text-letter w-24 rounded-lg font-bold" type="submit">Update</button>
 
         </div>
       
