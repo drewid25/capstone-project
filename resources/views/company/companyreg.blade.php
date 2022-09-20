@@ -6,7 +6,7 @@
             <h1 class="text-center text-3xl leading-9 font-extrabold text-gray-800">
                 Register
             </h1>
-            <form action="/companyreg" method="POST" enctype="multipart/form-data" class="mt-6">
+            <form action="companyreg" method="POST" enctype="multipart/form-data" class="mt-6">
                 @csrf
                 <div class="mb-2">
                     <label for="company_name" class="block text-sm font-semibold text-gray-text">

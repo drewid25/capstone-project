@@ -1,8 +1,8 @@
 
 @include('partials.header')
 <x-landingnav :company=$company />
-@dd($company)
-<x-herobanner/>
+
+<x-herobanner :company=$company/>
 
 
 <!-- wla JS yung navbar pag maliit na sya -->

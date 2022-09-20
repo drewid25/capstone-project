@@ -1,12 +1,13 @@
 <!-- Container for demo purpose -->
 <div class="relative top-10 right-0 bottom-0 left-0 w-full h-screen p-4 mx-auto mt-5">
-
+  @foreach($company as $companies)
   <!-- Section: Design Block -->
   <section class="mb-20 mx-8">
     <div class="px-12 py-12 md:px-12 bg-gray-100 text-gray-800 text-center lg:text-left">
       <div class="container mx-auto xl:px-32">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
           <div class="mt-12 lg:mt-0">
+            <h1 class="text-4xl font-bold text-gray-800">{{$companies->company_name}}</h1>
             <h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12">Property Management  <br /><span class="text-600 text-accent-blue">System</span></h1>
             <p class="text-gray-600">
             A system software that facilitates inventory or assets of a company,  is responsible for the effective purchase, use, and disposal of property investment and equipment. It also entails keeping detailed records of these assets' ownership, inventory, storage, and insurance.
@@ -108,6 +109,7 @@
         </div>
       </div>
     </div>
+    @endforeach
   </section>
   <!-- Section: Design Block -->
 

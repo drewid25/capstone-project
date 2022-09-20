@@ -20,7 +20,7 @@ class CompanyController extends Controller
       'password' => 'required|confirmed|min:6'
      ]);
      $request['password'] = Hash::make( $request['password']);
-     $newUserImage = time() . '-' .$request->name. "."  .$request->company_logo->extension();
+     $newUserImage = time() . '-' .$request->company_name. "."  .$request->company_logo->extension();
      $request->company_logo->move(public_path('images'),$newUserImage);
      $company = Company::create([
         'company_name'=>$request->input('company_name'),
@@ -31,7 +31,7 @@ class CompanyController extends Controller
       ]);
   
   
-     return redirect('/{id}');
+     return redirect('/companylanding');
   
   }
 }

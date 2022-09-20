@@ -36,8 +36,8 @@ use Illuminate\Http\Request;
 
 
 // Home Route
-Route::get('/{id}', function ($id){
-    return view('landingpage')->with('company', Company::find($id));
+Route::get('/companylanding', function (){
+    return view('landingpage')->with('company',Company::all());
 })->name('dashboard');
 
 // Dashboard Route
@@ -121,11 +121,15 @@ Route::get('/signin',function(){
 
     return view('company.signin');
 });
+Route::get('/',function(){
+
+    return view('company.landingpage');
+});
 Route::get('/companyreg',function(){
 
     return view('company.companyreg');
 });
-Route::post('/companyreg', [CompanyController::class, 'store']);
+Route::post('companyreg', [CompanyController::class, 'store']);
     
 
 Route::get('/home', function(){

@@ -37,7 +37,7 @@
         <div class="absolute top-1 right-0 ">
             <a href="#" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-md leading-normal uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Sign-in</a>
             
-            <a href="#" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-md leading-normal uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Sign-up</a>
+            <a href="/companyreg" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-md leading-normal uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Sign-up</a>
         </div>
         </div>
       <!-- Left links -->

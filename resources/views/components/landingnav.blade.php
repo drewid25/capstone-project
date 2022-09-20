@@ -1,10 +1,22 @@
 <nav class="relative w-full flex flex-wrap items-center justify-between py-4 bg-accent-blue text-gray-500 hover:text-gray-700 focus:text-gray-700 shadow-lg ">
     <div class="container-fluid w-full flex flex-wrap items-center justify-between px-6">
         <div class="container-fluid">
-            <a class="flex items-center text-gray-900 hover:text-gray-900 focus:text-gray-900 mt-2 lg:mt-0 mr-1" href="#">
+            @foreach($company as $companies)
+          
+            <div class="flex items-center ml-5">
+                <img  class="h-14  w-14 rounded-full mr-3" src="{{asset('images/'. $companies->company_logo)}}" alt="">
+                <div class="flex flex-col ">
+                <h2 class="text-xl font-bold text-gray-800">{{$companies->company_name}}</h2>
+                <h3 class="text-sm font-bold text-gray-800">Property Management System</h3>
+                </div>
+               </div>
+                @endforeach
+            
+            {{-- <a class="flex items-center text-gray-900 hover:text-gray-900 focus:text-gray-900 mt-2 lg:mt-0 mr-1" href="#">
                 <i class="fa-solid fa-users-gear mx-3 text-3xl" loading="lazy"></i>
-                <span class="text-2xl font-bold">Property Management System</span>
-            </a>
+            
+               
+            </a> --}}
         </div>
 
 
