@@ -10,12 +10,21 @@
     >
 Change Password
     </h2>
-   
+    @if (session('error'))
+    <div class="text-red bg-red">
+        {{ session('error') }}
+    </div>
+@endif
+    @if (session('success'))
+        <div class="text-blue-button alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
     <br />
     <br />
     <form action="{{ route('passwordchange') }}" method="POST" >
       @csrf
-      <input type="hidden" value="{{ auth()->user()->id }}" name="id" />
+      {{-- <input type="hidden" value="{{ auth()->user()->id }}" name="id" /> --}}
 
       <div class="flex justify-center">
         <div class="lg:w-full md:w-2/3 w-full">
@@ -23,17 +32,22 @@ Change Password
           class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
           htmlFor="text"
           >
-          Old Password
+          Current Password
           </label>
           <input 
             type="text"
-          
-            id="password"
-            placeholder="Username"
+            name="current_password"
+            id="current_password"
+            placeholder="Password"
             class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full  
               py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-button-blue md:"
             required 
           />
+          @if ($errors->has('current-password'))
+          <span class="">
+              <strong>{{ $errors->first('current-password') }}</strong>
+          </span>
+         @endif
         </div>
       </div>
 
@@ -47,26 +61,31 @@ Change Password
           </label>
           <input 
             type="password"
-            name="password"
-            id="password"
+            name="new_password"
+            id="new_password"
             placeholder="Password"
             class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full 
               py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-button-blue"
             required
           />
+          @if ($errors->has('new-password'))
+          <span class="">
+              <strong>{{ $errors->first('new-password') }}</strong>
+          </span>
+         @endif
         </div>
       </div>
       <div class="flex justify-center mt-4">
         <div class="lg:w-full md:w-2/3 w-full">
           <label 
           class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-          htmlFor="password_confirmation"
+          htmlFor="new_password_confirmation"
           >
            Confirm Password
           </label>
           <input 
             type="password_confirmation"
-            name="password_confirmation"
+            name="new_password_confirmation"
             id="password_confirmation"
             placeholder="Password"
             class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full 

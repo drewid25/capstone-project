@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Auth;
 
 
 
@@ -94,16 +95,31 @@ public function update(Request $request){
 
    return redirect('/employeelist')->with('success', 'Employee updated.');
 }
+
 public function change(Request $request){
-   $users = User::find($request->id);
- 
-   $users ->password = $request->password;
-   
+   if (!(Hash::check($request->get('current_password'), auth()->user()->password))) {
+      // The passwords matches
+      return redirect()->back()->with("error","Your current password does not matches with the password you provided. Please try again.");
+  }
 
- 
+  if(strcmp($request->get('current_password'), $request->get('new_password')) == 0){
+      //Current password and new password are same
+      return redirect()->back()->with("error","New Password cannot be same as your current password. Please choose a different password.");
+  }
 
-   $users->save();
+  $validatedData = $request->validate([
+      'current_password' => 'required',
+      'new_password' => 'required|string|min:6|confirmed',
+  ]);
+  $validatedData['current_password'] = Hash::make(   $validatedData['current_password']) ;
+  //Change Password
+  $users = Auth::user();
 
-   return redirect('/login')->with('success', 'password updated.');
+  $users->password =$validatedData['current_password'];
+  dd($users);
+  $users->save();
+
+  return redirect('/login')->back()->with('sucess', 'password changed succesfully updated.');
+
 }
-}
+};
