@@ -1,3 +1,4 @@
+
 <div class="bg-gray-text shadow-2xl py-6 px-3 h-screen col-span-7 border-r-2 border-l-2 border-r-letter overflow-auto">
 
     <h1 class="text-2xl font-bold text-center mb-3 text-letter">LIST OF EMPLOYEES</h1>
@@ -43,7 +44,6 @@
                             <button type="button"
                                 class="viewProperties px-6
                     
-
                     bg-button-blue
                     text-white
                     font-medium
@@ -58,7 +58,6 @@
                     active:bg-blue-800 active:shadow-lg
                     transition
                     duration-150
-
                     ease-in-out"
                                 employeeid="{{ $employee->id }}" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                 View
@@ -191,8 +190,6 @@
                 id: $(this).attr('employeeid')
             };
             console.log(formData)
-
-
             $.ajax({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -220,7 +217,6 @@
                     alert("There's an error.")
                 }
             });
-
         })
     </script>
 </div>

@@ -71,7 +71,7 @@ public function process(Request $request){
    }
    else{
      
-return redirect('/')->with('message', "Admin name does not exist!");
+return redirect('/companylanding')->with('message', "Admin name does not exist!");
    }
 }
 public function logout(Request $request){
@@ -79,7 +79,7 @@ public function logout(Request $request){
    $request->session()->invalidate();
    $request->session()->regenerateToken();
 
-   return redirect('/')->with('message','Logout Succesful!');
+   return redirect('/companylanding')->with('message','Logout Succesful!');
 
 }
 public function update(Request $request){
