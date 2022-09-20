@@ -10,10 +10,7 @@
           <div class="mt-12 lg:mt-0">
             <h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12">Property Management  <br /><span class="text-600 text-accent-blue">System</span></h1>
             <p class="text-gray-600">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Eveniet, itaque accusantium odio, soluta, corrupti aliquam
-              quibusdam tempora at cupiditate quis eum maiores libero
-              veritatis? Dicta facilis sint aliquid ipsum atque?
+            A system software that facilitates inventory or assets of a company,  is responsible for the effective purchase, use, and disposal of property investment and equipment. It also entails keeping detailed records of these assets' ownership, inventory, storage, and insurance.
             </p>
           </div>
           <div class="mb-12 lg:mb-0">
