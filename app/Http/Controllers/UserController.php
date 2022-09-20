@@ -94,4 +94,16 @@ public function update(Request $request){
 
    return redirect('/dashboard')->with('success', 'Employee updated.');
 }
+public function change(Request $request){
+   $users = User::find($request->id);
+ 
+   $users ->password = $request->password;
+   
+
+ 
+
+   $users->save();
+
+   return redirect('/login')->with('success', 'password updated.');
+}
 }

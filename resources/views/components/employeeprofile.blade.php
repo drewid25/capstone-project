@@ -18,7 +18,7 @@
         <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
           <div class="py-4 inline-block min-w-full sm:px-6 lg:px-8">
             <div class="overflow-hidden bg-white px-4 py-4">
-              <table class="min-w-full border text-center " >
+            <table class="min-w-full border text-center" >
                 <thead class="border-b bg-accent-blue">
                   <tr>
                     <th scope="col" class="text-sm font-medium text-white px-6 py-4 border-r">
@@ -38,17 +38,30 @@
                   </tr>
                 </thead class="border-b">
                 <tbody >
-                  <tr>
-                    <td class='border-2 border-border-gray text-grey text-center text-sm '>{{App\Models\Property::find(auth()->user()->id)->property_number}}</td>
-                    <td class='border-2 border-border-gray text-grey text-center text-sm '>{{App\Models\Property::find(auth()->user()->id)->property_name}}</td>
-                    <td class='border-2 border-border-gray text-grey text-center text-sm '>{{App\Models\Property::find(auth()->user()->id)->description}}</td>
-                    <td class='border-2 border-border-gray text-grey text-center text-sm '>
-                      <button class="bg-button-blue rounded-lg px-3 text-sm text-letter">Transfer</button>
-                      <button  class="bg-button-blue rounded-lg px-3 text-sm text-letter">Return</button>
-                    </td>
-       
+               
+   
+    @foreach ($inventories as $inventory ) 
+    @if($inventory->user_id === auth()->user()->id)
+     
+      <tr>
+                   
+        <td class='border-2 border-border-gray text-grey text-center text-sm '>{{$inventory->property_number}}</td>
+        <td class='border-2 border-border-gray text-grey text-center text-sm '>{{$inventory->property_name}}</td>
+        <td class='border-2 border-border-gray text-grey text-center text-sm '>{{$inventory->description}}</td>
+        <td class='border-2 border-border-gray text-grey text-center text-sm '>
+          <button class="bg-button-blue rounded-lg px-3 text-sm text-letter">Transfer</button>
+          <button  class="bg-button-blue rounded-lg px-3 text-sm text-letter">Return</button>
+        </td>
+
+     
+      </tr>
+    
+    
+    @endif
                 
-                  </tr>
+                  
+                  @endforeach
+               
                 </tbody>
               </table>
              

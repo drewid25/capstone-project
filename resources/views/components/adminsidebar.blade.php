@@ -22,12 +22,7 @@
                 <i class="fa-solid fa-warehouse text-white mr-2 mb-5"></i></i>Inventory List</a>
         </div>
 
-        <div class="hover:bg-gray-text hover:text-white rounded-r-full text-left hover:indent-4 pt-3">
-            <a href="/issuance" class="text-letter font-bold">
-
-                <i class="fa-solid fa-address-book text-white mr-2 mb-5"></i>Issuance</a>
-
-        </div>
+      
 
 
 

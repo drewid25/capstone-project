@@ -67,18 +67,18 @@ Route::get('/employeelist',function (){
 })->name('employeelist');
 
 Route::get('/employee/dashboard/',function(){
-    return view('employee.dashboard')->with('users',User::all());
+    return view('employee.dashboard')->with('inventories',Property::all());
 })->middleware(['auth'])->name('dashboard');
 
 Route::get('/employee/profile/{id}', function($id){
     return view('employee.profile')->with('users',User::find($id));
 });
-Route::get('/employee/change-password', function(){
-    return view('employee.changepassword');
-});
-Route::post('updateemployee',
-[UserController::class,'update']
-)->name('updateemployee');
+Route::get('/employee/change-password/{id}', function($id){
+    return view('employee.changepassword')->with('users',User::find($id));
+})->name('changepassword');
+
+Route::post('passwordchange',[UserController::class,'change'])->name('passwordchange');
+Route::post('updateemployee',[UserController::class,'update'])->name('updateemployee');
 
 Route::get('employeeupdate/{id}',
 function($id){
