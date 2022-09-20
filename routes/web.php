@@ -73,11 +73,9 @@ Route::get('/employee/dashboard/',function(){
 Route::get('/employee/profile/{id}', function($id){
     return view('employee.profile')->with('users',User::find($id));
 });
-Route::get('/employee/change-password/{id}', function($id){
-    return view('employee.changepassword')->with('users',User::find($id));
-})->name('changepassword');
 
-Route::post('passwordchange',[UserController::class,'change'])->name('passwordchange');
+
+
 Route::post('updateemployee',[UserController::class,'update'])->name('updateemployee');
 
 Route::get('employeeupdate/{id}',
@@ -116,3 +114,10 @@ Route::get('/inventory',function(){
     return view('admin.inventory')->with('inventories', Property::all());
 })->name('inventories');
 
+
+// Change password Routes
+Route::post('passwordchange',[UserController::class,'change'])->name('passwordchange');
+
+Route::get('/employee/change-password/', function(){
+    return view('employee.changepassword');
+})->name('changepassword');
