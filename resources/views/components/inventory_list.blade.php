@@ -29,7 +29,6 @@
            <tbody>
            
                @foreach($inventories as $inventory)
-           
                <tr>
              
                

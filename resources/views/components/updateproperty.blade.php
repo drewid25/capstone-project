@@ -58,6 +58,7 @@
                      <option value="TABLET">TABLET</option>
                      <option value="CELLPHONE">CELLPHONE</option>
                      <option value="AIRCONDITIONER">AIRCON</option>
+                     <option value="VEHICLE">VEHICLE</option>
                      </select>
                  </div>
                

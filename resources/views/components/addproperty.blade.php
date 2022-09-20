@@ -57,6 +57,7 @@
                      <option value="TABLET">TABLET</option>
                      <option value="CELLPHONE">CELLPHONE</option>
                      <option value="AIRCONDITIONER">AIRCON</option>
+                     <option value="VEHICLE">VEHICLE</option>
                      </select>
                  </div>
                
@@ -68,15 +69,7 @@
                      <div class="p-3 flex flex-col bg-accent-blue">
                          <label for="" class="text-letter mr-3">Property Name</label>
                          <input type="text" name="property_name">
-                         {{-- <select name="property_name" id="property">
-                         <option value="LAPTOP" class="text-gray-600" name="property_name
-
-                         " id="property">>LAPTOP COMPUTER</option>
-            <option value="DESKTOP COMPUTER" name="property_name" id="property">>DESKTOP COMPUTER</option>
-            <option value="CELLPHONE" name="property_name" id="property">>CELLPHONE</option>
-            <option value="TABLET" name="property_name
-                         " id="property">>TABLET</option>
-          </select> --}}
+                        
         </div>
       </div>
 
@@ -120,7 +113,7 @@
           
       
         <div class="text-center">
-          <button class=" text-lg rounded-full font-bold hover:bg-gray-text text-accent-blue bg-letter hover:text-letter w-24 rounded-lg font-bold" type="submit">ADD</button>
+          <button class=" text-lg font-bold hover:bg-gray-text text-accent-blue bg-letter hover:text-letter w-24 rounded-lg" type="submit">ADD</button>
 
         </div>
       

@@ -7,7 +7,7 @@
       © 2022 Copyright:
       <a class="text-gray-800" href="https://tailwind-elements.com/">Property Management System</a>
     </div>
-  </footer> --}}
+  </footer>
   
 
 <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
