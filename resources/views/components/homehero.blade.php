@@ -9,7 +9,7 @@
         A system software that facilitates inventory or assets of a company,  is responsible for the effective purchase, use, and disposal of property investment and equipment. It also entails keeping detailed records of these assets' ownership, inventory, storage, and insurance.
         </p>
         <br>
-      <a class="inline-block px-7 py-3 bg-accent-blue text-white font-medium text-sm leading-snug uppercase rounded hover:bg-blue-700 hover:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-200 transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light" href="#!" role="button">Sign In</a>
+      <a href='/companyreg' class="inline-block px-7 py-3 bg-accent-blue text-white font-bold text-sm leading-snug uppercase rounded hover:bg-blue-700 hover:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-200 transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light" href="#!" role="button">Register</a>
     </div>
   </section>
   <!-- Section: Design Block -->
