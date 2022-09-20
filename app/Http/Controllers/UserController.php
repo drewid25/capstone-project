@@ -83,6 +83,7 @@ public function logout(Request $request){
 }
 public function update(Request $request){
    $users = User::find($request->id);
+ 
    $users ->name = $request->name;
    $users ->email = $request->email;
    $users->usertype =$request->usertype;

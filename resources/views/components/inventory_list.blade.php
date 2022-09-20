@@ -29,7 +29,7 @@
            <tbody>
            
                @foreach($inventories as $inventory)
-             
+            
                <tr>
              
                
@@ -41,8 +41,11 @@
                    <td class='border-2 border-border-gray  text-grey text-center text-sm '>{{App\Models\User::find($inventory->user_id)->name}}
                    <td class='border-2 border-border-gray  text-grey text-center text-sm '>
                    <div class="flex flex-row gap-2">
-                    <a href="#" class='bg-button-blue px-2 rounded-lg text-letter ml-2'>edit</a>
-                    <a heref='#' class='bg-button-blue px-2 rounded-lg text-letter'>delete</a>
+                 
+                    <form onsubmit="return confirm('Do you really want to update this property')">
+                    @csrf
+                    </form>
+                    <a href="{{ url('propertyupdate/' . $inventory->id) }}" class='bg-button-blue px-2 rounded-lg text-letter'>edit</a>
                    </div>
                    
                   
