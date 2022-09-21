@@ -1,5 +1,5 @@
 <!-- Container for demo purpose -->
-<div class="relative top-10 right-0 bottom-0 left-0 w-full h-full p-4 mx-auto ">
+<div class="relative top-10 right-0 bottom-0 left-0 w-full h-screen p-4 mx-auto ">
 
   <!-- Section: Design Block -->
   <section class="mb-40 mx-8">

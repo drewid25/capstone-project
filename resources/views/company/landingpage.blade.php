@@ -1,13 +1,13 @@
 @include('partials.header')
 
-<x-homenav />
-<x-homehero />
+<x-homenav/>
+<x-homehero/>
 
-<footer class="bg-accent-blue justify-center bottom-0 flex flex-row z-20 mt-10">
+<footer class="bg-accent-blue justify-center bottom-0 flex flex-row mt-10">
     <div class="text-gray-800 p-4 ">
-        © 2022 Copyright.
-        <a class="text-gray-800" href="https://tailwind-elements.com/">Property Management System</a>
+      © 2022 Copyright.
+      <a class="text-gray-800" href="https://tailwind-elements.com/">Property Management System</a>
     </div>
-</footer>
+  </footer>
 
 @include('partials.footer')
