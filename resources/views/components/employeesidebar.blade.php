@@ -10,7 +10,7 @@
     <div class = "flex flex-col">
     
     <div class="hover:bg-button-blue hover:text-white rounded-r-full text-left hover:indent-4 pt-3">
-    <a href="/employee/profile" class="text-letter font-bold">
+    <a href="/employee/dashboard" class="text-letter font-bold">
     <i class="fa-solid fa-window-maximize text-grey text-sm mr-2 mb-5"></i>Profile</a>
     </div>
     <div class="hover:bg-button-blue hover:text-white rounded-r-full text-left hover:indent-4 pt-3">

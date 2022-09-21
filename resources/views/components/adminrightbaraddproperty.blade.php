@@ -15,6 +15,8 @@
                 <td class = "pb-0"> - Quantity</td>
                 <td class = "pb-0"> - Property Number</td>
                 <td class = "pb-0"> - Property Name</td>
+                <td class = "pb-0"> - Employee</td>
+                
             </tr>
             <tr class="justify flex flex-col text-gray-text mt-3">
                 <th align ="left">Please Select: </th>
@@ -22,7 +24,7 @@
                 <td class = "pb-0"> - Category</td>
             </tr>
             <tr class=" flex flex-col text-gray-text mt-3">
-                <th align ="left">Please add a Description: </th>
+                <th align ="left">Add Description: </th>
                 <td class="text-sm indent-2">"Specify the color, model, etc."</td>
                 <td class="text-sm indent-2">"Specify if there are damages."</td>
             </tr>

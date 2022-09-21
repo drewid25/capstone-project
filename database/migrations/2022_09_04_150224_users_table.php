@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('id_number')->unique()->nullable();
             $table->string('name');
             $table->string('email')->unique();
+            $table->string('employee_position');
             $table->string('employee_image');
             $table->string('department')->default('IT department');
             $table->enum('usertype',['admin','employee'])->default('employee');

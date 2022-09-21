@@ -28,6 +28,7 @@ class UserController extends Controller
     'name'=>'required|min:4',
     'email' =>['required', 'email', Rule::unique('users','email')],
    'employee_image'=>'required|mimes:jpg,png,jpeg|max:5048',
+   'employee_position'=>'required',
    'department'=>'required',
    'usertype' =>'required',
     'password' => 'required|confirmed|min:6'
@@ -40,6 +41,7 @@ class UserController extends Controller
       'name'=> $request->input('name'),
       'email'=>$request->input('email'),
        'employee_image'=>$newUserImage ,
+       'employee_position'=>$request->input('employee_position'),
        'department'=>$request->input('department'),
        'usertype' =>$request->input('usertype'),      
       'password'=>$request->input('password'),

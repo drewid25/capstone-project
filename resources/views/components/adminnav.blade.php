@@ -1,6 +1,6 @@
 <div class="min-h-full container mx-auto py-6">
     <nav class="bg-accent-blue">
-        <div class="  px-4 sm:px-6 lg:px-8 ">
+        <div class="px-4">
             <div class="flex h-16 items-center justify-between">
                 <div class="flex items-center">
                     <div class="flex-shrink-0 text-letter font-bold items-center justify-center">

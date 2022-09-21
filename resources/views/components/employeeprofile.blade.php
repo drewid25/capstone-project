@@ -3,6 +3,7 @@
         <img src="{{asset('images/'. auth()->user()->employee_image)}}" alt="" class="h-16 w-16 rounded-lg">
         <div class="ml-3 ">
           <h1 class="font-bold text-gray-text">{{auth()->user()->name}}</h1>
+            <p class="text-gray-text">{{auth()->user()->employee_position}}</p>
             <p class="text-gray-text">{{auth()->user()->department}}</p>
         </div>
     

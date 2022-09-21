@@ -89,7 +89,7 @@ Route::post('/updateproperty',
 
 Route::get('propertyupdate/{id}',
 function($id){
-    return view('admin.propertyupdate')->with('property',Property::find($id));
+    return view('admin.propertyupdate')->with('property',Property::find($id))->with('companies',Company::all());
 })->name('propertyupdate');
 
 // Inventory Routes

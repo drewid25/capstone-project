@@ -1,9 +1,8 @@
-
 <div class="bg-gray-text shadow-2xl py-6 px-3 h-screen col-span-7 border-r-2 border-l-2 border-r-letter overflow-auto">
 
     <h1 class="text-2xl font-bold text-center mb-3 text-letter">LIST OF EMPLOYEES</h1>
 
-    <div class="bg-white py-6 px-3 h-96 py-4 px-4 rounded-lg shadow-2xl">
+    <div class="bg-white h-96 py-4 px-4 rounded-lg shadow-2xl">
         <table class="container border-2 border-border-gray  ">
             <thead>
                 <tr>
@@ -173,7 +172,7 @@
     <div class="text-center mt-5">
 
         <a href="/addemployee"
-            class="text-lg rounded-full font-bold hover:bg-accent-blue hover:text-white bg-letter text-accent-blue p-2 hover:text-letter  rounded-lg font-bold">ADD
+            class="text-lg font-bold hover:bg-accent-blue bg-letter text-accent-blue p-2 hover:text-letter rounded-lg">ADD
             NEW EMPLOYEE</a>
 
     </div>

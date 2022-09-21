@@ -13,15 +13,18 @@
                 <td class = "pb-0">- ID Number</td>
                 <td class = "pb-0">- Employee Name</td>
                 <td class = "pb-0">- Email Address</td>
-                <td class = "pb-0">- Def. Password</td>
+                <td class = "pb-0">- Position/Title</td>
+                <td class = "pb-0">- Password</td>
+                <td class = "pb-0">- Confirm Password</td>
             </tr>
             <tr class="pt-5 justify flex flex-col text-gray-text">
                 <th align="left">Please Upload:</th>
-                <td>Image: (.jpg, .jpeg, .png) formats</td>
+                <td>- Profile Image</td>
             </tr>
             <tr class="pt-5 justify flex flex-col text-gray-text">
                 <th align="left">Select:</th>
-                <td>- DEPARTMENT/OFFICE</td>
+                <td>- Department/Office</td>
+                <td>- User Type</td>
             </tr>
         </tbody>
     </table>

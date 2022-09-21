@@ -76,11 +76,23 @@
           
           <div class="mb-2">
             <label for="employee_image" class="block text-sm font-semibold text-gray-text ">
-              Upload Image:
+              Upload Image
             </label>
             <input type="file" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full 
                   py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-accent-blue" name="employee_image"  value="{{ old('employee_image') }}" required />
             @error('employee_image')
+            <p class="text-red-500 text-xs p-1">
+              {{$message}}
+            </p>
+            @enderror
+          </div>
+          <div class="mb-2">
+            <label for="employee_position" class="block text-sm font-semibold text-gray-text ">
+              Position/Title
+            </label>
+            <input type="text" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full 
+                  py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-accent-blue" name="employee_position"  value="{{ old('employee_position') }}" required />
+            @error('employee_position')
             <p class="text-red-500 text-xs p-1">
               {{$message}}
             </p>

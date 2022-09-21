@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="h-screen">
+<html lang="en" class="h-full">
 
 <head>
     <meta charset="UTF-8">
@@ -21,4 +21,4 @@
     <title>Property Management System</title>
 </head>
 
-<body class="bg-gray-text ">
+<body class="bg-gray-text">

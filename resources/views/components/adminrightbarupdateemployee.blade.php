@@ -13,12 +13,9 @@
                 <td class = "text-sm pb-0">- Profile Picture</td>
             </tr>
             <tr class="pt-5 justify flex flex-col text-gray-text">
-                <th align="left">Please Upload:</th>
-                <td class = "text-sm pb-0">Image: (.jpg, .jpeg, .png formats)</td>
-            </tr>
-            <tr class="pt-5 justify flex flex-col text-gray-text">
                 <th align="left">Select:</th>
-                <td class = "text-sm pb-0">- DEPARTMENT/OFFICE</td>
+                <td class = "text-sm pb-0">- Department/Office</td>
+                <td class = "text-sm pb-0">- User Type</td>
             </tr>
         </tbody>
     </table>
