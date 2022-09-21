@@ -24,7 +24,7 @@ Route::get('/companylanding', function (){
 
 // Dashboard Route
 Route::get('/dashboard', function (){
-    return view('admin.dashboard')->with('inventories',Property::all());
+    return view('admin.dashboard')->with('inventories',Property::all())->with('companies',Company::all());
 })->middleware(['auth'])->name('dashboard');
 
 //  Login/logout  Route
@@ -43,15 +43,15 @@ Route::post('/user',[UserController::class,'store']);
 
 // Employe Route
 Route::get('/addemployee',function(){
-    return view('admin.addemployee');
+    return view('admin.addemployee')->with('companies',Company::all());
 })->name('addemployee');
 
 Route::get('/employeelist',function (){
-    return view('admin.employeelist')->with('users',User::all());
+    return view('admin.employeelist')->with('users',User::all())->with('companies',Company::all());
 })->name('employeelist');
 
 Route::get('/employee/dashboard/',function(){
-    return view('employee.dashboard')->with('inventories',Property::all());
+    return view('employee.dashboard')->with('inventories',Property::all())->with('companies',Company::all());
 })->middleware(['auth'])->name('dashboard');
 
 Route::get('/employee/profile/{id}', function($id){
@@ -64,7 +64,7 @@ Route::post('updateemployee',[UserController::class,'update'])->name('updateempl
 
 Route::get('employeeupdate/{id}',
 function($id){
-    return view('admin.employeeupdate')->with('employee',User::find($id));
+    return view('admin.employeeupdate')->with('employee',User::find($id))->with('companies',Company::all());
 })->name('employeeupdate');
 Route::post('getproperties',function(Request $request){
     $user = User::find($request->id);
@@ -79,7 +79,7 @@ Route::post('getproperties',function(Request $request){
 Route::post('/createproperty',[PropertyController::class,'create'])->name('createproperty');
 
 Route::get('/addproperty',function(){
-    return view('admin.addproperty')->with('users',User::all());
+    return view('admin.addproperty')->with('users',User::all())->with('companies',Company::all());
 });
 Route::post('/updateproperty',
     [PropertyController::class, 'update']
@@ -95,7 +95,7 @@ function($id){
 // Inventory Routes
 Route::get('/inventory',function(){
 
-    return view('admin.inventory')->with('inventories', Property::all());
+    return view('admin.inventory')->with('inventories', Property::all())->with('companies',Company::all());
 })->name('inventories');
 
 

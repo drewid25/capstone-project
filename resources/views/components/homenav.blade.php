@@ -29,7 +29,7 @@
     </button>
     <div class="collapse navbar-collapse flex-grow items-center" id="navbarSupportedContent1">
     <a class="flex items-center text-gray-900 hover:text-gray-900 focus:text-gray-900 mt-2 lg:mt-0 mr-1" href="#">
-        <i class="fa-solid fa-users-gear mx-3 text-3xl sm: text-sm" loading="lazy" ></i>
+        <i class="fa-solid fa-users-gear mx-3 text-3xl sm:text-sm" loading="lazy" ></i>
         <span class="text-2xl font-bold">Property Management System</span>
       </a>
       <!-- Left links -->

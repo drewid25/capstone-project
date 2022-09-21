@@ -1,14 +1,24 @@
 <div class="min-h-full container mx-auto py-6">
     <nav class="bg-accent-blue">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="px-4">
         <div class="flex h-16 items-center justify-between">
           <div class="flex items-center">
-          
+            <div class="flex flex-col items-center gap-2 ">
+              @foreach($companies as $company)
+              <a href="/dashboard">
+                  <div class="flex items-center">
+                      <img class="h-14 w-14 rounded-full mr-3" src="{{asset('images/'. $company->company_logo)}}" alt="">
+                      <div class="flex flex-col ">
+                          <h2 class="text-xl font-bold text-gray-800">{{$company->company_name}}</h2>
+                          <h3 class="text-sm font-bold text-gray-800">Property Management System</h3>
+                      </div>
+                  </div>
+              </a>
+              @endforeach
+          </div>
             <div class="hidden md:block">
               <div class="ml-10 flex items-baseline space-x-4">
             
-                
-                
               </div>
             </div>
           </div>

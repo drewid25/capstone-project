@@ -41,13 +41,12 @@ class UserController extends Controller
       'email'=>$request->input('email'),
        'employee_image'=>$newUserImage ,
        'department'=>$request->input('department'),
-       'usertype' =>$request->input('usertype'),
-       
+       'usertype' =>$request->input('usertype'),      
       'password'=>$request->input('password'),
     ]);
 
 
-   return redirect('/employeelist');
+   return redirect('/dashboard');
 
 }
 public function process(Request $request){

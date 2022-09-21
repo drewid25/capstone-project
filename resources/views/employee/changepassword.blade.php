@@ -35,7 +35,7 @@ Change Password
           Current Password
           </label>
           <input 
-            type="text"
+            type="password"
             name="current_password"
             id="current_password"
             placeholder="Password"
@@ -84,7 +84,7 @@ Change Password
            Confirm Password
           </label>
           <input 
-            type="password_confirmation"
+            type="password"
             name="new_password_confirmation"
             id="password_confirmation"
             placeholder="Password"
