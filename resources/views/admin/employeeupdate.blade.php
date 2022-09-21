@@ -6,6 +6,18 @@
     <x-updateemployee :employee=$employee />
     <x-adminrightbarupdateemployee/>
  </div>
+ @foreach ($companies as $company)
 
+ <footer class=" container  mx-auto bg-accent-blue justify-center bottom-0 flex flex-row z-20 mt-20">
+    <div class="text-gray-800 flex flex-col text-center p-2 ">
+     
+      
+      <p class="mr-2 text-gray-800  font-bold">{{$company->company_name}}</p>
+      
+      <a class="text-gray-800  " href="https://tailwind-elements.com/">Property Management System</a>
+      <p class="">© 2022 Copyright.</p>
+    </div>
+  </footer>
+ @endforeach
 
 @include('partials.footer')
