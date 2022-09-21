@@ -122,6 +122,6 @@ Route::get('/home', function(){
 Route::post('passwordchange',[UserController::class,'change'])->name('passwordchange');
 
 Route::get('/employee/change-password/', function(){
-    return view('employee.changepassword');
+    return view('employee.changepassword')->with('companies',Company::all());
 })->name('changepassword');
 

@@ -1,6 +1,6 @@
-<div class="min-h-full container mx-auto py-6">
+<div class="min-h-full container mx-auto ">
     <nav class="bg-accent-blue">
-        <div class="px-4">
+        <div class="px-4 py-4">
             <div class="flex h-16 items-center justify-between">
                 <div class="flex items-center">
                     <div class="flex-shrink-0 text-letter font-bold items-center justify-center">
@@ -18,26 +18,26 @@
                             @endforeach
                         </div>
                     </div>
-                    <div class="hidden md:block">
+                    {{-- <div class="hidden md:block">
                         <div class="ml-10 flex items-baseline space-x-4">
                             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                             <a href="/dashboard" class="bg-button-blue text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Dashboard</a>
 
                             <a href="/employeelist" class="text-letter hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Employees</a>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
                 <div class="hidden md:block">
-                    </button>
+                  
                     <!-- Profile dropdown -->
                     <div class=" ml-3">
-                        <div class="flex items-center">
+                        <div class="flex flex-row justify-center items-center">
                             <img class="h-8 w-8 rounded-full" src="{{asset('images/'. auth()->user()->employee_image)}}" alt="">
-                            </button>
-                            <h3 class="text-letter ml-3 items-center">{{auth()->user()->name}}</h3>
+                           
+                            <h4 class="text-letter ml-3 items-center">{{auth()->user()->name}}</h4>
                             <form action="/logout" method="post">
                                 @csrf
-                                <button class="text-letter ml-3  hover:bg-letter hover:text-accent-blue bg-button-blued px-3 py-2 rounded-md text-sm font-medium">logout</button>
+                                <button class="text-letter ml-2  hover:bg-letter hover:text-accent-blue bg-button-blued px-3 py-2 rounded-md text-sm font-medium">logout</button>
                             </form>
                         </div>
                     </div>
