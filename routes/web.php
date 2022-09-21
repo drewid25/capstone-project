@@ -24,7 +24,7 @@ Route::get('/companylanding', function (){
 
 // Dashboard Route
 Route::get('/dashboard', function (){
-    return view('admin.dashboard')->with('inventories',Property::all());
+    return view('admin.dashboard')->with('inventories',Property::all())->with('company',Company::all());
 })->middleware(['auth'])->name('dashboard');
 
 //  Login/logout  Route

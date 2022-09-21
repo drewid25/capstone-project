@@ -3,7 +3,7 @@
 
     <h1 class="text-2xl font-bold text-center mb-3 text-letter">LIST OF EMPLOYEES</h1>
 
-    <div class="bg-white py-6 px-3 h-96 py-4 px-4 rounded-lg shadow-2xl">
+    <div class="bg-white py-6 px-3 h-96 rounded-lg shadow-2xl">
         <table class="container border-2 border-border-gray  ">
             <thead>
                 <tr>

@@ -1,5 +1,5 @@
 @include('partials.header')
-<x-adminnav />
+<x-adminnav :company=$company />
 <div class="container bg-letter py-6 px-6 h-screen mx-auto grid grid-cols-12 grid-flow-col shadow-2xl mb-5">
     <x-adminsidebar />
     <x-inventory_list :inventories=$inventories />
