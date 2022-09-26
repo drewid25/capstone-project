@@ -115,7 +115,7 @@
             </div>
 
             <div class="text-center mt-5">
-                <button class=" text-lg font-bold hover:bg-gray-100 text-gray-100 bg-gray-800 hover:text-gray-800 hover:border hover:border-gray-600 w-24 rounded  py-1" type="submit">ADD</button>
+                <button class=" text-lg font-bold hover:bg-gray-100 text-gray-100 bg-gray-800 hover:text-gray-800 hover:border hover:border-gray-600 w-24 rounded  py-1" type="submit"> <i class="fa-solid fa-window-maximize fa-sm text-gray-100  mr-2 "></i>ADD</button>
 
             </div>
 

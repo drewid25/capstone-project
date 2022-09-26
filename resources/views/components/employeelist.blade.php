@@ -64,7 +64,7 @@
                     ease-in-out
                     py-2"
                                 employeeid="{{ $employee->id }}" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                View
+                                <i class="fa-solid fa-eye mr-2"></i> View
                             </button>
                             <div class="modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto"
                                 id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -157,7 +157,7 @@
                     focus:bg-gray-600 focus:shadow-lg focus:outline-none focus:ring-0
                     active:bg-gray-600 active:shadow-lg">
 
-                                    update
+                    <i class="fa-solid fa-pen mr-2"></i>   update
                                 </a>
 
 
@@ -176,7 +176,7 @@
     <div class="text-center mt-10">
 
         <a href="/addemployee"
-            class="text-lg font-bold hover:bg-gray-100 bg-gray-800 text-gray-100 p-2 hover:text-gray-800 hover:border hover:border-gray-600 rounded">ADD
+            class="text-lg font-bold hover:bg-gray-100 bg-gray-800 text-gray-100 p-2 hover:text-gray-800 hover:border hover:border-gray-600 rounded"><i class="fa-solid fa-address-book text-gray-100 mr-2 "></i>ADD
             NEW EMPLOYEE</a>
 
     </div>

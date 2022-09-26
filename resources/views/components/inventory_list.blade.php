@@ -42,7 +42,7 @@
                             <form onsubmit="return confirm('Do you really want to update this property')">
                                 @csrf
                             </form>
-                            <a href="{{ url('propertyupdate/' . $inventory->id) }}" class='bg-gray-800 hover:bg-gray-100 hover:text-gray-800 hover:border hover:border-gray-600 px-4 py-1 rounded text-letter'>Edit</a>
+                            <a href="{{ url('propertyupdate/' . $inventory->id) }}" class='bg-gray-800 hover:bg-gray-100 hover:text-gray-800 hover:border hover:border-gray-600 px-4 py-1 rounded text-letter'><i class="mr-2 fa-regular fa-pen-to-square"></i>Edit</a>
                         </div>
 
 
