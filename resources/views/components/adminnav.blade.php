@@ -34,10 +34,10 @@
                         <div class="flex flex-row justify-center items-center">
                             <img class="h-8 w-8 rounded-full" src="{{asset('images/'. auth()->user()->employee_image)}}" alt="">
                            
-                            <h4 class="text-gray-800 ml-3 items-center">{{auth()->user()->name}}</h4>
+                            <h4 class="text-gray-800 ml-3 capitalize items-center">{{auth()->user()->name}}</h4>
                             <form action="/logout" method="post">
                                 @csrf
-                                <button class="text-gray-800 ml-2  hover:bg-letter hover:text-accent-blue bg-button-blued px-3 py-2 rounded-md text-sm font-medium">logout</button>
+                                <button class="text-gray-100 ml-2  hover:bg-gray-100 hover:text-gray-800 hover:border hover:border-gray-600 bg-gray-800 px-3 py-2 rounded-md text-sm font-medium">logout</button>
                             </form>
                         </div>
                     </div>

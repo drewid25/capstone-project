@@ -33,13 +33,13 @@
                 @foreach ($users as $employee)
               
                     <tr>
-                        <td class='border-2 border-border-gray text-grey text-left text-sm'>{{ $employee->id_number }}
+                        <td class='border-2 border-border-gray text-gray-800 font-medium capitalize text-left text-sm'>{{ $employee->id_number }}
                         </td>
-                        <td class='border-2 border-border-gray text-grey text-left text-sm'>{{ $employee->name }}</td>
-                        <td class='border-2 border-border-gray text-grey text-left text-sm'>{{ $employee->department }}
+                        <td class='border-2 border-border-gray text-gray-800 font-medium  capitalize text-left text-sm'>{{ $employee->name }}</td>
+                        <td class='border-2 border-border-gray text-gray-800 font-medium  capitalize text-left text-sm'>{{ $employee->department }}
                         </td>
-                        <td class='border-2 border-border-gray text-grey text-left text-sm'>{{ $employee->email }}</td>
-                        <td class='border-2 border-border-gray text-grey text-center text-sm'>
+                        <td class='border-2 border-border-gray text-gray-800 font-medium  apitalize text-left text-sm'>{{ $employee->email }}</td>
+                        <td class='border-2 border-border-gray text-gray-800 font-medium  capitalize text-center text-sm'>
                             <button type="button"
                                 class="viewProperties px-6
                     
@@ -176,7 +176,7 @@
     <div class="text-center mt-10">
 
         <a href="/addemployee"
-            class="text-lg font-bold hover:bg-gray-100 bg-gray-800 text-gray-100 p-2 hover:text-gray-800 hover:border hover:border-gray-600 rounded"><i class="fa-solid fa-address-book text-gray-100 mr-2 "></i>ADD
+            class="text-lg font-bold hover:bg-gray-100 bg-gray-800 text-gray-100 p-2 hover:text-gray-800 hover:border hover:border-gray-600 rounded"><i class="fa-solid fa-address-book   mr-2 "></i>ADD
             NEW EMPLOYEE</a>
 
     </div>
@@ -208,10 +208,10 @@
                      data.forEach(function(property){
                            $('#subjectarea').append(
                                 '<tr class="border-2 border-border-gray text-grey text-left text-sm"><td class="border-2 border-border-gray text-grey text-left text-sm" >' +
-                                property.property_number + '</td><td class="border-2 border-border-gray text-grey text-left text-sm" >' +
-                                property.property_name + '</td><td class="border-2 border-border-gray text-grey text-left text-sm" >' +
-                                property.description + '</td><td class="border-2 border-border-gray text-grey text-left text-sm" >' +
-                                property.date_acquired + '</td><td class="border-2 border-border-gray text-grey text-left text-sm" >' +
+                                property.property_number + '</td><td class="border-2 border-border-gray text-gray-800 font-medium  capitalize text-left text-sm" >' +
+                                property.property_name + '</td><td class="border-2 border-border-gray text-gray-800 font-medium  capitalize text-left text-sm" >' +
+                                property.description + '</td><td class="border-2 border-border-gray text-gray-800 font-medium  capitalize text-left text-sm" >' +
+                                property.date_acquired + '</td><td class="border-2 border-border-gray text-gray-800 font-medium  capitalize text-left text-sm" >' +
                                 property.price + '</td></tr>')
                             });
                             button.text('View Properties');
