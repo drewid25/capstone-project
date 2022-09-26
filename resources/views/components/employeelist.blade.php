@@ -1,28 +1,28 @@
-<div class="bg-gray-text shadow-2xl py-6 px-3 h-screen col-span-7 border-r-2 border-l-2 border-r-letter overflow-auto">
+<div class="bg-gray-300 py-6 px-3 h-full col-span-10 border-r-2 border-l-2 border-r-letter overflow-auto">
 
-    <h1 class="text-2xl font-bold text-center mb-3 text-letter">LIST OF EMPLOYEES</h1>
+    <h1 class="text-2xl font-bold text-center mb-3 text-gray-800">LIST OF EMPLOYEES</h1>
 
-    <div class="bg-white h-96 py-4 px-4 rounded-lg shadow-2xl">
-        <table class="container border-2 border-border-gray  ">
+    
+        <table class="container border-2 border-border-gray ">
             <thead>
                 <tr>
-                    <th class="border-2 border-border-gray bg-accent-blue text-letter text-sm mr-2 w-40">
+                    <th class="border-2 border-border-gray bg-gray-600 text-letter text-sm mr-2 w-40">
                         ID number
                     </th>
-                    <th class="border-2 border-border-gray  bg-accent-blue text-letter text-sm mr-2 w-40">
+                    <th class="border-2 border-border-gray  bg-gray-600  text-letter text-sm mr-2 w-40">
                         Employee Name
                     </th>
-                    <th class="border-2 border-border-gray bg-accent-blue text-letter  text-sm mr-2 w-40">
+                    <th class="border-2 border-border-gray bg-gray-600  text-letter  text-sm mr-2 w-40">
                         Department/Office
                     </th>
-                    <th class="border-2 border-border-gray bg-accent-blue text-letter text-sm  mr-2 w-40">
+                    <th class="border-2 border-border-gray bg-gray-600  text-letter text-sm  mr-2 w-40">
                         Email Address
                     </th>
 
-                    <th class="border-2 border-border-gray bg-accent-blue text-letter text-sm  mr-2 w-40">
+                    <th class="border-2 border-border-gray bg-gray-600  text-letter text-sm  mr-2 w-40">
                         Property Accountability
                     </th>
-                    <th class="border-2 border-border-gray bg-accent-blue text-letter text-sm  mr-2 w-40">
+                    <th class="border-2 border-border-gray bg-gray-600  text-letter text-sm  mr-2 w-40">
                         Action
                     </th>
 
@@ -43,7 +43,7 @@
                             <button type="button"
                                 class="viewProperties px-6
                     
-                    bg-button-blue
+                    bg-gray-600
                     text-white
                     font-medium
                     text-xs
@@ -52,12 +52,17 @@
                     uppercase
                     rounded
                     shadow-md
-                    hover:bg-accent-blue hover:shadow-lg
-                    focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
-                    active:bg-blue-800 active:shadow-lg
+                    hover:bg-gray-100
+                    hover:text-gray-800
+                    hover:border
+                    hover:border-gray-600
+                    hover:shadow-lg
+                    focus:bg-gray-600 focus:shadow-lg focus:outline-none focus:ring-0
+                    active:bg-gray-600 active:shadow-lg
                     transition
                     duration-150
-                    ease-in-out"
+                    ease-in-out
+                    py-2"
                                 employeeid="{{ $employee->id }}" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                 View
                             </button>
@@ -79,23 +84,23 @@
                                                 <thead>
                                                     <tr>
                                                         <th
-                                                            class="border-2 border-border-gray bg-accent-blue text-letter text-sm mr-2 w-40">
+                                                            class="border-2 border-border-gray bg-gray-600 text-letter text-sm mr-2 w-40">
                                                             Property Number
                                                         </th>
                                                         <th
-                                                            class="border-2 border-border-gray  bg-accent-blue text-letter text-sm mr-2 w-40">
+                                                            class="border-2 border-border-gray  bg-gray-600  text-letter text-sm mr-2 w-40">
                                                             Property Name
                                                         </th>
                                                         <th
-                                                            class="border-2 border-border-gray bg-accent-blue text-letter  text-sm mr-2 w-40">
+                                                            class="border-2 border-border-gray bg-gray-600  text-letter  text-sm mr-2 w-40">
                                                             Description
                                                         </th>
                                                         <th
-                                                            class="border-2 border-border-gray bg-accent-blue text-letter text-sm  mr-2 w-40">
+                                                            class="border-2 border-border-gray bg-gray-600  text-letter text-sm  mr-2 w-40">
                                                             Date Acquired
                                                         </th>
                                                         <th
-                                                            class="border-2 border-border-gray bg-accent-blue text-letter text-sm  mr-2 w-40">
+                                                            class="border-2 border-border-gray bg-gray-600  text-letter text-sm  mr-2 w-40">
                                                             Price
                                                         </th>
 
@@ -133,7 +138,7 @@
                                 class="text-center rounded-lg p-3">
                                 @csrf
                                 <a href="{{ url('employeeupdate/' . $employee->id) }}"
-                                    class=" bg-button-blue
+                                    class=" bg-  bg-gray-600
                     text-white
                     font-medium
                     text-xs
@@ -142,10 +147,15 @@
                     uppercase
                     rounded
                     shadow-md
+                    py-2
                     px-3
-                    hover:bg-accent-blue hover:shadow-lg
-                    focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
-                    active:bg-blue-800 active:shadow-lg">
+                    hover:bg-gray-100
+                    hover:text-gray-800
+                    hover:border
+                    hover:border-gray-600
+                     hover:shadow-lg
+                    focus:bg-gray-600 focus:shadow-lg focus:outline-none focus:ring-0
+                    active:bg-gray-600 active:shadow-lg">
 
                                     update
                                 </a>
@@ -159,20 +169,14 @@
             </tbody>
 
         </table>
-        <hr class="m-5">
-        {{-- <div>
-        <h2 class="text-center">Subjects</h2>
-        <div class="mt-3 flex justify-center">
-            <ul class="bg-white rounded-lg border border-gray-200 w-96 text-button-blue">
-            </ul>
-        </div>
-    </div> --}}
-    </div>
+        
+     
+   
 
-    <div class="text-center mt-5">
+    <div class="text-center mt-10">
 
         <a href="/addemployee"
-            class="text-lg font-bold hover:bg-accent-blue bg-letter text-accent-blue p-2 hover:text-letter rounded-lg">ADD
+            class="text-lg font-bold hover:bg-gray-100 bg-gray-800 text-gray-100 p-2 hover:text-gray-800 hover:border hover:border-gray-600 rounded">ADD
             NEW EMPLOYEE</a>
 
     </div>

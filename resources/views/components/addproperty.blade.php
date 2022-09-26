@@ -1,38 +1,45 @@
-<div class=" h-full w-full bg-gray-text border-r-2 border-l-2 border-r-letter border-l-letter shadow-2xl col-span-7 px-3 mb-14">
-    <h1 class="text-white font-bold text-2xl my-5 text-center">Add Property</h1>
-    <div class="bg-white h-8/12 w-10/12 mx-auto p-6 shadow-2xl rounded-lg py-4 px-4">
-        <form action="{{ route('createproperty')}}" method="POST" type="submit" class="py-6 px-2 bg-accent-blue h-50 flex flex-col mx-auto shadow-2xl">
+<div class=" bg-gray-300 h-full col-span-10 border-2 border-t-gray-400 py-6 px-12">
+    <h1 class="text-gray-800 font-bold text-2xl my-5 text-center">Add Property</h1>
+    
+        <form action="{{ route('createproperty')}}" method="POST" type="submit" class="py-6 px-6 bg-gray-100 h-50 flex flex-col w-8/12 mx-auto shadow-2xl">
             @csrf
-            <div class="flex flex-row">
-                <div class="p-3 flex flex-col bg-accent-blue w-2/3">
-                    <label for="" class="text-letter mr-3">Supplier Name</label>
-                    <input type="text" name="supplier_name" class="bg-white appearance-none border-2 border-gray-200 rounded w-full py-0 px-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-accent-blue">
+            <div class="flex flex-row ">
+                <div class="p-3 flex flex-col w-4/12">
+                    
+                        
+                            <label for="" class="text-gray-800 mr-3">Supplier Name</label>
+                            <input type="text" name="supplier_name" class="bg-white appearance-none border-2 text-lg border-gray-200 rounded w-full py-0 px-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-800">
+                           </div>
+                <span class="mt-9"><a class="bg-gray-800 text-gray-100 py-1 px-3" href="">Add New Supplier</a></span>
+                <div class="p-3 flex flex-col  w-3/12">
+                    <label for="" class="text-gray-800  mr-3">Invoice Number</label>
+                    <input type="text" name="invoice_number" class="bg-white appearance-none  text-lg border-2 border-gray-200 rounded w-full py-0 px-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-800">
                 </div>
-                <div class="p-3 flex flex-col bg-accent-blue w-1/3">
-                    <label for="" class="text-letter mr-3">Invoice Number</label>
-                    <input type="text" name="invoice_number" class="bg-white appearance-none border-2 border-gray-200 rounded w-full py-0 px-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-accent-blue">
+                <div class="p-3 flex flex-col  w-3/12">
+                    <label for="" class="text-gray-800  mr-3">Date Acquired</label>
+                    <input type="date" name="date_acquired" class="bg-white appearance-none border-2 border-gray-200 rounded w-full py-0 px-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-800">
                 </div>
+                
             </div>
             <div class="flex flex-row">
-                <div class="p-3 flex flex-col bg-accent-blue w-1/3">
-                    <label for="" class="text-letter mr-3">Date Acquired</label>
-                    <input type="date" name="date_acquired" class="bg-white appearance-none border-2 border-gray-200 rounded w-full py-0 px-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-accent-blue">
-                </div>
+               
 
-                <div class="p-3 flex flex-col bg-accent-blue w-1/3">
-                    <label for="" class="text-letter mr-3">Price</label>
-                    <input type="text" name="price" class="bg-white appearance-none border-2 border-gray-200 rounded w-full py-0 px-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-accent-blue">
-                </div>
-                <div class="p-3 flex flex-col bg-accent-blue w-1/3">
-                    <label for="" class="text-letter mr-3">Quantity</label>
+               
+                <div class="p-3 flex flex-col w-1/12">
+                    <label for="" class="text-gray-800  mr-3">Quantity</label>
                     <input type="number" name="quantity" class="bg-white appearance-none border-2 border-gray-200 rounded w-full py-0 px-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-accent-blue">
                 </div>
+                <div class="p-3 flex flex-col  w-2/12">
+                    <label for="" class="text-gray-800  mr-3">Price</label>
+                    <input type="text" name="price" class="bg-white appearance-none border-2 border-gray-200 rounded w-full py-0 px-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-800">
+                </div>
 
-
+                           
             </div>
 
-            <div class="p-3 flex flex-col bg-accent-blue">
-                <label for="" class="text-letter mr-3">Classification</label>
+            <div class="flex flex-row">
+            <div class="p-3 flex flex-col w-6/12 ">
+                <label for="" class="text-gray-800  mr-3">Classification</label>
                 <select name="classification" id="" class="bg-white border-2 border-gray-200 rounded w-full py-0 px-1 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-accent-blue">
                     <option value="IT AND COMMUNICATIONS EQUIPMENT" class="text-gray-600">IT AND COMMUNICATIONS EQUIPMENTS</option>
                     <option value="OFFICE EQUIPMENT">OFFICE EQUIPMENTS</option>
@@ -40,9 +47,8 @@
                     <option value="MOTOR VEHICLE">MOTOR VEHICLE</option>
                 </select>
             </div>
-
-            <div class="p-3 flex flex-col bg-accent-blue">
-                <label for="" class="text-letter mr-3">Category
+            <div class="p-3 flex flex-col w-6/12">
+                <label for="" class="text-gray-800  mr-3">Category
 
                 </label>
                 <select name="category" id="" class="bg-white border-2 border-gray-200 rounded w-full py-0 px-1 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-accent-blue">
@@ -57,23 +63,27 @@
                     <option value="VEHICLE">VEHICLE</option>
                 </select>
             </div>
+            </div>
+
+           
 
             <div class="flex flex-row">
-                <div class="p-3 flex flex-col w-2/3 bg-accent-blue">
-                    <label for="" class="text-letter mr-3">Property Name</label>
-                    <input type="text" name="property_name" class="bg-white appearance-none border-2 border-gray-200 rounded w-full py-0 px-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-accent-blue">
-                </div>
-                <div class="p-3 flex flex-col w-1/3 bg-accent-blue">
-                    <label for="" class="text-letter mr-3">Property Number</label>
+                <div class="p-3 flex flex-col w-3/12">
+                    <label for="" class="text-gray-800 mr-3">Property Number</label>
                     <input type="text" name="property_number" class="bg-white appearance-none border-2 border-gray-200 rounded w-full py-0 px-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-accent-blue">
                 </div>
+                <div class="p-3 flex flex-col w-9/12 ">
+                    <label for="" class="text-gray-800  mr-3">Property Name</label>
+                    <input type="text" name="property_name" class="bg-white appearance-none border-2 border-gray-200 rounded w-full py-0 px-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-accent-blue">
+                </div>
+               
 
             </div>
 
 
             <div class="flex p-3">
                 <div class="mb-3 w-full">
-                    <label for="exampleFormControlTextarea1" class="form-label inline-block mb-2 text-white">
+                    <label for="exampleFormControlTextarea1" class="form-label inline-block mb-2 text-gray-800 ">
                         Description
 
                     </label>
@@ -105,12 +115,12 @@
             </div>
 
             <div class="text-center mt-5">
-                <button class=" text-lg font-bold hover:bg-gray-text text-accent-blue bg-letter hover:text-letter w-24 rounded-lg" type="submit">ADD</button>
+                <button class=" text-lg font-bold hover:bg-gray-100 text-gray-100 bg-gray-800 hover:text-gray-800 hover:border hover:border-gray-600 w-24 rounded  py-1" type="submit">ADD</button>
 
             </div>
 
         </form>
 
-    </div>
+  
 
 </div>
