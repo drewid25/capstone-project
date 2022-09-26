@@ -23,8 +23,16 @@
                 <i class="fa-solid fa-sharp fa-building fa-sm text-black mr-2 mb-5"></i></i>Add Office</a>
         </div>
         <div class="hover:bg-gray-400  hover:text-white rounded-r-full text-left hover:indent-2 pt-3">
+            <a href="/inventory" class="text-gray-700 font-bold text-sm">
+                <i class="fa-solid fa-sharp fa-building fa-sm text-black mr-2 mb-5"></i></i>Office Directory</a>
+        </div>
+        <div class="hover:bg-gray-400  hover:text-white rounded-r-full text-left hover:indent-2 pt-3">
             <a href="/employee/change-password/" class="text-gray-700  font-bold text-sm">
                 <i class="fa-solid fa-sharp fa-store fa-sm text-gray-800 mr-2 mb-5"></i>Add Supplier </a>
+        </div>
+        <div class="hover:bg-gray-400  hover:text-white rounded-r-full text-left hover:indent-2 pt-3">
+            <a href="/employee/change-password/" class="text-gray-700  font-bold text-sm">
+                <i class="fa-solid fa-sharp fa-store fa-sm text-gray-800 mr-2 mb-5"></i>Supplier Directory </a>
         </div>
         <div class="hover:bg-gray-400  hover:text-white rounded-r-full text-left hover:indent-2 pt-3">
             <a href="/employee/change-password/" class="text-gray-700  font-bold text-sm">

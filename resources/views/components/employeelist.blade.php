@@ -6,6 +6,9 @@
         <table class="container border-2 border-border-gray ">
             <thead>
                 <tr>
+                    <th class="border-2 border-border-gray bg-gray-600 text-letter text-sm mr-2 w-12">
+                        No.
+                    </th>
                     <th class="border-2 border-border-gray bg-gray-600 text-letter text-sm mr-2 w-40">
                         ID number
                     </th>
@@ -29,10 +32,11 @@
                 </tr>
             </thead>
             <tbody>
-
+                @php($i=1)
                 @foreach ($users as $employee)
               
                     <tr>
+                        <th scope="row" class='border-2 border-border-gray text-gray-800 font-medium capitalize text-left text-sm'>{{$i++}}</th>
                         <td class='border-2 border-border-gray text-gray-800 font-medium capitalize text-left text-sm'>{{ $employee->id_number }}
                         </td>
                         <td class='border-2 border-border-gray text-gray-800 font-medium  capitalize text-left text-sm'>{{ $employee->name }}</td>

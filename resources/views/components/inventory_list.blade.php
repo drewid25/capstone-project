@@ -5,6 +5,9 @@
             <thead>
                 <tr>
                     <th class="border-2 border-border-gray  bg-gray-600 text-letter text-sm mr-2 w-40">
+                         N0.
+                    </th>
+                    <th class="border-2 border-border-gray  bg-gray-600 text-letter text-sm mr-2 w-40">
                         Property Number
                     </th>
                     <th class="border-2 border-border-gray  bg-gray-600 text-letter text-sm   mr-2 w-40">
@@ -25,12 +28,12 @@
                 </tr>
             </thead>
             <tbody>
-
+                @php($i=1)
                 @foreach($inventories as $inventory)
                 <tr>
 
 
-
+                    <th scope="row" class='border-2 border-border-gray text-gray-800 font-medium capitalize text-left text-sm'>{{$i++}}</th>
                     <td class='border-2 border-border-gray text-grey text-center text-sm '>{{$inventory->property_number}}</td>
                     <td class='border-2 border-border-gray text-grey text-center text-sm '>{{$inventory->quantity}}</td>
                     <td class='border-2 border-border-gray text-grey text-center text-sm '>{{$inventory->property_name}}</td>
