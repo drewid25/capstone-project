@@ -3,7 +3,7 @@
  <x-adminnav :companies=$companies />
  <div class="bg-letter h-screen  grid grid-cols-12 grid-flow-col">
     <x-adminsidebar/>
-    <x-updateemployee :employee=$employee />
+    <x-updateemployee :users=$users />
    
  </div>
  @foreach ($companies as $company)

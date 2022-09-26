@@ -34,26 +34,27 @@ class PropertyController extends Controller
       return view('admin.search',compact('property'));
    
    }
-   public function update(Request $request){
+   public function update(Request $request,$id){
      
-    $property= Property::find($request->id);
+    $property= Property::find($id)->update([
+    'supplier_name' => $request->supplier_name,
+    'invoice_number' => $request->invoice_number,
+    'date_acquired' => $request->date_acquired,
+    'price' => $request->price,
+    'quantity' => $request->quantity,
+    'classification' => $request->classification,
+    'category' => $request->category,
+    'property_number'=> $request->property_number,
+    'property_name' => $request->property_name,
+    'description' => $request->description,]);
   
-    $property->supplier_name = $request->supplier_name;
-    $property->invoice_number = $request->invoice_number;
-    $property->date_acquired = $request->date_acquired;
-    $property->price = $request->price;
-    $property->quantity = $request->quantity;
-    $property->classification = $request->classification;
-    $property->category = $request->category;
-    $property->property_number= $request->property_number;
-    $property->property_name = $request->property_name;
-    $property->description = $request->description;
+    
   
 
-    $property->save();
+
    
       return redirect('/inventory')->with('success', 'Employee updated.');
-   }
+    }
 
 
 

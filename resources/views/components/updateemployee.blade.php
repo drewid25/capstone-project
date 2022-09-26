@@ -5,17 +5,17 @@
             @csrf
 
             <div class="flex flex-col">
-                <input type="hidden" value="{{ $employee->id }}" name="id" />
+                <input type="hidden" value="{{ $users->id }}" name="id" />
 
                 <div class="p-2 flex flex-col  w-50">
                     <label for="employee_name" class="text-gray-800 mr-3">Employee Name</label>
                     <input type="text" name="name" class="bg-white border-2 border-gray-200 rounded w-full 
-                    py-1 px-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-accent-blue" value={{ $employee->name }}>
+                    py-1 px-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-accent-blue" value={{ $users->name }}>
                 </div>
                 <div class="p-2 flex flex-col  w-50">
                     <label for="login_password" class="text-gray-800 mr-3">Email Address</label>
                     <input type="email" name="email" class="bg-white border-2 border-gray-200 rounded w-full 
-                    py-1 px-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-accent-blue" value={{ $employee->email }}>
+                    py-1 px-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-accent-blue" value={{ $users->email }}>
                 </div>
 
 
