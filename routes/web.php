@@ -15,20 +15,13 @@ use Illuminate\Http\Request;
 
 
 // Home Route
-Route::get('/companylanding', function () {
-    return view('landingpage')->with('company', Company::all());
-})->name('dashboard');
-
+Route::get('/companylanding',[CompanyController::class, 'show'])->name('dashboard');
 // Dashboard Route
-Route::get('/dashboard', function () {
-    return view('admin.dashboard')->with('inventories', Property::all())->with('companies', Company::all());
-})->middleware(['auth'])->name('dashboard');
-
+Route::get('/dashboard', [PropertyController::class, 'show'])->middleware(['auth'])->name('dashboard') ;
+// Property Controller
 Route::controller(PropertyController::class)->group(function () {
     Route::post('/createproperty', [PropertyController::class, 'create'])->name('createproperty');
-    Route::get('/addproperty', function () {
-        return view('admin.addproperty')->with('users', User::all())->with('companies', Company::all());
-    });
+    Route::get('/addproperty', [PropertyController::class, 'addproperty'])->name('addproperty');
     Route::post('getproperties', function (Request $request) {
         $user = User::find($request->id);
 
@@ -44,10 +37,10 @@ Route::controller(PropertyController::class)->group(function () {
         [PropertyController::class, 'update']
     )->name('updateproperty');
     // Inventory Routes
-    Route::get('/inventory', function () {
+    Route::get('/inventory', [PropertyController::class,'inventory'])->name('inventories');
 
-        return view('admin.inventory')->with('inventories', Property::all())->with('companies', Company::all());
-    })->name('inventories');
+        // return view('admin.inventory')->with('inventories', Property::all());
+   
 });
 
 Route::controller(UserController::class)->group(function () {

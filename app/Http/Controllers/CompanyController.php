@@ -10,6 +10,11 @@ use Illuminate\Support\Facades\Hash;
 
 class CompanyController extends Controller
 {
+   public function show(){
+    $company = Company::all();
+    return view('landingpage',compact('company'));
+   }
+
     public function store(Request $request){
     
         $request->validate([

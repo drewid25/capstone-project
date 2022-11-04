@@ -1,5 +1,5 @@
-<div class="min-h-full bg-letter mx-auto shadow-2xl >
-    <nav class="">
+<div class="min-h-full bg-letter mx-auto shadow-2xl" >
+    <nav>
         <div class="px-4 py-4">
             <div class="flex h-16 items-center justify-between">
                 <div class="flex items-center">
@@ -7,8 +7,10 @@
                         <div class="flex flex-col items-center gap-2 ">
                             @foreach($companies as $company)
                             <a href="/dashboard">
-                                <div class="flex items-center ml-5">
+                                <div class="flex  items-center ml-5">
                                     <img class="h-14  w-14 rounded-full mr-3" src="{{asset('images/'. $company->company_logo)}}" alt="">
+                                   
+    
                                     <div class="flex flex-col ">
                                         <h2 class="text-xl font-bold text-gray-800">{{$company->company_name}}</h2>
                                         <h3 class="text-sm font-bold text-gray-800">Property Management System</h3>
@@ -37,7 +39,7 @@
                             <h4 class="text-gray-800 ml-3 capitalize items-center">{{auth()->user()->name}}</h4>
                             <form action="/logout" method="post">
                                 @csrf
-                                <button class="text-gray-100 ml-2  hover:bg-gray-100 hover:text-gray-800 hover:border hover:border-gray-600 bg-gray-800 px-3 py-2 rounded-md text-sm font-medium">logout</button>
+                                <button class="text-gray-100 ml-2  hover:bg-gray-100 hover:text-gray-800  bg-gray-800 px-3 py-2 rounded-md text-sm font-medium">logout</button>
                             </form>
                         </div>
                     </div>

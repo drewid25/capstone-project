@@ -3,11 +3,28 @@
 namespace App\Http\Controllers;
  
 use App\Http\Controllers\Controller;
+use App\Models\Company;
 use App\Models\Property;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class PropertyController extends Controller
 {
+   public function inventory(){
+      $inventories = Property::latest()->paginate(20);
+      $companies = Company::all();
+      return view('admin.inventory',compact('inventories','companies'));
+   }
+   public function show(){
+      $inventories =Property::latest()->paginate(20);
+      $companies = Company::all();
+      return view('admin.dashboard',compact('inventories','companies'));
+   }
+   public function addproperty(){
+      $users = User::all();
+      $companies = Company::all();
+      return view('admin.addproperty',compact('users','companies'));
+   }
    public function create(Request $request){
     $property = new Property;
     $property->supplier_name = $request->supplier_name;

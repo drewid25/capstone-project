@@ -28,15 +28,15 @@
                 </tr>
             </thead>
             <tbody>
-                @php($i=1)
+          
                 @foreach($inventories as $inventory)
-                <tr>
+                <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
 
 
-                    <th scope="row" class='border-2 border-border-gray text-gray-800 font-medium capitalize text-left text-sm'>{{$i++}}</th>
-                    <td class='border-2 border-border-gray text-grey text-center text-sm '>{{$inventory->property_number}}</td>
+                    <th scope="row" class='border-2 border-border-gray text-gray-800 font-medium capitalize text-left  text-sm '>{{$inventories->firstItem()+$loop->index}}.</th>
+                    <td class='border-2 border-border-gray text-grey text-left text-sm '>{{$inventory->property_number}}</td>
                     <td class='border-2 border-border-gray text-grey text-center text-sm '>{{$inventory->quantity}}</td>
-                    <td class='border-2 border-border-gray text-grey text-center text-sm '>{{$inventory->property_name}}</td>
+                    <td class='border-2 border-border-gray text-grey text-left text-sm '>{{$inventory->property_name}}</td>
                     <td class='border-2 border-border-gray text-grey ml-2 text-sm '>{{$inventory->description}}</td>
                     <td class='border-2 border-border-gray  text-grey text-center text-sm '>{{App\Models\User::find($inventory->user_id)->name}}
                     <td class='border-2 border-border-gray  text-grey text-center text-sm '>
@@ -58,6 +58,8 @@
             </tbody>
 
         </table>
-
+   <div class="flex justify-end mr-2 mt-2">
+    {{$inventories->links()}}
   
+</div> 
 </div>

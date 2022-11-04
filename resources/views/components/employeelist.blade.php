@@ -35,7 +35,7 @@
                 @php($i=1)
                 @foreach ($users as $employee)
               
-                    <tr>
+                    <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
                         <th scope="row" class='border-2 border-border-gray text-gray-800 font-medium capitalize text-left text-sm'>{{$i++}}</th>
                         <td class='border-2 border-border-gray text-gray-800 font-medium capitalize text-left text-sm'>{{ $employee->id_number }}
                         </td>
