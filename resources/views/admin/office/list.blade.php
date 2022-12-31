@@ -1,9 +1,9 @@
 @include('partials.header')
 
-<x-admin_dashboard.nav :companies=$companies />
+<x-adminnav :companies=$companies />
 <div class="bg-letter h-screen  grid grid-cols-12 grid-flow-col ">
-    <x-admin_dashboard.sidebar />
-    <x-property.index :inventories=$inventories />
+    <x-adminsidebar />
+    <x-office.index :offices=$offices />
 
 
 </div>

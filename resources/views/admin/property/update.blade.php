@@ -1,10 +1,8 @@
 @include('partials.header')
-
-<x-admin_dashboard.nav :companies=$companies />
-<div class="bg-letter h-screen  grid grid-cols-12 grid-flow-col ">
-    <x-admin_dashboard.sidebar />
-    <x-property.index :inventories=$inventories />
-
+<x-adminnav :companies=$companies />
+<div class="bg-letter h-screen  grid grid-cols-12 grid-flow-col">
+    <x-adminsidebar />
+    <x-property.edit :property=$property :users=$users />
 
 </div>
 @foreach ($companies as $company)
@@ -19,5 +17,4 @@
         </div>
     </footer>
 @endforeach
-
 @include('partials.footer')
